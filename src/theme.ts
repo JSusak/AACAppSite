@@ -2,6 +2,7 @@ import { extendTheme } from '@chakra-ui/react'
 import type { StyleFunctionProps } from '@chakra-ui/styled-system'
 import '@fontsource/barlow';
 import "@fontsource/fredoka-one";
+import { mode } from "@chakra-ui/theme-tools";
 import { Colours } from "./colourScheme";
 
 //Global theme for the app. Here, we can give components default colours.
@@ -12,14 +13,18 @@ export const theme = extendTheme({
     Heading: {
       //If light mode, choose light mode colour. Otherwise, choose dark mode colour.
       baseStyle: (props: StyleFunctionProps) => ({
-        color: props.colorMode === "light" ? Colours.lightModeHeader : "blue",
+        color:
+          props.colorMode === "light"
+            ? Colours.lightModeHeader
+            : Colours.darkModeHeader,
       }),
     },
     Text: {
-      //If light mode, choose light mode colour. Otherwise, choose dark mode colour.
       baseStyle: (props: StyleFunctionProps) => ({
         color:
-          props.colorMode === "light" ? Colours.lightModeSecondary : "blue",
+          props.colorMode === "light"
+            ? Colours.lightModeSecondary
+            : Colours.darkModeSecondary,
       }),
     },
   },
@@ -29,5 +34,14 @@ export const theme = extendTheme({
   fonts: {
     heading: `'Fredoka One', sans-serif`,
     body: `'Barlow', sans-serif`,
+  },
+
+  //Define global styles for arbitrary HTML elements
+  styles: {
+    global: (props: StyleFunctionProps) => ({
+      body: {
+        bg: mode(Colours.lightModeBG, Colours.darkModeBG)(props),
+      },
+    }),
   },
 });
