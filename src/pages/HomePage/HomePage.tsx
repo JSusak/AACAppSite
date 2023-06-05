@@ -43,7 +43,7 @@ export const HomePage: React.FC = (): JSX.Element => {
         </SimpleGrid>
       </Center>
 
-      <SimpleGrid columns={2} spacing={10} mt="2rem">
+      <SimpleGrid columns={2} spacing={10} mt="2rem" mb="2rem">
         <Button height="40vh">Aphasia Phrases (Watch Out SVG)</Button>
         <Button height="40vh">Aphasia Dialogue (Watch In SVG)</Button>
       </SimpleGrid>
