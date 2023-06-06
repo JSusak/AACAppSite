@@ -24,7 +24,7 @@ export const FooterButton = ({
           outline: "none",
         }}
         _focus={{ boxShadow: "none", borderColor: "transparent" }}
-        color={"whiteAlpha.900"}
+
       >
         {buttonIcon}
       </Button>

@@ -18,7 +18,7 @@ export const Footer: React.FC = (): JSX.Element => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Heading fontSize={"md"} color={"whiteAlpha.900"}>
+          <Heading fontSize={"md"}>
             © 2023 King's College London{"\u00a0"}| All Rights Reserved.
           </Heading>
           <HStack align={"flex-start"} spacing="2px">
