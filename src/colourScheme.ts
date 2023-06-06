@@ -13,6 +13,8 @@ export const Colours: { [key: string]: string } = {
   darkModeSecondary: "#d3d3d3",
   darkModeMuted: "#00ff00",
 
-  lightModeMainCol: "#1d1d1d",
-  lightModeMainAccent: "49274a",
+  lightModeMainCol: "#ffd5a4",
+  lightModeNavColHighlight: "#a7c2cc",
+  lightModeNavColActive: "#b9ced6",
+  lightModeMainAccent: "#49274a",
 };
