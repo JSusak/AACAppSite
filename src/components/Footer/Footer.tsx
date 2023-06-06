@@ -10,6 +10,9 @@ export const Footer: React.FC = (): JSX.Element => {
         w="100%"
         backgroundColor={Colours.lightModeMainCol}
         style={{ position: "relative", left: "0", bottom: "0" }}
+        boxShadow={
+          "rgba(0, 0, 0, 0.2) 0px 10px 30px 5px, rgba(0, 0, 0, 0.04) 0px 10px 10px 10px"
+        }
       >
         <Container
           minW={"100%"}
