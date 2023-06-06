@@ -7,11 +7,16 @@ import { PeoplePage } from "./pages/PeoplePage/PeoplePage";
 export const AppRouter = (): JSX.Element => {
   const location = useLocation();
 
+  //Fix once watchin/out/contact pages made.
   return (
     <Routes key={location.pathname} location={location}>
       <Route path="/" element={<HomePage />} />
       <Route path="about" element={<AboutPage />} />
       <Route path="people" element={<PeoplePage />} />
+
+      <Route path="watchin" element={<HomePage />} />
+      <Route path="watchout" element={<HomePage />} />
+      <Route path="contact" element={<HomePage />} />
     </Routes>
   );
 };
