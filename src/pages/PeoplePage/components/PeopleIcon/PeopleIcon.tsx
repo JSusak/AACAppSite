@@ -66,6 +66,7 @@ export const PeopleIcon = ({
         alignItems={"center"}
         transition={"all 0.2s ease-in-out"}
         backgroundColor={"orange.100"}
+        boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
       >
         <Center>
           <VStack zIndex={isHover ? 11 : 1}>
