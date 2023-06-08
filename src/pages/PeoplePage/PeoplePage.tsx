@@ -52,14 +52,14 @@ export const PeoplePage: React.FC = (): JSX.Element => {
                       bg: "blue.100",
                     }}
                   >
-                    The team for 'Watch Your Language' is comprised of a handful
-                    of specialist PhD students and professors in Human-Computer
-                    Interaction. The project is based at King's College London's
+                    The main team for 'Watch Your Language' is comprised of a
+                    handful of specialist PhD students and professors in
+                    Human-Computer Interaction, based at King's College London's
                     Department of Informatics. We are grateful to work alongside
                     expert Speech & Language Therapists and independent
                     charities, who provide regular feedback as the project
-                    evolves, making sure that we don't leave any hidden gaps in
-                    your new apps.
+                    evolves, ensuring we don't leave any hidden gaps in your
+                    upcoming apps.
                   </Highlight>
                 </Text>
               </VStack>
@@ -82,7 +82,8 @@ export const PeoplePage: React.FC = (): JSX.Element => {
 
           <Divider />
 
-          <Heading fontSize={"7xl"}>Academics</Heading>
+          <Heading fontSize={"7xl"}>Academic Researchers</Heading>
+          <Heading fontSize={"3xl"}>The core pioneers of the project.</Heading>
           <Center>
             <SimpleGrid
               columns={[1, 1, 3, 3]}
@@ -125,7 +126,10 @@ export const PeoplePage: React.FC = (): JSX.Element => {
           </Center>
 
           <Divider />
-          <Heading fontSize={"7xl"}>Non-Academics</Heading>
+          <Heading fontSize={"7xl"}>Other Contributors</Heading>
+          <Heading fontSize={"3xl"}>
+            The driving force behind making this project possible.
+          </Heading>
 
           <SimpleGrid columns={2} spacingX={"300px"} spacingY={"2rem"} m="2rem">
             <PeopleIcon
