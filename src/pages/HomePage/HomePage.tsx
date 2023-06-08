@@ -10,6 +10,8 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { TestComponent } from "../../components/TestComponent/TestComponent";
+import { ImageCollage } from "./components/ImageCollab/ImageCollage";
+
 //import { useState } from "react";
 //import { Colours } from "../../colourScheme";
 
@@ -17,11 +19,11 @@ export const HomePage: React.FC = (): JSX.Element => {
   return (
     <>
       {/* Top section */}
-      <Grid backgroundColor={"red.100"} minH="93vh" position="relative">
+      <Grid minH="93vh" position="relative">
         <VStack display={"flex"} justifyContent={"center"} alignItems="center">
           <Heading fontSize={"9xl"}>Watch your language!</Heading>
           <Heading fontSize={"6xl"}>The future of AAC smartwatch apps.</Heading>
-          <Heading fontSize={"5xl"}>A project by Mr. Humphrey Curtis.</Heading>
+
           <TestComponent />
         </VStack>
 
@@ -36,7 +38,7 @@ export const HomePage: React.FC = (): JSX.Element => {
         </Text>
       </Grid>
       {/* Our mission section*/}
-      <Grid backgroundColor={"green.100"} minH="100vh" position="relative">
+      <Grid minH="100vh" position="relative">
         <VStack
           mt="2rem"
           display={"flex"}
@@ -91,10 +93,10 @@ export const HomePage: React.FC = (): JSX.Element => {
       </Grid>
 
       {/* Watch out section*/}
-      <Grid backgroundColor={"blue.100"} minH="100vh" position="relative">
+      <Grid minH="100vh" position="relative">
         <SimpleGrid columns={2}>
           <Center>
-            <Text>Image collage goes here</Text>
+            <ImageCollage images={["", "", "g", "./phrases.png"]} />
           </Center>
           <Center>
             <VStack>
@@ -126,7 +128,7 @@ export const HomePage: React.FC = (): JSX.Element => {
       </Grid>
 
       {/* Watch in section*/}
-      <Grid backgroundColor={"yellow.100"} minH="100vh" position="relative">
+      <Grid minH="100vh" position="relative">
         <SimpleGrid columns={2}>
           <Center>
             <VStack>
@@ -156,18 +158,20 @@ export const HomePage: React.FC = (): JSX.Element => {
           </Center>
 
           <Center>
-            <Text>Image collage goes here</Text>
+            <ImageCollage images={["", "", "g", "./dialogue.png"]} />
           </Center>
         </SimpleGrid>
       </Grid>
 
       {/* Watch in section*/}
-      <Grid backgroundColor={"pink.100"} minH="100vh" position="relative">
+      <Grid minH="100vh" position="relative">
         <VStack mt="6rem">
           <Heading fontSize={"8xl"}>Video Demonstration</Heading>
-          <Heading fontSize={"4xl"}>See the apps for yourself!</Heading>
+          <Heading fontSize={"4xl"}>
+            See the apps for yourself! (embedded yt vid maybe)
+          </Heading>
 
-          <Heading mt="4rem">Embedded YT video can go here.</Heading>
+          <Image mt="4rem" fallbackSrc="https://via.placeholder.com/1000x500" />
         </VStack>
       </Grid>
     </>
