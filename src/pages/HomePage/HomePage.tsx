@@ -68,14 +68,15 @@ export const HomePage: React.FC = (): JSX.Element => {
               </Text>
               <Divider />
               <SimpleGrid columns={3} spacing={"2rem"} mt="4rem">
-                <Button colorScheme="teal" size={"lg"}>
-                  What is Aphasia?
-                </Button>
-                <Button colorScheme="teal" size={"lg"}>
+                <Button colorScheme="orange" size={"lg"}>
                   {" "}
                   Project Description
                 </Button>
-                <Button colorScheme="teal" size={"lg"}>
+                <Button colorScheme="blue" size={"lg"}>
+                  What is Aphasia?
+                </Button>
+
+                <Button colorScheme="blue" size={"lg"}>
                   View Contributors
                 </Button>
               </SimpleGrid>
@@ -115,10 +116,10 @@ export const HomePage: React.FC = (): JSX.Element => {
               <Divider />
 
               <SimpleGrid columns={2} mt="4rem" spacing={"2rem"}>
-                <Button size={"lg"} colorScheme="teal">
+                <Button size={"lg"} colorScheme="blue">
                   Learn More
                 </Button>
-                <Button size={"lg"} colorScheme="teal">
+                <Button size={"lg"} colorScheme="blue">
                   Install Now
                 </Button>
               </SimpleGrid>
@@ -147,10 +148,10 @@ export const HomePage: React.FC = (): JSX.Element => {
               <Divider />
 
               <SimpleGrid columns={2} mt="4rem" spacing={"2rem"}>
-                <Button size={"lg"} colorScheme="teal">
+                <Button size={"lg"} colorScheme="orange">
                   Learn More
                 </Button>
-                <Button size={"lg"} colorScheme="teal">
+                <Button size={"lg"} colorScheme="orange">
                   Install Now
                 </Button>
               </SimpleGrid>
