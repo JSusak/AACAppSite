@@ -8,19 +8,24 @@ export const InteractiveDesign = (): JSX.Element => {
   return (
     <Box
       position={"relative"}
-      width={"90%"}
-      height="90%"
+      width={"90vw"}
+      height="90vh"
       display={"flex"}
       alignItems={"center"}
       justifyContent={"center"}
+      overflow={"auto"}
+      borderRadius={"10px"}
     >
       <VStack>
-        <Heading fontSize={"7xl"}>Project Diagram</Heading>
+        <Heading fontSize={"7xl"} mt="2rem">
+          Project Diagram
+        </Heading>
         <SimpleGrid
+          mt="-2rem"
           columns={3}
           display={"flex"}
           justifyContent={"center"}
-          spacing={"200px"}
+          spacing={"5%"}
         >
           <div className="individualsWithAphasia">
             <div
@@ -44,44 +49,47 @@ export const InteractiveDesign = (): JSX.Element => {
           <Box
             mt="2rem"
             mb="2rem"
-            width="600px"
+            width="90%"
             backgroundColor={"orange.200"}
-            borderRadius={"10%"}
+            borderRadius={"50px"}
             id="codesign"
             boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
+            borderColor={"blue.100"}
+            borderWidth={"5px"}
           >
             <Center>
               <VStack>
-                <Heading mt="1rem">Co-Design Process</Heading>
+                <Heading mt="2rem">Co-Design Process</Heading>
 
                 <SimpleGrid
                   columns={2}
-                  spacing={"3rem"}
+                  spacing={"2rem"}
+                  padding={"0rem"}
                   mt="1rem"
                   mb="1rem"
                   id="codesign"
                 >
                   <InteractiveDesignIcon
-                    width={250}
-                    height={250}
+                    width={230}
+                    height={230}
                     text="Storyboarding"
                     id="box2"
                   />
                   <InteractiveDesignIcon
-                    width={250}
-                    height={250}
-                    text="Low-Fidelity Prototyping/Group Discussions"
+                    width={230}
+                    height={230}
+                    text="Group Discussion"
                     id="box3"
                   />
                   <InteractiveDesignIcon
-                    width={250}
-                    height={250}
+                    width={230}
+                    height={230}
                     text="High-Fidelity Prototyping"
                     id="box4"
                   />
                   <InteractiveDesignIcon
-                    width={250}
-                    height={250}
+                    width={230}
+                    height={230}
                     text="Experience Prototyping & Role Play"
                     id="box5"
                   />
@@ -96,9 +104,12 @@ export const InteractiveDesign = (): JSX.Element => {
           <Box
             mt="2rem"
             mb="2rem"
-            width="400px"
+            mr="1rem"
+            width="600px"
             backgroundColor={"orange.200"}
-            borderRadius={"10%"}
+            borderRadius={"50px"}
+            borderColor={"blue.100"}
+            borderWidth={"5px"}
             id="apps"
             boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
           >
@@ -120,6 +131,7 @@ export const InteractiveDesign = (): JSX.Element => {
                 <Image
                   src="./dialogue.png"
                   width={"230px"}
+                  mb="1rem"
                   borderRadius={"10%"}
                   fallbackSrc="https://via.placeholder.com/300x300"
                   id="dialogue"
