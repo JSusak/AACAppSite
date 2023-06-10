@@ -8,14 +8,18 @@ import {
   SimpleGrid,
   Image,
   Center,
+  Button,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { InteractiveDesign } from "./components/InteractiveDesign/InteractiveDesign";
+import { InteractiveDesignVertical } from "./components/InteractiveDesign/InteractiveDesignVertical";
 
 export const AboutPage: React.FC = (): JSX.Element => {
+  const [isLargerThan1360] = useMediaQuery("(min-width: 1360px)");
   return (
     <>
       {/* Top section */}
-      <Grid minH="93vh" position="relative" backgroundColor={"red.100"}>
+      <Grid minH="93vh" position="relative">
         <SimpleGrid columns={3}>
           <Center>
             <VStack>
@@ -70,7 +74,7 @@ export const AboutPage: React.FC = (): JSX.Element => {
       </Grid>
 
       {/* Project Overview section */}
-      <Grid minH="93vh" position="relative" backgroundColor={"green.100"}>
+      <Grid minH="93vh" position="relative">
         <SimpleGrid columns={2}>
           <VStack
             display={"flex"}
@@ -122,7 +126,7 @@ export const AboutPage: React.FC = (): JSX.Element => {
       </Grid>
 
       {/* Vision & Values section */}
-      <Grid minH="93vh" position="relative" backgroundColor={"blue.100"}>
+      <Grid minH="93vh" position="relative">
         <SimpleGrid columns={2}>
           <VStack
             display={"flex"}
@@ -156,8 +160,8 @@ export const AboutPage: React.FC = (): JSX.Element => {
           </VStack>
           <Center>
             <Image
-              width={"850px"}
-              height={"800px"}
+              width={"90%"}
+              height={"100%"}
               src="./kcl.png"
               borderRadius={"10%"}
               fallbackSrc="https://via.placeholder.com/850x800"
@@ -167,10 +171,50 @@ export const AboutPage: React.FC = (): JSX.Element => {
       </Grid>
 
       {/* Interactive Diagram section */}
-      <Grid minH="93vh" position="relative">
+      <Grid minH="93vh" position="relative" backgroundColor={"red.100"}>
         <Center>
-          <InteractiveDesign />
+          {isLargerThan1360 ? (
+            <InteractiveDesign />
+          ) : (
+            <InteractiveDesignVertical />
+          )}
         </Center>
+      </Grid>
+
+      {/* Aphasia Reconnectsection */}
+      <Grid minH="93vh" position="relative">
+        <VStack mt="2rem">
+          <Heading fontSize={"7xl"}>Our Charity</Heading>
+          <Text fontSize={"xl"} maxW="4xl" textAlign={"left"}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            perspiciatis reprehenderit, veniam obcaecati consequatur, nostrum
+            harum, vitae perferendis labore quisquam reiciendis atque nam earum?
+            Ipsum amet fugiat quam pariatur vel. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Enim quae maiores, dolore tenetur
+            corporis velit neque est, voluptatibus dicta doloremque fugit eum
+            nulla beatae. Culpa facilis fuga corporis ipsam ratione. Lorem ipsum
+            dolor sit amet consectetur, adipisicing elit
+          </Text>
+
+          <SimpleGrid columns={2} spacing={5} mt="2rem">
+            <Button size={"lg"} colorScheme="blue">
+              View Site
+            </Button>
+            <Button size={"lg"} colorScheme="blue">
+              Get Involved
+            </Button>
+          </SimpleGrid>
+
+          <Image
+            mt="2rem"
+            mb="2rem"
+            width={"1500px"}
+            height={"800px"}
+            src="./kcl.png"
+            borderRadius={"10%"}
+            fallbackSrc="https://via.placeholder.com/1500x800"
+          />
+        </VStack>
       </Grid>
     </>
   );
