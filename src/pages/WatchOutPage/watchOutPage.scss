@@ -1,0 +1,26 @@
+
+//from https://www.gradient-animator.com/
+.watchOutHero {
+    background: linear-gradient(322deg, #a7c2cc, #bee3f8, #2c5282);
+    background-size: 600% 600%;
+
+    -webkit-animation: watchOutGradient 30s ease infinite;
+    -moz-animation: watchOutGradient 30s ease infinite;
+    animation: watchOutGradient 30s ease infinite;
+}
+
+@-webkit-keyframes watchOutGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes watchOutGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes watchOutGradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

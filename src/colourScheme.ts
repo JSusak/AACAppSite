@@ -3,7 +3,7 @@
 //By keeping it in one file, colours are not hard-coded and can instead be referenced with a variable.
 export const Colours: { [key: string]: string } = {
   //base components (mainly shades of black/white for text and background)
-  lightModeBG: "#fafafa",
+  lightModeBG: "#fffcf5",
   lightModeHeader: "#1E2328",
   lightModeSecondary: "#333",
   lightModeMuted: "#00ff00",
@@ -17,4 +17,6 @@ export const Colours: { [key: string]: string } = {
   lightModeNavColHighlight: "#a7c2cc",
   lightModeNavColActive: "#b9ced6",
   lightModeMainAccent: "#49274a",
+
+  lightModeWatchOutAccent: "#90CDF4",
 };
