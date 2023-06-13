@@ -4,8 +4,7 @@ import { Avatar } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/layout";
 import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const testimonialVariants = {
   visible: {
@@ -35,11 +34,6 @@ export const UserTestimonial = ({
   reviewDate: string;
 }): JSX.Element => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  useEffect(() => {
-    console.log("Element is in view: ", isInView);
-  }, [isInView]);
 
   return (
     <motion.div ref={ref} variants={testimonialVariants}>
