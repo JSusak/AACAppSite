@@ -47,7 +47,30 @@ export const AppFeature = ({
         <Divider borderColor={Colours.lightModeHeader} />
         <Center>
           <Heading fontSize={"2xl"} m="2rem">
-            Numeric Fact 1 | Numeric Fact 2 | Numeric Fact 3
+            Numeric Fact{" "}
+            <Heading
+              as="span"
+              color={Colours.lightModeWatchOutAccent}
+              fontSize={"2xl"}
+            >
+              1
+            </Heading>{" "}
+            | Numeric Fact{" "}
+            <Heading
+              as="span"
+              color={Colours.lightModeWatchOutAccent}
+              fontSize={"2xl"}
+            >
+              2
+            </Heading>{" "}
+            | Numeric Fact{" "}
+            <Heading
+              as="span"
+              color={Colours.lightModeWatchOutAccent}
+              fontSize={"2xl"}
+            >
+              3
+            </Heading>{" "}
           </Heading>
         </Center>
         <Divider borderColor={Colours.lightModeHeader} />
@@ -68,6 +91,7 @@ export const AppFeature = ({
           fontSize={"xl"}
           mt="2rem"
           textAlign={isOnLeft ? "left" : "right"}
+          color={Colours.lightModeWatchOutAccent}
         >
           {catchyLine}
         </Heading>
