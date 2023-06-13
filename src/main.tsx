@@ -6,12 +6,15 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from './theme.ts'
 //can also replace with HashRouter
 import { BrowserRouter, } from "react-router-dom";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <ChakraProvider theme={theme}>
-        <App />
+        <ParallaxProvider>
+          <App />
+        </ParallaxProvider>
       </ChakraProvider>
     </BrowserRouter>
   </React.StrictMode>
