@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/layout";
 import { InteractiveDesignIcon } from "./InteractiveDesignIcon";
 import Xarrow from "react-xarrows";
-import { Image } from "@chakra-ui/image";
+import { FinalImageIcon } from "./FinalImageIcon";
 
 export const InteractiveDesignVertical = (): JSX.Element => {
   return (
@@ -22,6 +22,8 @@ export const InteractiveDesignVertical = (): JSX.Element => {
         borderRadius={"10px"}
         borderColor={"orange.300"}
       >
+        <Xarrow start="box1" end="codesign" color={"orange"} />
+        <Xarrow start="codesign" end="apps" color={"orange"} />
         <VStack mt="2rem">
           <Heading fontSize={"5xl"}>Project Diagram</Heading>
 
@@ -84,7 +86,7 @@ export const InteractiveDesignVertical = (): JSX.Element => {
                   <InteractiveDesignIcon
                     width={180}
                     height={180}
-                    text="Experience Prototyping & Role Play"
+                    text="Experience Prototyping"
                     id="box5"
                   />
                 </SimpleGrid>
@@ -94,7 +96,7 @@ export const InteractiveDesignVertical = (): JSX.Element => {
 
           <Box
             mb="2rem"
-            width={["75%", "75%", "60%"]}
+            width={["90%", "90%", "75%", "60%"]}
             backgroundColor={"orange.200"}
             borderRadius={"50px"}
             id="apps"
@@ -106,29 +108,26 @@ export const InteractiveDesignVertical = (): JSX.Element => {
               <Heading mt="1rem">Final Apps</Heading>
 
               <HStack padding={5} spacing={5}>
-                <Image
-                  src="./phrases.png"
-                  width={"150px"}
-                  borderRadius={"10%"}
-                  fallbackSrc="https://via.placeholder.com/150x150"
-                  id="phrases"
-                  boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
+                <FinalImageIcon
+                  headerName={"Watch Out"}
+                  id={"phrases"}
+                  imageURL={"./phrases.png"}
+                  width={180}
+                  height={180}
+                  linkTo={"watchOut"}
                 />
-
-                <Image
-                  src="./dialogue.png"
-                  width={"150px"}
-                  borderRadius={"10%"}
-                  fallbackSrc="https://via.placeholder.com/150x150"
-                  id="dialogue"
-                  boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
+                <FinalImageIcon
+                  headerName={"Watch In"}
+                  id={"dialogue"}
+                  imageURL={"./dialogue.png"}
+                  width={180}
+                  height={180}
+                  linkTo={"watchIn"}
                 />
               </HStack>
             </VStack>
           </Box>
         </VStack>
-        <Xarrow start="box1" end="codesign" color={"orange"} />
-        <Xarrow start="codesign" end="apps" color={"orange"} />
       </Box>
     </>
   );

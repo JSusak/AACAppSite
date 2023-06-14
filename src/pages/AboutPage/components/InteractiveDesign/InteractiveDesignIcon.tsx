@@ -54,10 +54,14 @@ export const InteractiveDesignIcon = ({
   return (
     <motion.div
       whileHover={{
-        scale: 1.8,
+        scale: 1.1,
       }}
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
+      onMouseEnter={() => {
+        setIsHover(true);
+      }}
+      onMouseLeave={() => {
+        setIsHover(false);
+      }}
       transition={{
         type: "spring",
         duration: 0.5,
@@ -85,7 +89,7 @@ export const InteractiveDesignIcon = ({
         <Center>
           <Image
             src="./kcl.png"
-            borderRadius={"50px"}
+            borderRadius={"44px"}
             fallbackSrc={`https://via.placeholder.com/${width}x${height}`}
           />
 
@@ -96,39 +100,46 @@ export const InteractiveDesignIcon = ({
             h="100%"
             transition="all 0.5s ease-in-out"
             position="absolute"
-            borderRadius={"50px"}
+            borderRadius={"44px"}
           >
-            <Center>
-              <VStack>
-                <Heading textAlign={"center"} fontSize={"2xl"} mt="1rem">
-                  {text}
-                </Heading>
-
-                <motion.span
-                  variants={overlayContent}
-                  animate={isHover ? "visible" : "hidden"}
-                >
-                  <Heading textAlign={"center"} fontSize={"md"}>
-                    Short description of task...........
-                  </Heading>
-                </motion.span>
-                <motion.span
-                  variants={overlayContent}
-                  animate={isHover ? "visible" : "hidden"}
-                >
-                  <Text textAlign={"center"} fontSize={"sm"}>
-                    Location of task?
-                  </Text>
-                </motion.span>
-
-                <motion.span
-                  variants={overlayContent}
-                  animate={isHover ? "visible" : "hidden"}
-                >
-                  <Link>Learn More</Link>
-                </motion.span>
-              </VStack>
-            </Center>
+            <VStack spacing={["0rem", "0rem", "-0.5rem", "0rem"]}>
+              <Heading
+                textAlign={"center"}
+                fontSize={["md", "md", "lg", "xl"]}
+                mt="1rem"
+              >
+                {text}
+              </Heading>
+              <Center>
+                <VStack mt="0.2rem">
+                  <motion.span
+                    variants={overlayContent}
+                    animate={isHover ? "visible" : "hidden"}
+                  >
+                    <Heading
+                      textAlign={"center"}
+                      fontSize={["sm", "sm", "md", "md"]}
+                    >
+                      Short description of task...........
+                    </Heading>
+                  </motion.span>
+                  <motion.span
+                    variants={overlayContent}
+                    animate={isHover ? "visible" : "hidden"}
+                  >
+                    <Text textAlign={"center"} fontSize={"sm"}>
+                      Location of task?
+                    </Text>
+                  </motion.span>
+                  <motion.span
+                    variants={overlayContent}
+                    animate={isHover ? "visible" : "hidden"}
+                  >
+                    <Link>See More</Link>
+                  </motion.span>
+                </VStack>
+              </Center>
+            </VStack>
           </Box>
         </Center>
       </Box>

@@ -1,7 +1,7 @@
 import { Box, Center, Heading, SimpleGrid, VStack } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/image";
 import { InteractiveDesignIcon } from "./InteractiveDesignIcon";
 import Xarrow from "react-xarrows";
+import { FinalImageIcon } from "./FinalImageIcon";
 //   width={"850px"}
 //height={"800px"}
 export const InteractiveDesign = (): JSX.Element => {
@@ -16,6 +16,8 @@ export const InteractiveDesign = (): JSX.Element => {
       overflow={"auto"}
       borderRadius={"10px"}
     >
+      <Xarrow start="box1" end="codesign" color={"orange"} />
+      <Xarrow start="codesign" end="apps" color={"orange"} />
       <VStack>
         <Heading fontSize={"7xl"} mt="2rem">
           Project Diagram
@@ -48,6 +50,7 @@ export const InteractiveDesign = (): JSX.Element => {
 
           <Box
             mt="2rem"
+            position={"relative"}
             mb="2rem"
             width="90%"
             backgroundColor={"orange.200"}
@@ -90,12 +93,9 @@ export const InteractiveDesign = (): JSX.Element => {
                   <InteractiveDesignIcon
                     width={230}
                     height={230}
-                    text="Experience Prototyping & Role Play"
+                    text="Experience Prototyping/Role Play"
                     id="box5"
                   />
-
-                  <Xarrow start="box1" end="codesign" color={"orange"} />
-                  <Xarrow start="codesign" end="apps" color={"orange"} />
                 </SimpleGrid>
               </VStack>
             </Center>
@@ -114,28 +114,25 @@ export const InteractiveDesign = (): JSX.Element => {
             boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
           >
             <Center>
-              <VStack>
+              <VStack spacing={"1rem"}>
                 <Heading mt="1rem" paddingTop={"1rem"}>
                   Final Apps
                 </Heading>
-                <Heading fontSize={"2xl"}>Watch Out</Heading>
-                <Image
-                  src="./phrases.png"
-                  width={"230px"}
-                  borderRadius={"10%"}
-                  fallbackSrc="https://via.placeholder.com/300x300"
-                  id="phrases"
-                  boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
+                <FinalImageIcon
+                  headerName={"Watch Out"}
+                  id={"phrases"}
+                  imageURL={"./phrases.png"}
+                  width={230}
+                  height={230}
+                  linkTo={"watchOut"}
                 />
-                <Heading fontSize={"2xl"}>Watch In</Heading>
-                <Image
-                  src="./dialogue.png"
-                  width={"230px"}
-                  mb="1rem"
-                  borderRadius={"10%"}
-                  fallbackSrc="https://via.placeholder.com/300x300"
-                  id="dialogue"
-                  boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
+                <FinalImageIcon
+                  headerName={"Watch In"}
+                  id={"dialogue"}
+                  imageURL={"./dialogue.png"}
+                  width={230}
+                  height={230}
+                  linkTo={"watchIn"}
                 />
               </VStack>
             </Center>
