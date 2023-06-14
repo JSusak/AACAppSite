@@ -12,7 +12,7 @@ import {
 
 export const VisionAndValues = (): JSX.Element => {
   return (
-    <Grid minH="93vh" position="relative" backgroundColor={"green.100"}>
+    <Grid minH="93vh" position="relative">
       <SimpleGrid columns={2}>
         <VStack display={"flex"} justifyContent={"center"} alignItems="center">
           <Heading fontSize={"7xl"} textAlign={"left"}>

@@ -6,7 +6,7 @@ import { useMediaQuery } from "@chakra-ui/media-query";
 export const InteractiveSection = (): JSX.Element => {
   const [isLargerThan1360] = useMediaQuery("(min-width: 1360px)");
   return (
-    <Grid minH="93vh" position="relative" backgroundColor={"red.100"}>
+    <Grid minH="93vh" position="relative">
       <Center>
         {isLargerThan1360 ? (
           <InteractiveDesign />

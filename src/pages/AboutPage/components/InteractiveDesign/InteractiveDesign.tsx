@@ -2,6 +2,7 @@ import { Box, Center, Heading, SimpleGrid, VStack } from "@chakra-ui/layout";
 import { InteractiveDesignIcon } from "./InteractiveDesignIcon";
 import Xarrow from "react-xarrows";
 import { FinalImageIcon } from "./FinalImageIcon";
+import { Colours } from "../../../../colourScheme";
 //   width={"850px"}
 //height={"800px"}
 export const InteractiveDesign = (): JSX.Element => {
@@ -15,6 +16,8 @@ export const InteractiveDesign = (): JSX.Element => {
       justifyContent={"center"}
       overflow={"auto"}
       borderRadius={"10px"}
+      borderWidth={"10px"}
+      borderColor={Colours.lightModeMainCol}
     >
       <Xarrow start="box1" end="codesign" color={"orange"} />
       <Xarrow start="codesign" end="apps" color={"orange"} />
