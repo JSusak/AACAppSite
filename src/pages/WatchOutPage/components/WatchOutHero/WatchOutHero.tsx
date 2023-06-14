@@ -3,6 +3,7 @@ import { WatchOutLogoAnim } from "../WatchOutLogoAnim/WatchOutLogoAnim";
 import { motion } from "framer-motion";
 import { Image } from "@chakra-ui/react";
 import { Colours } from "../../../../colourScheme";
+import { FaGithub } from "react-icons/fa";
 
 export const WatchOutHero = (): JSX.Element => {
   return (
@@ -29,6 +30,15 @@ export const WatchOutHero = (): JSX.Element => {
           >
             <Link>
               <Image src="./appstore.svg" width={"150px"} />
+            </Link>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.3 }}
+            transition={{ type: "spring" }}
+          >
+            <Link>
+              <FaGithub size="60px" />
             </Link>
           </motion.div>
         </HStack>
