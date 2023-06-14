@@ -27,7 +27,7 @@ export const VideoEmbed = (): JSX.Element => {
     >
       <Box borderWidth={"3px"} borderColor={"blue.100"}>
         <ReactPlayer
-          url="https://www.youtube.com/watch?v=C_sb2KYbi-4"
+          url="https://www.youtube.com/watch?v=SNsdeS8VKg4"
           width={"100%"}
           height={"700px"}
         />

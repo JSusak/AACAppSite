@@ -2,8 +2,11 @@ import { Grid, Center, SimpleGrid } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Parallax } from "react-scroll-parallax";
 import { AppFeature } from "../AppFeature/AppFeature";
+import { useMediaQuery } from "@chakra-ui/react";
 
 export const PhrasesSection = (): JSX.Element => {
+  const [isLargerThan790] = useMediaQuery("(min-width: 790px)");
+
   return (
     <Grid minH="100vh" position="relative">
       <SimpleGrid columns={[1, 1, 2, 2]} spacingY="2rem">
@@ -24,7 +27,7 @@ export const PhrasesSection = (): JSX.Element => {
 
         <Center>
           <Parallax
-            translateX={["-300px", "0px"]}
+            translateY={isLargerThan790 ? ["-300px", "0px"] : ["0px", "0px"]}
             easing="easeInOutQuad"
             opacity={[0, 1]}
           >
