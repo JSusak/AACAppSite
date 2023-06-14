@@ -59,7 +59,7 @@ export const AppFeature = ({
       whileInView="visible"
     >
       <Center>
-        <Box>
+        <Box w="90%">
           <motion.span variants={appFeatureSectionAnim}>
             <Heading
               fontSize={"6xl"}
