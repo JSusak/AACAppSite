@@ -13,6 +13,8 @@
     "@chakra-ui/react": "^2.7.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/bitter": "^5.0.4",
+    "@fontsource-variable/open-sans": "^5.0.4",
     "@fontsource/barlow": "^5.0.2",
     "@fontsource/fredoka-one": "^5.0.0",
     "@fontsource/poppins": "^5.0.2",
