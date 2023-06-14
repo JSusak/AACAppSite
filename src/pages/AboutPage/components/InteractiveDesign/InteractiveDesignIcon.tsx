@@ -53,8 +53,13 @@ export const InteractiveDesignIcon = ({
 
   return (
     <motion.div
+      drag
+      dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+      dragElastic={0.01}
+      whileDrag={{ scale: 1 }}
       whileHover={{
         scale: 1.1,
+        cursor: "pointer",
       }}
       onMouseEnter={() => {
         setIsHover(true);
