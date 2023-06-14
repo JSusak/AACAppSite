@@ -1,10 +1,18 @@
-import { Box, Center, Divider, Heading } from "@chakra-ui/layout";
+import {
+  Box,
+  Center,
+  Divider,
+  Heading,
+  List,
+  ListIcon,
+} from "@chakra-ui/layout";
 
 import { Text } from "@chakra-ui/layout";
-import { ListItem, UnorderedList } from "@chakra-ui/react";
+import { ListItem } from "@chakra-ui/react";
 import { Colours } from "../../../../colourScheme";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { ResponsiveSizes } from "../../../../responsiveSizes";
+import { FaArrowCircleRight } from "react-icons/fa";
 
 const appFeatureAnim = {
   hidden: { opacity: 0 },
@@ -43,15 +51,6 @@ export const AppFeature = ({
   catchyLine: string;
   isOnLeft: boolean;
 }): JSX.Element => {
-  let numericFactConcat = "";
-  //Appending all numeric facts into a single string before render.
-  useEffect(() => {
-    numericFacts.forEach((fact, index, arr) =>
-      index === arr.length - 1
-        ? numericFactConcat.concat(`${fact}`)
-        : numericFactConcat.concat(`${fact} | `)
-    );
-  });
   return (
     <motion.div
       variants={appFeatureAnim}
@@ -62,8 +61,12 @@ export const AppFeature = ({
         <Box w="90%">
           <motion.span variants={appFeatureSectionAnim}>
             <Heading
-              fontSize={"6xl"}
-              textAlign={isOnLeft ? "left" : "right"}
+              fontSize={ResponsiveSizes.SecondaryHeaderSizes}
+              textAlign={
+                isOnLeft
+                  ? ["center", "center", "left", "left"]
+                  : ["center", "center", "right", "right"]
+              }
               m="2rem"
             >
               {featureName}
@@ -78,45 +81,44 @@ export const AppFeature = ({
           </motion.span>
           <Divider borderColor={Colours.lightModeHeader} />
           <Center>
-            <Heading fontSize={"2xl"} m="2rem">
-              Numeric Fact{" "}
-              <Heading
-                as="span"
-                color={Colours.lightModeWatchOutAccent}
-                fontSize={"2xl"}
-              >
-                1
-              </Heading>{" "}
-              | Numeric Fact{" "}
-              <Heading
-                as="span"
-                color={Colours.lightModeWatchOutAccent}
-                fontSize={"2xl"}
-              >
-                2
-              </Heading>{" "}
-              | Numeric Fact{" "}
-              <Heading
-                as="span"
-                color={Colours.lightModeWatchOutAccent}
-                fontSize={"2xl"}
-              >
-                3
-              </Heading>{" "}
-            </Heading>
+            <List fontSize={"2xl"} m="2rem">
+              {numericFacts.map((fact, key) => {
+                return (
+                  <ListItem key={key}>
+                    <ListIcon
+                      as={FaArrowCircleRight}
+                      color={Colours.lightModeWatchOutAccent}
+                    />
+                    {fact}
+                  </ListItem>
+                );
+              })}
+            </List>
           </Center>
           <Divider borderColor={Colours.lightModeHeader} />
 
-          <Heading fontSize={"5xl"} m="2rem" textAlign={"center"}>
+          <Heading
+            fontSize={ResponsiveSizes.SecondaryHeaderSizes}
+            m="2rem"
+            textAlign={"center"}
+          >
             Useful when...
           </Heading>
 
           <Center>
-            <UnorderedList fontSize={"xl"}>
+            <List fontSize={"2xl"}>
               {usefulWhen.map((useful, key) => {
-                return <ListItem key={key}>{useful}</ListItem>;
+                return (
+                  <ListItem key={key}>
+                    <ListIcon
+                      as={FaArrowCircleRight}
+                      color={Colours.lightModeWatchOutAccent}
+                    />
+                    {useful}
+                  </ListItem>
+                );
               })}
-            </UnorderedList>
+            </List>
           </Center>
 
           <Heading
