@@ -1,5 +1,6 @@
-import { Button, Link } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 import { Colours } from "../../../../colourScheme";
+import { motion } from "framer-motion";
 
 export const PeopleIconButton = ({
   icon,
@@ -9,17 +10,16 @@ export const PeopleIconButton = ({
   webLink: string;
 }): JSX.Element => {
   return (
-    <Link isExternal href={webLink}>
-      {" "}
-      <Button
-        size="lg"
+    <motion.div whileHover={{ scale: 1.1 }}>
+      <Link
+        isExternal
+        href={webLink}
         display={webLink === "" ? "none" : ""}
         bg={"none"}
         alignItems={"center"}
         justifyContent={"center"}
         transition={"all 0.3s ease-in-out"}
         borderRadius={"100%"}
-        isDisabled={webLink === ""}
         _hover={{
           bg: "none",
           color: webLink === "" ? "none" : Colours.lightModeNavColHighlight,
@@ -28,8 +28,9 @@ export const PeopleIconButton = ({
         }}
         _focus={{ boxShadow: "none", borderColor: "transparent" }}
       >
+        {" "}
         {icon}
-      </Button>
-    </Link>
+      </Link>
+    </motion.div>
   );
 };
