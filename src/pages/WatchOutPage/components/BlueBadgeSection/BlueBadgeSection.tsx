@@ -6,7 +6,7 @@ import { AppFeature } from "../AppFeature/AppFeature";
 export const BlueBadgeSection = (): JSX.Element => {
   return (
     <Grid minH="100vh" position="relative">
-      <SimpleGrid columns={2}>
+      <SimpleGrid columns={[1, 1, 2, 2]} spacingY="2rem">
         <AppFeature
           featureName={"Feature 3"}
           featureDescription={
