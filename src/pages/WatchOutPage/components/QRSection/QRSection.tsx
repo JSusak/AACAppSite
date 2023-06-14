@@ -6,7 +6,11 @@ import { AppFeature } from "../AppFeature/AppFeature";
 export const QRSection = (): JSX.Element => {
   return (
     <Grid minH="100vh" position="relative">
-      <SimpleGrid columns={[1, 1, 2, 2]} spacingY="2rem">
+      <SimpleGrid
+        columns={[1, 1, 2, 2]}
+        spacingY="2rem"
+        m={["2rem", "2rem", "0rem", "0rem"]}
+      >
         <Center>
           <Parallax
             translateX={["300px", "0px"]}
@@ -15,8 +19,8 @@ export const QRSection = (): JSX.Element => {
           >
             <Image
               src="./watchOut/qrcode.jpg"
-              width={600}
-              height={600}
+              width={[400, 400, 600, 600]}
+              height={[400, 400, 600, 600]}
               fallbackSrc="https://via.placeholder.com/600"
               borderRadius={"20%"}
             />

@@ -23,16 +23,11 @@ export const BlueBadgeSection = (): JSX.Element => {
         />
 
         <Center>
-          <Parallax
-            speed={-8}
-            easing="easeInOutQuad"
-            opacity={[0, 1]}
-            scale={[0.5, 1]}
-          >
+          <Parallax speed={8} easing="easeInOutQuad" opacity={[0, 1]}>
             <Image
               src="./watchOut/bluebadge.jpg"
-              width={600}
-              height={600}
+              width={[400, 400, 600, 600]}
+              height={[400, 400, 600, 600]}
               fallbackSrc="https://via.placeholder.com/600"
               borderRadius={"20%"}
             />

@@ -32,8 +32,8 @@ export const PhrasesSection = (): JSX.Element => {
               src="./watchOut/menu.jpg"
               onMouseOver={e => (e.currentTarget.src = "./watchOut/seat.jpg")}
               onMouseOut={e => (e.currentTarget.src = "./watchOut/menu.jpg")}
-              width={600}
-              height={600}
+              width={[400, 400, 600, 600]}
+              height={[400, 400, 600, 600]}
               fallbackSrc="https://via.placeholder.com/600"
               borderRadius={"20%"}
             />
