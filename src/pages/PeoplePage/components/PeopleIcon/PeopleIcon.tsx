@@ -43,6 +43,7 @@ export const PeopleIcon = ({
     >
       <div className="personImage">
         <Image
+          boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
           borderRadius={"100%"}
           width={"100%"}
           height={"100%"}
@@ -85,7 +86,7 @@ export const PeopleIcon = ({
             </Heading>
             <SimpleGrid
               columns={secondaryWebLink === "" ? 1 : 2}
-              spacing={"5px"}
+              spacing={"2rem"}
             >
               <PeopleIconButton webLink={primaryWebLink} icon={primaryIcon} />
               <PeopleIconButton
