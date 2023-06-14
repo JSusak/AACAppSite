@@ -9,6 +9,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { ImageCollage } from "../ImageCollab/ImageCollage";
+import { Colours } from "../../../../colourScheme";
 
 export const WatchInPreview = (): JSX.Element => {
   return (
@@ -16,8 +17,10 @@ export const WatchInPreview = (): JSX.Element => {
       <SimpleGrid columns={2}>
         <Center>
           <VStack>
-            <Heading fontSize={"8xl"}>Watch In.</Heading>
-            <Heading fontSize={"4xl"}>Private cognitive support.</Heading>
+            <Heading fontSize={"8xl"}>Watch In AAC</Heading>
+            <Heading fontSize={"4xl"} color={Colours.lightModeMainCol}>
+              Private cognitive support.
+            </Heading>
             <Divider />
             <Text fontSize={"2xl"} maxW="xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -31,7 +34,7 @@ export const WatchInPreview = (): JSX.Element => {
             <Divider />
 
             <SimpleGrid columns={2} mt="4rem" spacing={"2rem"}>
-              <Button size={"lg"} colorScheme="orange">
+              <Button size={"lg"} colorScheme="orange" variant="outline">
                 Learn More
               </Button>
               <Button size={"lg"} colorScheme="orange">

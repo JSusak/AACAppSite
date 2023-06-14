@@ -19,8 +19,10 @@ export const WatchOutPreview = (): JSX.Element => {
         </Center>
         <Center>
           <VStack>
-            <Heading fontSize={"8xl"}>Watch Out.</Heading>
-            <Heading fontSize={"4xl"}>Face-to-face interactions.</Heading>
+            <Heading fontSize={"8xl"}>Watch Out AAC</Heading>
+            <Heading fontSize={"4xl"} color={"blue.100"}>
+              Face-to-face interactions.
+            </Heading>
             <Divider />
             <Text fontSize={"2xl"} maxW="xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -34,7 +36,7 @@ export const WatchOutPreview = (): JSX.Element => {
             <Divider />
 
             <SimpleGrid columns={2} mt="4rem" spacing={"2rem"}>
-              <Button size={"lg"} colorScheme="blue">
+              <Button size={"lg"} colorScheme="blue" variant="outline">
                 Learn More
               </Button>
               <Button size={"lg"} colorScheme="blue">
