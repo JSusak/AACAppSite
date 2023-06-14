@@ -32,35 +32,35 @@ export const WatchOutLogoAnim = (): JSX.Element => {
           <clipPath clipPathUnits="userSpaceOnUse" id="clipPath148">
             <path
               d="M 0,0 H 1562.5 V 1593.75 H 0 Z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
               id="path146"
             />
           </clipPath>
           <clipPath clipPathUnits="userSpaceOnUse" id="clipPath160">
             <path
               d="M 0,0 H 1562.5 V 1562.5 H 0 Z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
               id="path158"
             />
           </clipPath>
           <clipPath clipPathUnits="userSpaceOnUse" id="clipPath172">
             <path
               d="M 0,0 H 1562.5 V 1562.5 H 0 Z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
               id="path170"
             />
           </clipPath>
           <clipPath clipPathUnits="userSpaceOnUse" id="clipPath184">
             <path
               d="M 68.868187,172.16356 H 1493.8682 V 1390.9136 H 68.868187 Z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
               id="path182"
             />
           </clipPath>
           <clipPath clipPathUnits="userSpaceOnUse" id="clipPath172-9">
             <path
               d="M 0,0 H 1562.5 V 1562.5 H 0 Z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
               id="path170-8"
             />
           </clipPath>
@@ -71,12 +71,12 @@ export const WatchOutLogoAnim = (): JSX.Element => {
           transform="matrix(0.31999998,0,0,0.31999998,0,9.434666e-6)"
         >
           <g id="g166" transform="matrix(1,0,0,1.001197,0.58266441,0.57286946)">
-            <g id="g168" clip-path="url(#clipPath172)">
+            <g id="g168" clipPath="url(#clipPath172)">
               <g id="g174" transform="scale(3.125)"></g>
             </g>
           </g>
           <g id="g178">
-            <g id="g180" clip-path="url(#clipPath184)">
+            <g id="g180" clipPath="url(#clipPath184)">
               <g
                 id="g186"
                 transform="matrix(6.0495181,0,0,6.0513906,-504.45688,-504.987)"
