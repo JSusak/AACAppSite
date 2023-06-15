@@ -9,9 +9,9 @@ import {
 
 import { Text } from "@chakra-ui/layout";
 import { ListItem } from "@chakra-ui/react";
-import { Colours } from "../../../../colourScheme";
+import { Colours } from "../../../../../colourScheme";
 import { motion } from "framer-motion";
-import { ResponsiveSizes } from "../../../../responsiveSizes";
+import { ResponsiveSizes } from "../../../../../responsiveSizes";
 import { FaArrowCircleRight } from "react-icons/fa";
 
 const appFeatureAnim = {

@@ -2,9 +2,9 @@ import { Grid, Heading, VStack, HStack, Link } from "@chakra-ui/react";
 import { WatchOutLogoAnim } from "../WatchOutLogoAnim/WatchOutLogoAnim";
 import { motion } from "framer-motion";
 import { Image } from "@chakra-ui/react";
-import { Colours } from "../../../../colourScheme";
+import { Colours } from "../../../../../colourScheme";
 import { FaGithub } from "react-icons/fa";
-import { ResponsiveSizes } from "../../../../responsiveSizes";
+import { ResponsiveSizes } from "../../../../../responsiveSizes";
 
 export const WatchOutHero = (): JSX.Element => {
   return (
