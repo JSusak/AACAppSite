@@ -15,7 +15,7 @@ const videoEmbedVariants = {
   },
 };
 
-export const VideoEmbed = (): JSX.Element => {
+export const VideoEmbed = ({ link }: { link: string }): JSX.Element => {
   return (
     <motion.div
       variants={videoEmbedVariants}
@@ -26,11 +26,7 @@ export const VideoEmbed = (): JSX.Element => {
       }}
     >
       <Box borderWidth={"3px"} borderColor={"blue.100"}>
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=SNsdeS8VKg4"
-          width={"100%"}
-          height={"700px"}
-        />
+        <ReactPlayer url={link} width={"100%"} height={"700px"} />
       </Box>
     </motion.div>
   );
