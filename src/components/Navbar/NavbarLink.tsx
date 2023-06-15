@@ -25,6 +25,7 @@ export const NavbarLink = ({
       to={"/" + linkTo.toLowerCase()}
       /*
       // @ts-ignore */ //A workaround for the unneccessary typing error.
+      //Another error occurs here, to fix later... React has detected a change in the order of Hooks called by NavLink. This will lead to bugs and errors if not fixed.
       style={({ isActive }: { isActive: boolean }) => {
         return {
           backgroundColor: isActive
