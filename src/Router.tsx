@@ -2,6 +2,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { AboutPage } from "./pages/AboutPage/AboutPage";
 import { PeoplePage } from "./pages/PeoplePage/PeoplePage";
+import { WatchOutPage } from "./pages/WatchOutPage/WatchOutPage";
 
 //Contains all patterns relating to subpages. Depending on the routed subpage, a new page is shown to the user.
 export const AppRouter = (): JSX.Element => {
@@ -15,7 +16,7 @@ export const AppRouter = (): JSX.Element => {
       <Route path="people" element={<PeoplePage />} />
 
       <Route path="watchin" element={<HomePage />} />
-      <Route path="watchout" element={<HomePage />} />
+      <Route path="watchout" element={<WatchOutPage />} />
       <Route path="contact" element={<HomePage />} />
     </Routes>
   );
