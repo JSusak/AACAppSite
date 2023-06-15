@@ -3,6 +3,7 @@ import { Image } from "@chakra-ui/react";
 import { Parallax } from "react-scroll-parallax";
 import { AppFeature } from "../../../components/AppFeature/AppFeature";
 import { useMediaQuery } from "@chakra-ui/react";
+import { Colours } from "../../../../../colourScheme";
 
 export const PhrasesSection = (): JSX.Element => {
   const [isLargerThan790] = useMediaQuery("(min-width: 790px)");
@@ -23,6 +24,7 @@ export const PhrasesSection = (): JSX.Element => {
           ]}
           catchyLine={"Catchy line 1"}
           isOnLeft={true}
+          accentColour={Colours.lightModeWatchOutAccent}
         />
 
         <Center>
