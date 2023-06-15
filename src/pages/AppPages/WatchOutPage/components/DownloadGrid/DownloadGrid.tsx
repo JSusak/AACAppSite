@@ -1,6 +1,6 @@
 import { Center, SimpleGrid } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { DownloadEmbed } from "../DownloadEmbed/DownloadEmbed";
+import { DownloadEmbed } from "../../../components/DownloadEmbed/DownloadEmbed";
 import { Colours } from "../../../../../colourScheme";
 import {
   FaAccessibleIcon,

@@ -1,7 +1,7 @@
 import { Grid, Center, SimpleGrid } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { Parallax } from "react-scroll-parallax";
-import { AppFeature } from "../AppFeature/AppFeature";
+import { AppFeature } from "../../../components/AppFeature/AppFeature";
 import { useMediaQuery } from "@chakra-ui/react";
 
 export const PhrasesSection = (): JSX.Element => {

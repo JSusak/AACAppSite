@@ -1,5 +1,5 @@
 import { Grid, Heading, VStack } from "@chakra-ui/react";
-import { VideoEmbed } from "../VideoEmbed/VideoEmbed";
+import { VideoEmbed } from "../../../components/VideoEmbed/VideoEmbed";
 
 import { DownloadGrid } from "../DownloadGrid/DownloadGrid";
 
