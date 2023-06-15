@@ -22,6 +22,11 @@ export const PickerSection = (): JSX.Element => {
             opacity={[0, 1]}
           >
             <Image
+              src="./watchIn/picker.jpg"
+              onMouseOver={e =>
+                (e.currentTarget.src = "./watchIn/pickersearch.jpg")
+              }
+              onMouseOut={e => (e.currentTarget.src = "./watchIn/picker.jpg")}
               width={[400, 400, 600, 600]}
               height={[400, 400, 600, 600]}
               fallbackSrc="https://via.placeholder.com/600"

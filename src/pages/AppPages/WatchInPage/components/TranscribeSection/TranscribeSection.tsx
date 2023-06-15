@@ -36,6 +36,7 @@ export const TranscribeSection = (): JSX.Element => {
             opacity={[0, 1]}
           >
             <Image
+              src="./watchIn/transcribe.jpg"
               width={[400, 400, 600, 600]}
               height={[400, 400, 600, 600]}
               fallbackSrc="https://via.placeholder.com/600"
