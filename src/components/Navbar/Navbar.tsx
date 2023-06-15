@@ -48,11 +48,11 @@ export const Navbar: React.FC = (): JSX.Element => {
       style={{
         position: "sticky",
         top: "0px",
+        zIndex: 9000,
       }}
       variants={navbarAnims}
       animate={isScrollDown ? "hidden" : "active"}
       transition={{ duration: 0.5, type: "tween" }}
-      whileHover={{ opacity: 0.9 }}
     >
       <Box
         w="100%"
@@ -61,7 +61,7 @@ export const Navbar: React.FC = (): JSX.Element => {
         boxShadow={
           "rgba(0, 0, 0, 0.2) 0px 10px 30px -10px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px"
         }
-        zIndex={1000}
+        zIndex={9000}
         scrollBehavior={"smooth"}
       >
         <Container minW={"100%"} display={"flex"} alignItems={"center"} h={5}>
