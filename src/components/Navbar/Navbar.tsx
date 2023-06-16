@@ -97,7 +97,7 @@ export const Navbar: React.FC = (): JSX.Element => {
             >
               <NavbarLink linkText="About" linkTo="about" />
               <NavbarLink linkText="People" linkTo="people" />
-              <NavbarLink linkText="Co-Design" linkTo="contact" />
+              <NavbarLink linkText="Co-Design" linkTo="codesign" />
               <NavbarLink linkText="Watch In" linkTo="watchin" />
               <NavbarLink linkText="Watch Out" linkTo="watchout" />
             </HStack>

@@ -3,6 +3,7 @@ import { HomePage } from "./pages/HomePage/HomePage";
 import { AboutPage } from "./pages/AboutPage/AboutPage";
 import { PeoplePage } from "./pages/PeoplePage/PeoplePage";
 import { WatchOutPage } from "./pages/WatchOutPage/WatchOutPage";
+import { CoDesignPage } from "./pages/CoDesignPage/CoDesignPage";
 
 //Contains all patterns relating to subpages. Depending on the routed subpage, a new page is shown to the user.
 export const AppRouter = (): JSX.Element => {
@@ -17,7 +18,7 @@ export const AppRouter = (): JSX.Element => {
 
       <Route path="watchin" element={<HomePage />} />
       <Route path="watchout" element={<WatchOutPage />} />
-      <Route path="contact" element={<HomePage />} />
+      <Route path="codesign" element={<CoDesignPage />} />
     </Routes>
   );
 };
