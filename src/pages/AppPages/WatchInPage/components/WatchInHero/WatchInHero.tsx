@@ -19,7 +19,9 @@ export const WatchInHero = (): JSX.Element => {
       >
         {" "}
         <WatchInLogoAnim />
-        <Heading fontSize={ResponsiveSizes.HeroHeaderSizes}>Watch In.</Heading>
+        <Heading fontSize={ResponsiveSizes.HeroHeaderSizes}>
+          Watch In AAC
+        </Heading>
         <Heading fontSize={ResponsiveSizes.SecondaryHeaderSizes}>
           Aiding{" "}
           <Heading
