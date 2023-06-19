@@ -1,5 +1,9 @@
-import { Heading } from "@chakra-ui/react";
+import { TimelineSection } from "./components/TimelineSection/TimelineSection";
 
 export const CoDesignPage = (): JSX.Element => {
-  return <Heading>Codesign page</Heading>;
+  return (
+    <>
+      <TimelineSection />
+    </>
+  );
 };
