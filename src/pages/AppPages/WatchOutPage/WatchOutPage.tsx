@@ -4,19 +4,22 @@ import { PhrasesSection } from "./components/PhrasesSection/PhrasesSection";
 import { QRSection } from "./components/QRSection/QRSection";
 import { BlueBadgeSection } from "./components/BlueBadgeSection/BlueBadgeSection";
 import { WatchOutFurtherInfoSection } from "./components/WatchOutFurtherInfoSection/WatchOutFurtherInfoSection";
+import { PageTransition } from "../../../PageTransition";
 
 export const WatchOutPage = (): JSX.Element => {
   return (
     <>
-      <WatchOutHero />
+      <PageTransition>
+        <WatchOutHero />
 
-      <PhrasesSection />
+        <PhrasesSection />
 
-      <QRSection />
+        <QRSection />
 
-      <BlueBadgeSection />
+        <BlueBadgeSection />
 
-      <WatchOutFurtherInfoSection />
+        <WatchOutFurtherInfoSection />
+      </PageTransition>
     </>
   );
 };

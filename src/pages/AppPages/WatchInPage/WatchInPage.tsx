@@ -3,22 +3,25 @@ import { TranscribeSection } from "./components/TranscribeSection/TranscribeSect
 import { PickerSection } from "./components/PickerSection/PickerSection";
 import { BreatheSection } from "./components/BreatheSection/BreatheSection";
 import { WatchInFurtherInfoSection } from "./components/WatchInFurtherInfoSection/WatchInFurtherInfoSection";
+import { PageTransition } from "../../../PageTransition";
 
 //Main component for the Watch In page, containing all sections.
 export const WatchInPage = (): JSX.Element => {
   return (
     <>
-      <WatchInHero />
+      <PageTransition>
+        <WatchInHero />
 
-      <TranscribeSection />
+        <TranscribeSection />
 
-      <PickerSection />
+        <PickerSection />
 
-      {/**Breathe component */}
-      <BreatheSection />
+        {/**Breathe component */}
+        <BreatheSection />
 
-      {/**Further Info component */}
-      <WatchInFurtherInfoSection />
+        {/**Further Info component */}
+        <WatchInFurtherInfoSection />
+      </PageTransition>
     </>
   );
 };

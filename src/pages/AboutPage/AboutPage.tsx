@@ -4,26 +4,29 @@ import { VisionAndValues } from "./components/VisionAndValues/VisionAndValues";
 import { InteractiveSection } from "./components/InteractiveSection/InteractiveSection";
 import { OurCharity } from "./components/OurCharity/OurCharity";
 import { PublicationSection } from "./components/PublicationSection/PublicationSection";
+import { PageTransition } from "../../PageTransition";
 
 export const AboutPage: React.FC = (): JSX.Element => {
   return (
     <>
-      {/* Top section */}
-      <AboutTop />
-      {/* Project Overview section */}
-      <ProjectOverview />
+      <PageTransition>
+        {/* Top section */}
+        <AboutTop />
+        {/* Project Overview section */}
+        <ProjectOverview />
 
-      {/* Vision & Values section */}
-      <VisionAndValues />
+        {/* Vision & Values section */}
+        <VisionAndValues />
 
-      {/* Academic Publications section */}
-      <PublicationSection />
+        {/* Academic Publications section */}
+        <PublicationSection />
 
-      {/* Interactive Diagram section */}
-      <InteractiveSection />
+        {/* Interactive Diagram section */}
+        <InteractiveSection />
 
-      {/* Aphasia Reconnectsection */}
-      <OurCharity />
+        {/* Aphasia Reconnectsection */}
+        <OurCharity />
+      </PageTransition>
     </>
   );
 };
