@@ -16,16 +16,17 @@ export const AboutTop = (): JSX.Element => {
           <SimpleGrid
             columns={[2, 2, 2, 1]}
             display={["none", "none", "none", "block"]}
-            p="0.5rem"
           >
             <Image
               width={"300px"}
+              p="0.5rem"
               src="./kcl.png"
               fallbackSrc="https://via.placeholder.com/300"
               borderRadius={"10%"}
             />
             <Image
               width={"300px"}
+              p="0.5rem"
               src="./kcl.png"
               borderRadius={"10%"}
               fallbackSrc="https://via.placeholder.com/300"
@@ -52,15 +53,17 @@ export const AboutTop = (): JSX.Element => {
           </Text>
         </VStack>
         <Center>
-          <SimpleGrid columns={[2, 2, 2, 1]} spacingX={"0.5rem"} p="0.5rem">
+          <SimpleGrid columns={[2, 2, 2, 1]}>
             <Image
               width={"300px"}
+              p="0.5rem"
               src="./kcl.png"
               fallbackSrc="https://via.placeholder.com/300"
               borderRadius={"10%"}
             />
             <Image
               width={"300px"}
+              p="0.5rem"
               src="./kcl.png"
               fallbackSrc="https://via.placeholder.com/300"
               borderRadius={"10%"}
