@@ -32,6 +32,12 @@ export const Navbar: React.FC = (): JSX.Element => {
   //and therefore the navbar should be hidden.
   const checkScrollPos = (): void => {
     window.scrollY > scrollPos ? setIsScrollDown(true) : setIsScrollDown(false);
+
+    //Apple 'bouncing' bug.
+    if (window.scrollY < 50) {
+      setIsScrollDown(false);
+    }
+
     setScrollPos(window.scrollY);
   };
 
