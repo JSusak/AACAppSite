@@ -1,9 +1,12 @@
-import { Grid, Center, SimpleGrid, useMediaQuery } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
-import { Parallax } from "react-scroll-parallax";
-import { AppFeature } from "../AppFeature/AppFeature";
+import { Center, Grid, SimpleGrid, useMediaQuery } from "@chakra-ui/react";
 
-export const QRSection = (): JSX.Element => {
+import { Image } from "@chakra-ui/react";
+
+import { Colours } from "../../../../../colourScheme";
+import { Parallax } from "react-scroll-parallax";
+import { AppFeature } from "../../../components/AppFeature/AppFeature";
+
+export const PickerSection = (): JSX.Element => {
   const [isLargerThan790] = useMediaQuery("(min-width: 790px)");
   return (
     <Grid minH="100vh" position="relative">
@@ -19,7 +22,11 @@ export const QRSection = (): JSX.Element => {
             opacity={[0, 1]}
           >
             <Image
-              src="./watchOut/qrcode.jpg"
+              src="./watchIn/picker.jpg"
+              onMouseOver={e =>
+                (e.currentTarget.src = "./watchIn/pickersearch.jpg")
+              }
+              onMouseOut={e => (e.currentTarget.src = "./watchIn/picker.jpg")}
               width={[400, 400, 600, 600]}
               height={[400, 400, 600, 600]}
               fallbackSrc="https://via.placeholder.com/600"
@@ -41,6 +48,7 @@ export const QRSection = (): JSX.Element => {
           ]}
           catchyLine={"Catchy line 2"}
           isOnLeft={false}
+          accentColour={Colours.lightModeWatchInAccent}
         />
       </SimpleGrid>
     </Grid>

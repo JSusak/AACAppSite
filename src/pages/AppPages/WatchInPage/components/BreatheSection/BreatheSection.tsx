@@ -1,11 +1,11 @@
-import { Grid, Center, SimpleGrid, useMediaQuery } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
+import { Grid, SimpleGrid, Center, useMediaQuery } from "@chakra-ui/react";
 import { Parallax } from "react-scroll-parallax";
-import { AppFeature } from "../AppFeature/AppFeature";
+import { Colours } from "../../../../../colourScheme";
+import { AppFeature } from "../../../components/AppFeature/AppFeature";
+import { Image } from "@chakra-ui/react";
 
-export const BlueBadgeSection = (): JSX.Element => {
+export const BreatheSection = (): JSX.Element => {
   const [isLargerThan790] = useMediaQuery("(min-width: 790px)");
-
   return (
     <Grid minH="100vh" position="relative">
       <SimpleGrid columns={[1, 1, 2, 2]} spacingY="2rem">
@@ -22,16 +22,17 @@ export const BlueBadgeSection = (): JSX.Element => {
           ]}
           catchyLine={"Catchy line 3"}
           isOnLeft={true}
+          accentColour={Colours.lightModeWatchInAccent}
         />
 
         <Center>
           <Parallax
-            speed={isLargerThan790 ? 8 : 0}
+            translateX={isLargerThan790 ? ["-300px", "0px"] : ["0px", "0px"]}
             easing="easeInOutQuad"
             opacity={[0, 1]}
           >
             <Image
-              src="./watchOut/bluebadge.jpg"
+              src="./watchIn/breathe.jpeg"
               width={[400, 400, 600, 600]}
               height={[400, 400, 600, 600]}
               fallbackSrc="https://via.placeholder.com/600"

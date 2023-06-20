@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
 import { motion } from "framer-motion";
+import { Colours } from "../../../../colourScheme";
 
 const videoEmbedVariants = {
   visible: {
@@ -15,7 +16,7 @@ const videoEmbedVariants = {
   },
 };
 
-export const VideoEmbed = (): JSX.Element => {
+export const VideoEmbed = ({ link }: { link: string }): JSX.Element => {
   return (
     <motion.div
       variants={videoEmbedVariants}
@@ -25,12 +26,8 @@ export const VideoEmbed = (): JSX.Element => {
         width: "90%",
       }}
     >
-      <Box borderWidth={"3px"} borderColor={"blue.100"}>
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=SNsdeS8VKg4"
-          width={"100%"}
-          height={"700px"}
-        />
+      <Box borderWidth={"3px"} borderColor={Colours.lightModeHeader}>
+        <ReactPlayer url={link} width={"100%"} height={"700px"} />
       </Box>
     </motion.div>
   );

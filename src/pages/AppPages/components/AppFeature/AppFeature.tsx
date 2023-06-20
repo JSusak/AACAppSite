@@ -9,7 +9,6 @@ import {
 
 import { Text } from "@chakra-ui/layout";
 import { ListItem } from "@chakra-ui/react";
-import { Colours } from "../../../../colourScheme";
 import { motion } from "framer-motion";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { FaArrowCircleRight } from "react-icons/fa";
@@ -43,6 +42,7 @@ export const AppFeature = ({
   usefulWhen,
   catchyLine,
   isOnLeft,
+  accentColour,
 }: {
   featureName: string;
   featureDescription: string;
@@ -50,6 +50,7 @@ export const AppFeature = ({
   usefulWhen: string[];
   catchyLine: string;
   isOnLeft: boolean;
+  accentColour: string;
 }): JSX.Element => {
   return (
     <motion.div
@@ -79,23 +80,20 @@ export const AppFeature = ({
               </Text>
             </Center>
           </motion.span>
-          <Divider borderColor={Colours.lightModeHeader} />
+          <Divider borderColor={accentColour} />
           <Center>
             <List fontSize={"2xl"} m="2rem">
               {numericFacts.map((fact, key) => {
                 return (
                   <ListItem key={key}>
-                    <ListIcon
-                      as={FaArrowCircleRight}
-                      color={Colours.lightModeWatchOutAccent}
-                    />
+                    <ListIcon as={FaArrowCircleRight} color={accentColour} />
                     {fact}
                   </ListItem>
                 );
               })}
             </List>
           </Center>
-          <Divider borderColor={Colours.lightModeHeader} />
+          <Divider borderColor={accentColour} />
 
           <Heading
             fontSize={ResponsiveSizes.SecondaryHeaderSizes}
@@ -110,10 +108,7 @@ export const AppFeature = ({
               {usefulWhen.map((useful, key) => {
                 return (
                   <ListItem key={key}>
-                    <ListIcon
-                      as={FaArrowCircleRight}
-                      color={Colours.lightModeWatchOutAccent}
-                    />
+                    <ListIcon as={FaArrowCircleRight} color={accentColour} />
                     {useful}
                   </ListItem>
                 );
@@ -125,11 +120,11 @@ export const AppFeature = ({
             fontSize={"xl"}
             mt="2rem"
             textAlign={isOnLeft ? "left" : "right"}
-            color={Colours.lightModeWatchOutAccent}
+            color={accentColour}
           >
             {catchyLine}
           </Heading>
-          <Divider borderColor={Colours.lightModeHeader} />
+          <Divider borderColor={accentColour} />
         </Box>
       </Center>
     </motion.div>

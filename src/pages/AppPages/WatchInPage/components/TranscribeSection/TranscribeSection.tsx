@@ -1,10 +1,13 @@
-import { Grid, Center, SimpleGrid } from "@chakra-ui/react";
+import { Center, Grid, SimpleGrid } from "@chakra-ui/react";
+
 import { Image } from "@chakra-ui/react";
+
 import { Parallax } from "react-scroll-parallax";
-import { AppFeature } from "../AppFeature/AppFeature";
+import { Colours } from "../../../../../colourScheme";
+import { AppFeature } from "../../../components/AppFeature/AppFeature";
 import { useMediaQuery } from "@chakra-ui/react";
 
-export const PhrasesSection = (): JSX.Element => {
+export const TranscribeSection = (): JSX.Element => {
   const [isLargerThan790] = useMediaQuery("(min-width: 790px)");
 
   return (
@@ -23,18 +26,17 @@ export const PhrasesSection = (): JSX.Element => {
           ]}
           catchyLine={"Catchy line 1"}
           isOnLeft={true}
+          accentColour={Colours.lightModeWatchInAccent}
         />
 
         <Center>
           <Parallax
-            translateY={isLargerThan790 ? ["-300px", "0px"] : ["0px", "0px"]}
+            translateX={isLargerThan790 ? ["-300px", "0px"] : ["0px", "0px"]}
             easing="easeInOutQuad"
             opacity={[0, 1]}
           >
             <Image
-              src="./watchOut/menu.jpg"
-              onMouseOver={e => (e.currentTarget.src = "./watchOut/seat.jpg")}
-              onMouseOut={e => (e.currentTarget.src = "./watchOut/menu.jpg")}
+              src="./watchIn/transcribe.jpg"
               width={[400, 400, 600, 600]}
               height={[400, 400, 600, 600]}
               fallbackSrc="https://via.placeholder.com/600"

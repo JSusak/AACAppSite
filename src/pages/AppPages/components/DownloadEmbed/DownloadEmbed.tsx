@@ -44,12 +44,23 @@ export const DownloadEmbed = ({
       whileHover={{ scale: 1.05, textDecoration: "none" }}
       variants={downloadVariants}
     >
-      <Link download href={embedLink}>
+      <Link
+        download
+        href={embedLink}
+        _hover={{
+          "#embedHeading": {
+            textDecoration: `underline dashed ${embedIcon.props.color}`,
+          },
+          textDecoration: "none",
+        }}
+      >
         <Card w="100%">
           <CardHeader>
             <VStack>
               {embedIcon}
-              <Heading size="lg">{embedName}</Heading>
+              <Heading size="lg" id="embedHeading">
+                {embedName}
+              </Heading>
             </VStack>
           </CardHeader>
           <CardBody>

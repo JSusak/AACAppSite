@@ -3,7 +3,7 @@ import { WatchOutHero } from "./components/WatchOutHero/WatchOutHero";
 import { PhrasesSection } from "./components/PhrasesSection/PhrasesSection";
 import { QRSection } from "./components/QRSection/QRSection";
 import { BlueBadgeSection } from "./components/BlueBadgeSection/BlueBadgeSection";
-import { FurtherInfoSection } from "./components/FurtherInfoSection/FurtherInfoSection";
+import { WatchOutFurtherInfoSection } from "./components/WatchOutFurtherInfoSection/WatchOutFurtherInfoSection";
 
 export const WatchOutPage = (): JSX.Element => {
   return (
@@ -16,7 +16,7 @@ export const WatchOutPage = (): JSX.Element => {
 
       <BlueBadgeSection />
 
-      <FurtherInfoSection />
+      <WatchOutFurtherInfoSection />
     </>
   );
 };
