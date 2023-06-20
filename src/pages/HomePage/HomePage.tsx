@@ -14,7 +14,7 @@ export const HomePage: React.FC = (): JSX.Element => {
       <OurMission />
       <WatchOutPreview />
       <WatchInPreview />
-      <VideoPreview />
+
     </>
   );
 };
