@@ -12,6 +12,19 @@ import { Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Colours } from "../../../../colourScheme";
 
+const publicationEmbedAnim = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 3,
+      type: "spring",
+    },
+  },
+};
+
 export const PublicationEmbed = ({
   publicationName,
   publicationImage,
@@ -26,7 +39,11 @@ export const PublicationEmbed = ({
   paperURL: string;
 }): JSX.Element => {
   return (
-    <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring" }}>
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring" }}
+      variants={publicationEmbedAnim}
+    >
       <Link isExternal href={paperURL} style={{ textDecoration: "none" }}>
         <Card w="100%" borderRadius={"10px"}>
           <VStack>
