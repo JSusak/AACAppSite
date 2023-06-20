@@ -11,13 +11,13 @@ import {
 export const ProjectOverview = (): JSX.Element => {
   return (
     <Grid minH="93vh" position="relative">
-      <SimpleGrid columns={2}>
+      <SimpleGrid columns={[1, 1, 1, 2]}>
         <VStack display={"flex"} justifyContent={"center"} alignItems="center">
-          <Heading fontSize={"7xl"} textAlign={"left"}>
+          <Heading fontSize={"7xl"} textAlign={"center"}>
             Project Description
           </Heading>
 
-          <Text fontSize={"xl"} maxW="3xl" textAlign={"left"}>
+          <Text fontSize={"xl"} maxW="90%" textAlign={"left"}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             maxime, suscipit ut in tempora adipisci ea repellendus aliquam
             ducimus? Distinctio necessitatibus ea, perspiciatis fugit officiis
@@ -30,7 +30,7 @@ export const ProjectOverview = (): JSX.Element => {
             Research Funding
           </Heading>
 
-          <Text fontSize={"xl"} maxW="3xl" textAlign={"left"}>
+          <Text fontSize={"xl"} maxW="90%" textAlign={"left"}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             maxime, suscipit ut in tempora adipisci ea repellendus aliquam
             ducimus? Distinctio necessitatibus ea, perspiciatis fugit officiis
@@ -41,15 +41,15 @@ export const ProjectOverview = (): JSX.Element => {
           </Text>
         </VStack>
         <Center>
-          <SimpleGrid columns={2} spacing={"20px"}>
+          <SimpleGrid columns={2} spacingX={"0.5rem"} p="0.5rem">
             <Image
               src="./kcl.png"
-              fallbackSrc="https://via.placeholder.com/400x400"
+              fallbackSrc="https://via.placeholder.com/300x300"
               borderRadius={"10%"}
             />
             <Image
               src="./kcl.png"
-              fallbackSrc="https://via.placeholder.com/400x400"
+              fallbackSrc="https://via.placeholder.com/300x300"
               borderRadius={"10%"}
             />
           </SimpleGrid>

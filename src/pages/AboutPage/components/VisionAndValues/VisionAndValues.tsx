@@ -13,13 +13,13 @@ import {
 export const VisionAndValues = (): JSX.Element => {
   return (
     <Grid minH="93vh" position="relative">
-      <SimpleGrid columns={2}>
+      <SimpleGrid columns={[1, 1, 1, 2]}>
         <VStack display={"flex"} justifyContent={"center"} alignItems="center">
-          <Heading fontSize={"7xl"} textAlign={"left"}>
+          <Heading fontSize={"7xl"} textAlign={"center"}>
             Overall Vision & Values
           </Heading>
 
-          <Text fontSize={"xl"} maxW="3xl" textAlign={"left"}>
+          <Text fontSize={"xl"} maxW="90%" textAlign={"left"}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             maxime, suscipit ut in tempora adipisci ea repellendus aliquam
             ducimus? Distinctio necessitatibus ea, perspiciatis fugit officiis
@@ -46,7 +46,7 @@ export const VisionAndValues = (): JSX.Element => {
             height={"90%"}
             src="./kcl.png"
             borderRadius={"10%"}
-            fallbackSrc="https://via.placeholder.com/850x800"
+            fallbackSrc="https://via.placeholder.com/800x800"
           />
         </Center>
       </SimpleGrid>

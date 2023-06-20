@@ -12,7 +12,11 @@ export const OurCharity = (): JSX.Element => {
     <Grid minH="93vh" position="relative">
       <VStack mt="2rem">
         <Heading fontSize={"7xl"}>Our Charity</Heading>
-        <Text fontSize={"xl"} maxW="4xl" textAlign={"left"}>
+        <Text
+          fontSize={"xl"}
+          maxW={["90%", "90%", "3xl", "3xl"]}
+          textAlign={"left"}
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
           perspiciatis reprehenderit, veniam obcaecati consequatur, nostrum
           harum, vitae perferendis labore quisquam reiciendis atque nam earum?
@@ -35,10 +39,11 @@ export const OurCharity = (): JSX.Element => {
         <Image
           mt="2rem"
           mb="2rem"
-          width={"1500px"}
+          width={"95%"}
           height={"800px"}
           src="./kcl.png"
-          borderRadius={"10%"}
+          borderRadius={"10px"}
+          objectFit={"cover"}
           fallbackSrc="https://via.placeholder.com/1500x800"
         />
       </VStack>

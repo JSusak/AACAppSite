@@ -25,11 +25,18 @@ export const PublicationSection = (): JSX.Element => {
     <Grid minH="93vh" position="relative">
       <Center>
         <VStack>
-          <Heading fontSize={"7xl"} textAlign={"left"}>
+          <Heading
+            fontSize={"7xl"}
+            textAlign={["center", "center", "center", "left"]}
+          >
             Academic Publications
           </Heading>
 
-          <Text fontSize={"xl"} maxW="3xl" textAlign={"left"}>
+          <Text
+            fontSize={"xl"}
+            maxW={["90%", "90%", "3xl", "3xl"]}
+            textAlign={"left"}
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             maxime, suscipit ut in tempora adipisci ea repellendus aliquam
             ducimus? Distinctio necessitatibus ea, perspiciatis fugit officiis
@@ -43,6 +50,7 @@ export const PublicationSection = (): JSX.Element => {
             variants={publicationSectionAnim}
             initial="hidden"
             whileInView={"visible"}
+            viewport={{ once: true }}
           >
             <Center>
               <SimpleGrid

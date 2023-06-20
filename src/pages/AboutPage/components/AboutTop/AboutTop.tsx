@@ -11,9 +11,13 @@ import {
 export const AboutTop = (): JSX.Element => {
   return (
     <Grid minH="93vh" position="relative">
-      <SimpleGrid columns={3}>
+      <SimpleGrid columns={[1, 1, 1, 3]} spacingX="2rem">
         <Center>
-          <VStack>
+          <SimpleGrid
+            columns={[2, 2, 2, 1]}
+            display={["none", "none", "none", "block"]}
+            p="0.5rem"
+          >
             <Image
               width={"300px"}
               src="./kcl.png"
@@ -26,12 +30,18 @@ export const AboutTop = (): JSX.Element => {
               borderRadius={"10%"}
               fallbackSrc="https://via.placeholder.com/300"
             />
-          </VStack>
+          </SimpleGrid>
         </Center>
-        <VStack display={"flex"} justifyContent={"center"} alignItems="center">
+        <VStack
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems="center"
+          ml="1rem"
+          mr="1rem"
+        >
           <Heading fontSize={"9xl"}>About</Heading>
 
-          <Text fontSize={"xl"} maxW="2xl" textAlign={"center"}>
+          <Text fontSize={"xl"} maxW="90%" textAlign={"center"}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             maxime, suscipit ut in tempora adipisci ea repellendus aliquam
             ducimus? Distinctio necessitatibus ea, perspiciatis fugit officiis
@@ -42,7 +52,7 @@ export const AboutTop = (): JSX.Element => {
           </Text>
         </VStack>
         <Center>
-          <VStack>
+          <SimpleGrid columns={[2, 2, 2, 1]} spacingX={"0.5rem"} p="0.5rem">
             <Image
               width={"300px"}
               src="./kcl.png"
@@ -55,7 +65,7 @@ export const AboutTop = (): JSX.Element => {
               fallbackSrc="https://via.placeholder.com/300"
               borderRadius={"10%"}
             />
-          </VStack>
+          </SimpleGrid>
         </Center>
       </SimpleGrid>
     </Grid>
