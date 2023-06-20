@@ -86,7 +86,7 @@ export const Navbar: React.FC = (): JSX.Element => {
                 },
               }}
               to={"/"}
-              style={{ margin: "auto" }}
+              id="homeLink"
             >
               <Heading
                 className="navLogoText"
