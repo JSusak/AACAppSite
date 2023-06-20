@@ -45,10 +45,12 @@ export const Navbar: React.FC = (): JSX.Element => {
 
   return (
     <motion.div
+      id="navbar"
       style={{
         position: "sticky",
         top: "0px",
         zIndex: 9000,
+        transition: "opacity 0.2s ease-in-out",
       }}
       variants={navbarAnims}
       animate={isScrollDown ? "hidden" : "active"}

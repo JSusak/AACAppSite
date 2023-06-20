@@ -64,7 +64,13 @@ export const TimelineCard = ({
           height={`100%`}
           borderRadius={"50px"}
           position={"relative"}
-          onClick={onOpen}
+          onClick={() => {
+            if (document.getElementById("navbar") != null) {
+              document.getElementById("navbar")!.style.opacity = "0";
+              document.getElementById("navbar")!.style.pointerEvents = "none";
+            }
+            onOpen();
+          }}
         >
           <Center>
             <Image
@@ -84,9 +90,16 @@ export const TimelineCard = ({
       {/*Modal containing the overall description of the activity, main tasks which occurreed, location...*/}
       <Modal
         isOpen={isOpen}
-        onClose={onClose}
+        onClose={() => {
+          if (document.getElementById("navbar") != null) {
+            console.log(document.getElementById("navbar"));
+            document.getElementById("navbar")!.style.opacity = "1";
+            document.getElementById("navbar")!.style.pointerEvents = "";
+          }
+          onClose();
+        }}
         isCentered
-        size={"xl"}
+        size={["md", "md", "lg", "xl"]}
         scrollBehavior="inside"
       >
         <ModalOverlay />
