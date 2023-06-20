@@ -3,6 +3,7 @@ import { TimelineCard } from "./TimelineCard";
 import Xarrow from "react-xarrows";
 import { Colours } from "../../../../colourScheme";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const timelineBeadAnim = {
   hidden: {
@@ -52,6 +53,8 @@ export const TimelineBeadSection = ({
   activityDate: string;
   taskList: string[];
 }): JSX.Element => {
+  const [arrow, setArrow] = useState(false);
+
   const SectionCard = (): JSX.Element => {
     return (
       <TimelineCard
@@ -62,22 +65,27 @@ export const TimelineBeadSection = ({
         activityDate={activityDate}
         taskList={taskList}
         activityLocation={activityLocation}
+        onImageLoad={function (): void {
+          setArrow(true);
+        }}
       />
     );
   };
   return (
     <Box className="timelineSection" zIndex={15}>
-      <motion.div
-        variants={timelineArrowAnim}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <Xarrow
-          start={`bead${orderInTimeline.toString()}`}
-          end={`workshop${orderInTimeline.toString()}`}
-          color={Colours.lightModeMainCol}
-        />
-      </motion.div>
+      {arrow ? (
+        <motion.div
+          variants={timelineArrowAnim}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <Xarrow
+            start={`bead${orderInTimeline.toString()}`}
+            end={`workshop${orderInTimeline.toString()}`}
+            color={Colours.lightModeMainCol}
+          />
+        </motion.div>
+      ) : null}
       <SimpleGrid columns={3}>
         {isOnLeft ? <SectionCard /> : <Box></Box>}
         <Center>

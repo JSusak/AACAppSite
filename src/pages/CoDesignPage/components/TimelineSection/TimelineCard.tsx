@@ -39,6 +39,7 @@ export const TimelineCard = ({
   activityLocation,
   activityDate,
   taskList,
+  onImageLoad,
 }: {
   id: string;
   imageURL: string;
@@ -47,6 +48,7 @@ export const TimelineCard = ({
   activityLocation: string;
   activityDate: string;
   taskList: string[];
+  onImageLoad: () => void;
 }): JSX.Element => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -74,6 +76,7 @@ export const TimelineCard = ({
         >
           <Center>
             <Image
+              onLoad={onImageLoad}
               src={imageURL}
               width={"100%"}
               height={"100%"}
