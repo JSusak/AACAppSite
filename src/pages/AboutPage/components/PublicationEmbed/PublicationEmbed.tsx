@@ -43,6 +43,7 @@ export const PublicationEmbed = ({
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring" }}
       variants={publicationEmbedAnim}
+      viewport={{ once: true }}
     >
       <Link isExternal href={paperURL} style={{ textDecoration: "none" }}>
         <Card w="100%" borderRadius={"10px"}>
