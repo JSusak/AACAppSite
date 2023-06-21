@@ -8,6 +8,7 @@ import {
   Image,
   Center,
 } from "@chakra-ui/react";
+import { ResponsiveSizes } from "../../../../responsiveSizes";
 
 export const PeopleTop = (): JSX.Element => {
   return (
@@ -25,7 +26,7 @@ export const PeopleTop = (): JSX.Element => {
 
         <Center>
           <VStack>
-            <Heading fontSize={"9xl"}>People</Heading>
+            <Heading fontSize={ResponsiveSizes.HeroHeaderSizes}>People</Heading>
             <Text fontSize={"xl"} maxW="90%" textAlign={"center"}>
               <Highlight
                 query={[

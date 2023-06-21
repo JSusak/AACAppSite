@@ -1,5 +1,6 @@
 import { Center, Grid, Heading, SimpleGrid, VStack } from "@chakra-ui/react";
 import { PeopleIcon } from "../PeopleIcon/PeopleIcon";
+import { ResponsiveSizes } from "../../../../responsiveSizes";
 
 interface PersonType {
   personName: string;
@@ -25,10 +26,13 @@ export const ListOfPeopleSection = ({
   return (
     <Grid minH="43vh" position="relative">
       <VStack>
-        <Heading fontSize={"7xl"} textAlign={"center"}>
+        <Heading
+          fontSize={ResponsiveSizes.SecondaryHeaderSizes}
+          textAlign={"center"}
+        >
           {sectionHeading}
         </Heading>
-        <Heading fontSize={"3xl"} textAlign={"center"}>
+        <Heading fontSize={["2xl", "2xl", "3xl", "3xl"]} textAlign={"center"}>
           {sectionSubheading}
         </Heading>
         <Center>
