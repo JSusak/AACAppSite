@@ -7,6 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { PublicationEmbed } from "../PublicationEmbed/PublicationEmbed";
+import { publications } from "../../publications";
 import { motion } from "framer-motion";
 
 const publicationSectionAnim = {
@@ -60,56 +61,18 @@ export const PublicationSection = (): JSX.Element => {
                 mb="2rem"
                 width={"90%"}
               >
-                <PublicationEmbed
-                  publicationName={"Academic Paper 1"}
-                  publicationImage={"./images.jpg"}
-                  publicationAuthors={["Author 1", "Author 2", "Author 3"]}
-                  inProceedingsOf={
-                    "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI), 2019."
-                  }
-                  paperURL={
-                    "https://kclpure.kcl.ac.uk/ws/portalfiles/portal/197593195/chi_2023_no_copyright.pdf"
-                  }
-                />
-                <PublicationEmbed
-                  publicationName={"Academic Paper 2"}
-                  publicationImage={"./images.jpg"}
-                  publicationAuthors={["Author 1", "Author 2", "Author 3"]}
-                  inProceedingsOf={
-                    "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI), 2019."
-                  }
-                  paperURL={
-                    "https://kclpure.kcl.ac.uk/ws/portalfiles/portal/197593195/chi_2023_no_copyright.pdf"
-                  }
-                />
-                <PublicationEmbed
-                  publicationName={"Academic Paper 3"}
-                  publicationImage={"./images.jpg"}
-                  publicationAuthors={[
-                    "Author 1",
-                    "Author 2",
-                    "Author 3",
-                    "author 4",
-                    "authro 5",
-                  ]}
-                  inProceedingsOf={
-                    "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI), 2019."
-                  }
-                  paperURL={
-                    "https://kclpure.kcl.ac.uk/ws/portalfiles/portal/197593195/chi_2023_no_copyright.pdf"
-                  }
-                />
-                <PublicationEmbed
-                  publicationName={"Academic Paper 4"}
-                  publicationImage={"./images.jpg"}
-                  publicationAuthors={["Author 1", "Author 2", "Author 3"]}
-                  inProceedingsOf={
-                    "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI), 2019."
-                  }
-                  paperURL={
-                    "https://kclpure.kcl.ac.uk/ws/portalfiles/portal/197593195/chi_2023_no_copyright.pdf"
-                  }
-                />
+                {publications.map((publication, index) => {
+                  return (
+                    <PublicationEmbed
+                      key={`publication${index}`}
+                      publicationName={publication.publicationName}
+                      publicationImage={publication.publicationImage}
+                      publicationAuthors={publication.publicationAuthors}
+                      inProceedingsOf={publication.inProceedingsOf}
+                      paperURL={publication.paperURL}
+                    />
+                  );
+                })}
               </SimpleGrid>
             </Center>
           </motion.div>
