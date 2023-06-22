@@ -43,9 +43,11 @@ export const DownloadEmbed = ({
     <motion.div
       whileHover={{ scale: 1.05, textDecoration: "none" }}
       variants={downloadVariants}
+      viewport={{ once: true }}
     >
       <Link
         download
+        isExternal
         href={embedLink}
         _hover={{
           "#embedHeading": {
@@ -54,7 +56,7 @@ export const DownloadEmbed = ({
           textDecoration: "none",
         }}
       >
-        <Card w="100%">
+        <Card w="100%" borderRadius={"10px"}>
           <CardHeader>
             <VStack>
               {embedIcon}

@@ -1,4 +1,4 @@
-import { Center, SimpleGrid } from "@chakra-ui/react";
+import { Box, Center, SimpleGrid } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
@@ -20,23 +20,25 @@ export const DownloadGrid = ({
   children: ReactNode;
 }): JSX.Element => {
   return (
-    <Center>
-      <motion.div
-        variants={downloadGrid}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <Center>
-          <SimpleGrid
-            columns={[1, 1, 1, 2]}
-            spacing={"2rem"}
-            mt="2rem"
-            width={"90%"}
-          >
-            {children}
-          </SimpleGrid>
-        </Center>
-      </motion.div>
-    </Center>
+    <Box w="100%">
+      <Center>
+        <motion.div
+          variants={downloadGrid}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <Center>
+            <SimpleGrid
+              columns={[1, 1, 1, 2]}
+              spacing={"2rem"}
+              mt="2rem"
+              width={"90%"}
+            >
+              {children}
+            </SimpleGrid>
+          </Center>
+        </motion.div>
+      </Center>
+    </Box>
   );
 };
