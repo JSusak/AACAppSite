@@ -12,6 +12,8 @@ import { ListItem } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { FaArrowCircleRight } from "react-icons/fa";
+import { StepType } from "../AppFeatureSection/AppFeatureSection";
+import { AppFeatureCarousel } from "../AppFeatureCarousel/AppFeatureCarousel";
 
 const appFeatureAnim = {
   hidden: { opacity: 0 },
@@ -36,20 +38,22 @@ const appFeatureSectionAnim = {
 };
 
 export const AppFeature = ({
+  sectionId,
   featureName,
   featureDescription,
   numericFacts,
-  usefulWhen,
   catchyLine,
   isOnLeft,
+  featureSteps,
   accentColour,
 }: {
+  sectionId: string;
   featureName: string;
   featureDescription: string;
   numericFacts: string[];
-  usefulWhen: string[];
   catchyLine: string;
   isOnLeft: boolean;
+  featureSteps: StepType[];
   accentColour: string;
 }): JSX.Element => {
   return (
@@ -57,6 +61,7 @@ export const AppFeature = ({
       variants={appFeatureAnim}
       initial="hidden"
       whileInView="visible"
+      id={sectionId}
     >
       <Center>
         <Box w="90%">
@@ -97,24 +102,17 @@ export const AppFeature = ({
 
           <Heading
             fontSize={ResponsiveSizes.SecondaryHeaderSizes}
-            m="2rem"
+            mt="2rem"
             textAlign={"center"}
           >
-            Useful when:
+            How to use:
           </Heading>
 
-          <Center>
-            <List fontSize={"2xl"}>
-              {usefulWhen.map((useful, key) => {
-                return (
-                  <ListItem key={key}>
-                    <ListIcon as={FaArrowCircleRight} color={accentColour} />
-                    {useful}
-                  </ListItem>
-                );
-              })}
-            </List>
-          </Center>
+          <AppFeatureCarousel
+            steps={featureSteps}
+            featureSectionId={sectionId}
+            accentColour={accentColour}
+          />
 
           <Heading
             fontSize={"xl"}
