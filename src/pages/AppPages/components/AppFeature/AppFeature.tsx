@@ -100,7 +100,7 @@ export const AppFeature = ({
             m="2rem"
             textAlign={"center"}
           >
-            Useful when...
+            Useful when:
           </Heading>
 
           <Center>
