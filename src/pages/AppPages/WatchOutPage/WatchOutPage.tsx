@@ -4,6 +4,7 @@ import { WatchOutFurtherInfoSection } from "./components/WatchOutFurtherInfoSect
 import { PageTransition } from "../../../PageTransition";
 import { watchOutFeatureList } from "./watchOutFeatureList";
 import { AppFeatureSection } from "../components/AppFeatureSection/AppFeatureSection";
+import { Colours } from "../../../colourScheme";
 
 export const WatchOutPage = (): JSX.Element => {
   return (
@@ -23,6 +24,7 @@ export const WatchOutPage = (): JSX.Element => {
               isOnLeft={index % 2 == 0}
               initialFeatureImageURL={feature.initialFeatureImageURL}
               featureSteps={feature.featureCarouselSteps}
+              accentColour={Colours.lightModeWatchOutAccent}
             />
           );
         })}

@@ -1,5 +1,4 @@
 import { Grid, SimpleGrid, Center } from "@chakra-ui/react";
-import { Colours } from "../../../../colourScheme";
 import { AppFeature } from "../AppFeature/AppFeature";
 import { Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -29,6 +28,7 @@ export const AppFeatureSection = ({
   featureSteps,
   isOnLeft,
   initialFeatureImageURL,
+  accentColour,
 }: {
   sectionId: string;
   featureName: string;
@@ -38,6 +38,7 @@ export const AppFeatureSection = ({
   catchyLine: string;
   isOnLeft: boolean;
   initialFeatureImageURL: string;
+  accentColour: string;
 }): JSX.Element => {
   const Feature = (): JSX.Element => {
     return (
@@ -48,7 +49,7 @@ export const AppFeatureSection = ({
         numericFacts={numericFacts}
         catchyLine={catchyLine}
         isOnLeft={isOnLeft}
-        accentColour={Colours.lightModeWatchOutAccent}
+        accentColour={accentColour}
         featureSteps={featureSteps}
       />
     );
