@@ -8,6 +8,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 
+
 export const TimelineCardCompact = ({
   id,
   cardImageURL,
@@ -28,7 +29,7 @@ export const TimelineCardCompact = ({
   onImageLoad: () => void;
 }): JSX.Element => {
   return (
-    <Card id={id} width={"90%"}>
+    <Card id={id} width={"100%"}>
       <Image
         onLoad={onImageLoad}
         src={cardImageURL}
@@ -40,7 +41,10 @@ export const TimelineCardCompact = ({
       />
       <VStack p="1rem">
         <Heading fontSize={"5xl"}>{`${cardName}`}</Heading>
-        <Text fontSize={"3xl"}>{`${activityLocation} • ${activityDate}`}</Text>
+        <Text
+          fontSize={"2xl"}
+          textAlign={"center"}
+        >{`${activityLocation} • ${activityDate}`}</Text>
         <Heading fontSize={"3xl"}>What happened?</Heading>
 
         <Text textAlign={"center"} fontSize={"xl"}>
@@ -49,7 +53,7 @@ export const TimelineCardCompact = ({
 
         <Heading fontSize={"3xl"}>Main tasks:</Heading>
 
-        <UnorderedList>
+        <UnorderedList fontSize={"lg"}>
           {taskList.map((task, key) => {
             return <ListItem key={key}>{task}</ListItem>;
           })}
