@@ -62,8 +62,9 @@ export const TimelineCard = ({
       >
         <Box
           id={id}
-          width={`100%`}
-          height={`100%`}
+          width={[`200px`, `200px`, `200px`, `400px`]}
+          height={[`200px`, `200px`, `200px`, `400px`]}
+          borderWidth={"10px"}
           borderRadius={"50px"}
           position={"relative"}
           onClick={() => {
@@ -80,11 +81,13 @@ export const TimelineCard = ({
               src={imageURL}
               width={"100%"}
               height={"100%"}
+              pos={"absolute"}
+              top={0}
               borderRadius={"50px"}
               fallbackSrc={`https://via.placeholder.com/400x400`}
             />
             <Box position={"absolute"} top="0">
-              <Heading>{cardName}</Heading>
+              <Heading textAlign={"center"}>{cardName}</Heading>
             </Box>
           </Center>
         </Box>
