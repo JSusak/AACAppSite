@@ -4,6 +4,8 @@ import { TimelineCardCompact } from "./TimelineCardCompact";
 import Xarrow from "react-xarrows";
 import { useState } from "react";
 import { Colours } from "../../../../colourScheme";
+import { motion } from "framer-motion";
+import { timelineArrowAnim } from "./timelineAnims";
 
 export const TimelineSectionCompact = (): JSX.Element => {
   const [arrow, setArrow] = useState(false);
@@ -23,23 +25,40 @@ export const TimelineSectionCompact = (): JSX.Element => {
           {timelineCardContents.map((card, index) => {
             return (
               <>
-                {arrow && timelineCardContents.length != index + 1 ? (
-                  <Xarrow
-                    start={`compactCard${index}`}
-                    end={`compactCard${index + 1}`}
-                    color={Colours.lightModeMainCol}
-                  />
-                ) : null}
-                <TimelineCardCompact
-                  id={`compactCard${index}`}
-                  cardImageURL={card.cardImageURL}
-                  cardName={card.cardName}
-                  modalDescription={card.modalDescription}
-                  activityLocation={card.activityLocation}
-                  activityDate={card.activityDate}
-                  taskList={card.activityTasks}
-                  onImageLoad={() => setArrow(true)}
-                />
+                <motion.div
+                  variants={timelineArrowAnim}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  style={{ width: "90%" }}
+                >
+                  {arrow && timelineCardContents.length != index + 1 ? (
+                    <Xarrow
+                      start={`compactCard${index}`}
+                      end={`compactCard${index + 1}`}
+                      color={Colours.lightModeMainCol}
+                    />
+                  ) : null}
+
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <TimelineCardCompact
+                      id={`compactCard${index}`}
+                      cardImageURL={card.cardImageURL}
+                      cardName={card.cardName}
+                      modalDescription={card.modalDescription}
+                      activityLocation={card.activityLocation}
+                      activityDate={card.activityDate}
+                      taskList={card.activityTasks}
+                      onImageLoad={() => setArrow(true)}
+                    />
+                  </motion.div>
+                </motion.div>
               </>
             );
           })}
