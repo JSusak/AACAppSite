@@ -138,7 +138,14 @@ export const TimelineCard = ({
             <Button
               colorScheme="orange"
               mr={3}
-              onClick={onClose}
+              onClick={() => {
+                if (document.getElementById("navbar") != null) {
+                  console.log(document.getElementById("navbar"));
+                  document.getElementById("navbar")!.style.opacity = "1";
+                  document.getElementById("navbar")!.style.pointerEvents = "";
+                }
+                onClose();
+              }}
               variant={"outline"}
             >
               Back to timeline
