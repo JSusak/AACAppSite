@@ -4,35 +4,7 @@ import Xarrow from "react-xarrows";
 import { Colours } from "../../../../colourScheme";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-const timelineBeadAnim = {
-  hidden: {
-    opacity: 0,
-    scale: 0,
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 2,
-      type: "spring",
-    },
-  },
-};
-
-const timelineArrowAnim = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-
-    transition: {
-      duration: 2,
-      type: "tween",
-    },
-  },
-};
+import { timelineArrowAnim, timelineBeadAnim } from "./timelineAnims";
 
 export const TimelineBeadSection = ({
   orderInTimeline,
