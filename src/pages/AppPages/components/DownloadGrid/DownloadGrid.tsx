@@ -1,6 +1,6 @@
 import { Box, Center, SimpleGrid } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { DownloadEmbed } from "../DownloadEmbed/DownloadEmbed";
 
 const downloadGrid = {
   hidden: { opacity: 0 },
@@ -13,11 +13,19 @@ const downloadGrid = {
   },
 };
 
+interface downloadEmbedType {
+  embedIcon: JSX.Element;
+  embedName: string;
+  embedText: string;
+
+  embedLink: string;
+}
+
 //Abstraction of a SimpleGrid to be used for download embeds.
 export const DownloadGrid = ({
-  children,
+  listOfDownloads,
 }: {
-  children: ReactNode;
+  listOfDownloads: downloadEmbedType[];
 }): JSX.Element => {
   return (
     <Box w="100%">
@@ -34,7 +42,17 @@ export const DownloadGrid = ({
               mt="2rem"
               width={"90%"}
             >
-              {children}
+              {listOfDownloads.map((download, index) => {
+                return (
+                  <DownloadEmbed
+                    key={`embed${download.embedName}${index}`}
+                    embedIcon={download.embedIcon}
+                    embedName={download.embedName}
+                    embedText={download.embedText}
+                    embedLink={download.embedLink}
+                  />
+                );
+              })}
             </SimpleGrid>
           </Center>
         </motion.div>
