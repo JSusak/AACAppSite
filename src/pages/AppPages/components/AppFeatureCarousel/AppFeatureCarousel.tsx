@@ -99,7 +99,7 @@ export const AppFeatureCarousel = ({
             }:`}</Heading>
             <Text textAlign={"center"}>{steps[currentIndex].step}</Text>
 
-            <SimpleGrid columns={2} w="100%" spacing="2rem">
+            <SimpleGrid columns={2} maxW="100%" spacing="2rem">
               <Button
                 aria-label="View Previous step"
                 variant={"outline"}
