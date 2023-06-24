@@ -5,9 +5,10 @@ import {
   Text,
   SimpleGrid,
   Button,
+  Box,
 } from "@chakra-ui/react";
 import { StepType } from "../AppFeatureSection/AppFeatureSection";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaPlay } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { appFeatureColourScheme } from "../../appFeatureColourSchemes";
 
@@ -54,53 +55,76 @@ export const AppFeatureCarousel = ({
   }, [currentIndex]);
   return (
     <>
-      <Center>
-        <Button
-          display={isHidden ? " block" : "none"}
-          onClick={() => {
-            document.getElementById(`${featureSectionId}Image`)!.style.opacity =
-              "0";
-            setCurrentIndex(0);
-            modifyFeatureImage();
-            setIsHidden(false);
-          }}
-          colorScheme={colourScheme.buttonColour}
-        >
-          View Demo
-        </Button>
-      </Center>
-      <Center display={isHidden ? "none" : "block"}>
-        <VStack spacing={"2rem"} fontSize={["lg", "lg", "lg", "xl"]}>
-          <Heading color={colourScheme.accent}>{`Step ${
-            currentIndex + 1
-          }:`}</Heading>
-          <Text>{steps[currentIndex].step}</Text>
-
-          <SimpleGrid columns={2} w="100%" spacing="2rem">
+      <Box
+        w="100%"
+        minH="100%"
+        borderWidth={isHidden ? "0px" : "0.5px"}
+        borderRadius={"10px"}
+        position={"relative"}
+        borderColor={colourScheme.accent}
+      >
+        <Box>
+          <Center>
             <Button
-              aria-label="View Previous step"
+              zIndex={100}
+              pos={"absolute"}
+              top="50%"
+              size={"lg"}
+              transform={"translate(0,-50%)"}
+              display={isHidden ? " flex" : "none"}
+              onClick={() => {
+                document.getElementById(
+                  `${featureSectionId}Image`
+                )!.style.opacity = "0";
+                setCurrentIndex(0);
+                modifyFeatureImage();
+                setIsHidden(false);
+              }}
+              leftIcon={<FaPlay />}
               variant={"outline"}
               colorScheme={colourScheme.buttonColour}
-              leftIcon={<FaArrowLeft />}
-              isDisabled={currentIndex === 0}
-              onClick={decrementIndex}
             >
-              Previous step
+              Play Demo
             </Button>
+          </Center>
+        </Box>
+        <Center
+          opacity={isHidden ? "0" : "1"}
+          transition={"all 0.5s ease-in-out"}
+          p="0.5rem"
+        >
+          <VStack spacing={"1rem"} fontSize={["lg", "lg", "lg", "xl"]}>
+            <Heading color={colourScheme.accent} textAlign={"center"}>{`Step ${
+              currentIndex + 1
+            }:`}</Heading>
+            <Text textAlign={"center"}>{steps[currentIndex].step}</Text>
 
-            <Button
-              aria-label="View next step"
-              variant="outline"
-              colorScheme={colourScheme.buttonColour}
-              rightIcon={<FaArrowRight />}
-              isDisabled={currentIndex === steps.length - 1}
-              onClick={incrementIndex}
-            >
-              Next step
-            </Button>
-          </SimpleGrid>
-        </VStack>
-      </Center>
+            <SimpleGrid columns={2} w="100%" spacing="2rem">
+              <Button
+                aria-label="View Previous step"
+                variant={"outline"}
+                colorScheme={colourScheme.buttonColour}
+                leftIcon={<FaArrowLeft />}
+                isDisabled={currentIndex === 0}
+                onClick={decrementIndex}
+              >
+                Previous
+              </Button>
+
+              <Button
+                aria-label="View next step"
+                variant="outline"
+                colorScheme={colourScheme.buttonColour}
+                rightIcon={<FaArrowRight />}
+                isDisabled={currentIndex === steps.length - 1}
+                onClick={incrementIndex}
+              >
+                Next
+              </Button>
+            </SimpleGrid>
+          </VStack>
+        </Center>
+      </Box>
     </>
   );
 };
