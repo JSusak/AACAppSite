@@ -14,6 +14,7 @@ import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { StepType } from "../AppFeatureSection/AppFeatureSection";
 import { AppFeatureCarousel } from "../AppFeatureCarousel/AppFeatureCarousel";
+import { appFeatureColourScheme } from "../../appFeatureColourSchemes";
 
 const appFeatureAnim = {
   hidden: { opacity: 0 },
@@ -45,7 +46,7 @@ export const AppFeature = ({
   catchyLine,
   isOnLeft,
   featureSteps,
-  accentColour,
+  colourScheme,
 }: {
   sectionId: string;
   featureName: string;
@@ -54,7 +55,7 @@ export const AppFeature = ({
   catchyLine: string;
   isOnLeft: boolean;
   featureSteps: StepType[];
-  accentColour: string;
+  colourScheme: appFeatureColourScheme;
 }): JSX.Element => {
   return (
     <motion.div
@@ -85,20 +86,23 @@ export const AppFeature = ({
               </Text>
             </Center>
           </motion.span>
-          <Divider borderColor={accentColour} />
+          <Divider borderColor={colourScheme.accent} />
           <Center>
             <List fontSize={"2xl"} m="2rem">
               {numericFacts.map((fact, key) => {
                 return (
                   <ListItem key={key}>
-                    <ListIcon as={FaArrowCircleRight} color={accentColour} />
+                    <ListIcon
+                      as={FaArrowCircleRight}
+                      color={colourScheme.accent}
+                    />
                     {fact}
                   </ListItem>
                 );
               })}
             </List>
           </Center>
-          <Divider borderColor={accentColour} />
+          <Divider borderColor={colourScheme.accent} />
 
           <Heading
             fontSize={ResponsiveSizes.SecondaryHeaderSizes}
@@ -111,18 +115,18 @@ export const AppFeature = ({
           <AppFeatureCarousel
             steps={featureSteps}
             featureSectionId={sectionId}
-            accentColour={accentColour}
+            colourScheme={colourScheme}
           />
 
           <Heading
             fontSize={"xl"}
             mt="2rem"
             textAlign={isOnLeft ? "left" : "right"}
-            color={accentColour}
+            color={colourScheme.accent}
           >
             {catchyLine}
           </Heading>
-          <Divider borderColor={accentColour} />
+          <Divider borderColor={colourScheme.accent} />
         </Box>
       </Center>
     </motion.div>

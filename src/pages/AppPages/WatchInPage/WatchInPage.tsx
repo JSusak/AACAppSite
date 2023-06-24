@@ -4,7 +4,7 @@ import { WatchInFurtherInfoSection } from "./components/WatchInFurtherInfoSectio
 import { PageTransition } from "../../../PageTransition";
 import { AppFeatureSection } from "../components/AppFeatureSection/AppFeatureSection";
 import { watchInFeatureList } from "./watchInFeatureList";
-import { Colours } from "../../../colourScheme";
+import { watchInColourScheme } from "../appFeatureColourSchemes";
 
 //Main component for the Watch In page, containing all sections.
 export const WatchInPage = (): JSX.Element => {
@@ -25,7 +25,7 @@ export const WatchInPage = (): JSX.Element => {
               isOnLeft={index % 2 == 0}
               initialFeatureImageURL={feature.initialFeatureImageURL}
               featureSteps={feature.featureCarouselSteps}
-              accentColour={Colours.lightModeWatchInAccent}
+              colourScheme={watchInColourScheme}
             />
           );
         })}
