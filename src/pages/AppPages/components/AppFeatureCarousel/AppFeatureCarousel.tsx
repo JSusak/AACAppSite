@@ -3,7 +3,6 @@ import {
   Heading,
   VStack,
   Text,
-  IconButton,
   SimpleGrid,
   Button,
 } from "@chakra-ui/react";
@@ -24,7 +23,7 @@ export const AppFeatureCarousel = ({
   featureSectionId: string;
   accentColour: string;
 }): JSX.Element => {
-  const [currentIndex, setCurrentIndex] = useState(steps.length - 1);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isHidden, setIsHidden] = useState(true);
 
   const decrementIndex = () => {
@@ -35,10 +34,18 @@ export const AppFeatureCarousel = ({
     setCurrentIndex(currentIndex + 1);
   };
 
+  //Modify all image opacities. The current index's image should be visible, an opacity of 1,
+  //while the rest are 0.
   const modifyFeatureImage = () => {
-    document
-      .getElementById(`${featureSectionId}Image`)!
-      .setAttribute("src", steps[currentIndex].stepImage);
+    for (let i = 0; i < steps.length; i++) {
+      if (i != currentIndex) {
+        document.getElementById(`${featureSectionId}Image${i}`)!.style.opacity =
+          "0";
+      } else {
+        document.getElementById(`${featureSectionId}Image${i}`)!.style.opacity =
+          "1";
+      }
+    }
   };
 
   useEffect(() => {
@@ -50,9 +57,13 @@ export const AppFeatureCarousel = ({
         <Button
           display={isHidden ? " block" : "none"}
           onClick={() => {
+            document.getElementById(`${featureSectionId}Image`)!.style.opacity =
+              "0";
             setCurrentIndex(0);
+            modifyFeatureImage();
             setIsHidden(false);
           }}
+          colorScheme="blackAlpha"
         >
           View Demo
         </Button>
@@ -62,21 +73,28 @@ export const AppFeatureCarousel = ({
           <Heading color={accentColour}>{`Step ${currentIndex + 1}:`}</Heading>
           <Text>{steps[currentIndex].step}</Text>
 
-          <SimpleGrid columns={2}>
-            <IconButton
+          <SimpleGrid columns={2} w="100%" spacing="2rem">
+            <Button
               aria-label="View Previous step"
               variant={"outline"}
-              icon={<FaArrowLeft />}
+              colorScheme="blackAlpha"
+              leftIcon={<FaArrowLeft />}
               isDisabled={currentIndex === 0}
               onClick={decrementIndex}
-            />
-            <IconButton
+            >
+              Previous step
+            </Button>
+
+            <Button
               aria-label="View next step"
               variant="outline"
-              icon={<FaArrowRight />}
+              colorScheme="blackAlpha"
+              rightIcon={<FaArrowRight />}
               isDisabled={currentIndex === steps.length - 1}
               onClick={incrementIndex}
-            />
+            >
+              Next step
+            </Button>
           </SimpleGrid>
         </VStack>
       </Center>

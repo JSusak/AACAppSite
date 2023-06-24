@@ -62,15 +62,39 @@ export const AppFeatureSection = ({
           variants={imageAnim}
           initial="hidden"
           whileInView={"visible"}
+          id={`${sectionId}ImageContainer`}
+          style={{ position: "relative" }}
         >
+          {/*To achieve a crossfading effect, all images must be initially present.*/}
+          {/*Animations cannot be achieved by directly changing the src of an image*/}
+          {featureSteps.map((feature, index) => {
+            return (
+              <Image
+                key={`${sectionId}Image${index}`}
+                id={`${sectionId}Image${index}`}
+                src={feature.stepImage}
+                opacity={0}
+                position="absolute"
+                transition={"all 0.5s ease-in-out"}
+                width={[400, 400, 600, 600]}
+                height={[400, 400, 600, 600]}
+                fallbackSrc="https://via.placeholder.com/600"
+                borderRadius={"20%"}
+                zIndex={1}
+              />
+            );
+          })}
           <Image
             id={`${sectionId}Image`}
             src={initialFeatureImageURL}
-            transition={"all 0.3s ease-in-out"}
+            transition={"all 0.5s ease-in-out"}
             width={[400, 400, 600, 600]}
+            opacity={1}
             height={[400, 400, 600, 600]}
             fallbackSrc="https://via.placeholder.com/600"
             borderRadius={"20%"}
+            zIndex={2}
+            pos="relative"
           />
         </motion.div>
       </Center>
