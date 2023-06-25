@@ -2,99 +2,88 @@ $drop-shadow-col: #000000;
 $box-shadow-effect: 0 0 5px $drop-shadow-col;
 
 .imageWrapper {
-   
-
-    position: relative;
-    height: 500px;
-    width: 500px;
+  position: relative;
 }
 .image {
-    position: absolute;
-    top:0;
-    left:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-    transform:translate(50%, 50%);
+  transform: translate(50%, 50%);
 
-    padding:20px;
-    z-index: 10;
-    background-color:#fafafa ;
-    width: 100%;
-    height: 100%;
- 
-    border: 3px solid #000000;
-    transition: all 0.4s ease-in-out, z-index 0s;
+  padding: 20px;
+
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
+
+  border: 3px solid #000000;
+  transition: all 0.3s ease-in-out, z-index 0s;
 }
 .image1 {
-    transform: rotate(20deg);
-    zoom:1
+  transform: rotate(20deg);
+  zoom: 1;
 }
 .image2 {
-    transform: rotate(30deg);
-    zoom:1
+  transform: rotate(30deg);
+  zoom: 1;
 }
 .image3 {
-    transform: rotate(40deg);
-    zoom:1
+  transform: rotate(40deg);
+  zoom: 1;
 }
 .image4 {
-    transform: rotate(50deg);
-    zoom:1
+  transform: rotate(50deg);
+  zoom: 1;
 }
 
-.imageWrapper:hover .imageHov:not(:hover){
-   filter: blur(8px);
+.imageWrapper:hover .imageHov:not(:hover) {
+  filter: blur(8px);
 }
 
 //hovering and affecting other elements is a weird case, specific symbols have to be used:
 //+ to represent the element directly after, ~ to represent any arbitrary sibling.
 .image1:hover {
-   z-index: 150;
-
- 
+  z-index: 150;
 }
 .image2:hover {
-    z-index: 150;
-  
- }
- .image3:hover {
-    z-index: 150;
- }
- .image4:hover {
-    z-index: 150;
- }
-
+  z-index: 150;
+}
+.image3:hover {
+  z-index: 150;
+}
+.image4:hover {
+  z-index: 150;
+}
 
 .imageWrapper:hover {
-  
-    .image1 {
-        top:-200px;
-        left:150px;
-        transform: rotate(10deg);
-        box-shadow: $box-shadow-effect;
-  
- 
-        }
-    
-        .image2 {
-            transform: rotate(-10deg);
-            top:100px;
-            box-shadow: $box-shadow-effect;
-            left:200px;
-          
+  .image1 {
+    top: -100px;
+    left: 75px;
+    transform: rotate(10deg);
+    box-shadow: $box-shadow-effect;
+  }
 
-            }
+  .image2 {
+    transform: rotate(-10deg);
+    top: 50px;
+    box-shadow: $box-shadow-effect;
+    left: 100px;
+  }
 
-            .image3 {
-                transform: rotate(10deg);
-                top:50px;
-                box-shadow:$box-shadow-effect;
-                left:-100px;
-                }
+  .image3 {
+    transform: rotate(10deg);
+    top: 25px;
+    box-shadow: $box-shadow-effect;
+    left: -50px;
+  }
 
-                .image4 {
-                    top:-200px;
-                    transform: rotate(-10deg);
-                    box-shadow: $box-shadow-effect;
-                    left:-100px;
-                    }
+  .image4 {
+    top: -100px;
+    transform: rotate(-10deg);
+    box-shadow: $box-shadow-effect;
+    left: -50px;
+  }
 }
