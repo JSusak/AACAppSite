@@ -18,7 +18,10 @@ export const TimelineSectionCompact = (): JSX.Element => {
           (Compact Version)
         </Heading>
         <Center mb="2rem">
-          <Text maxW="lg">Take a look at some of the activities we did!</Text>
+          <Text maxW="lg">
+            Take a look at some of the activities we did! Interact with specific
+            cards to find out more information about that certain activity.
+          </Text>
         </Center>
 
         <VStack spacing={"5rem"}>
