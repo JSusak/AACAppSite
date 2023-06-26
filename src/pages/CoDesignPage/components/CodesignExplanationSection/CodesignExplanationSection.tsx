@@ -24,7 +24,7 @@ export const CodesignExplanationSection = (): JSX.Element => {
               Co-Design Process
             </Heading>
 
-            <SimpleGrid columns={[1, 1, 2, 2]} spacingX="2rem">
+            <SimpleGrid columns={[1, 1, 2, 2]} spacing="2rem">
               <VStack>
                 <Heading
                   fontSize={ResponsiveSizes.SecondaryHeaderSizes}
