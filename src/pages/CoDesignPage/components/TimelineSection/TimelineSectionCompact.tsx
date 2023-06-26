@@ -18,7 +18,7 @@ export const TimelineSectionCompact = (): JSX.Element => {
           (Compact Version)
         </Heading>
         <Center mb="2rem">
-          <Text maxW="lg">
+          <Text maxW="md">
             Take a look at some of the activities we did! Interact with specific
             cards to find out more information about that certain activity.
           </Text>
@@ -36,11 +36,13 @@ export const TimelineSectionCompact = (): JSX.Element => {
                   style={{ width: "90%" }}
                 >
                   {arrow && timelineCardContents.length != index + 1 ? (
-                    <Xarrow
-                      start={`compactCard${index}`}
-                      end={`compactCard${index + 1}`}
-                      color={Colours.lightModeMainCol}
-                    />
+                    <motion.div variants={timelineArrowAnim}>
+                      <Xarrow
+                        start={`compactCard${index}`}
+                        end={`compactCard${index + 1}`}
+                        color={Colours.lightModeMainCol}
+                      />
+                    </motion.div>
                   ) : null}
 
                   <motion.div

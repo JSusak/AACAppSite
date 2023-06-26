@@ -8,6 +8,8 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import { datesLongForm } from "./datesLongForm";
+import { motion } from "framer-motion";
+import { timelineChildrenAnim } from "./timelineAnims";
 
 export const TimelineCardCompact = ({
   id,
@@ -40,32 +42,51 @@ export const TimelineCardCompact = ({
         objectFit={"cover"}
       />
       <VStack p="1rem">
-        <Heading fontSize={"5xl"} textAlign={"center"}>{`${cardName}`}</Heading>
+        <motion.span variants={timelineChildrenAnim}>
+          <Heading
+            fontSize={"5xl"}
+            textAlign={"center"}
+          >{`${cardName}`}</Heading>
+        </motion.span>
         <VStack>
-          <Text
-            fontSize={"2xl"}
-            textAlign={"center"}
-          >{`${activityLocation}`}</Text>
-          <Text
-            fontSize={"lg"}
-            textAlign={"center"}
-            color={"blackAlpha.600"}
-          >{`${datesLongForm[activityDate.split(" ")[0]]} ${
-            activityDate.split(" ")[1]
-          }`}</Text>
+          <motion.span variants={timelineChildrenAnim}>
+            <Text
+              fontSize={"2xl"}
+              textAlign={"center"}
+            >{`${activityLocation}`}</Text>
+          </motion.span>
+          <motion.span variants={timelineChildrenAnim}>
+            <Text
+              fontSize={"lg"}
+              textAlign={"center"}
+              color={"blackAlpha.600"}
+            >{`${datesLongForm[activityDate.split(" ")[0]]} ${
+              activityDate.split(" ")[1]
+            }`}</Text>
+          </motion.span>
         </VStack>
 
-        <Heading fontSize={"3xl"}>What happened?</Heading>
+        <motion.span variants={timelineChildrenAnim}>
+          <Heading fontSize={"3xl"}>What happened?</Heading>
+        </motion.span>
 
-        <Text textAlign={"center"} fontSize={"xl"}>
-          {modalDescription}
-        </Text>
+        <motion.span variants={timelineChildrenAnim}>
+          <Text textAlign={"center"} fontSize={"xl"}>
+            {modalDescription}
+          </Text>
+        </motion.span>
 
-        <Heading fontSize={"3xl"}>Main tasks:</Heading>
+        <motion.span variants={timelineChildrenAnim}>
+          <Heading fontSize={"3xl"}>Main tasks:</Heading>
+        </motion.span>
 
         <UnorderedList fontSize={"lg"}>
           {taskList.map((task, key) => {
-            return <ListItem key={key}>{task}</ListItem>;
+            return (
+              <motion.span variants={timelineChildrenAnim}>
+                <ListItem key={key}>{task}</ListItem>
+              </motion.span>
+            );
           })}
         </UnorderedList>
       </VStack>
