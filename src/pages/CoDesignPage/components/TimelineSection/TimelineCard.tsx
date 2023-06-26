@@ -149,9 +149,19 @@ export const TimelineCard = ({
                 fallbackSrc={`https://via.placeholder.com/400x400`}
               />
               <Heading>{cardName}</Heading>
-              <Text
-                fontSize={"xl"}
-              >{`${activityLocation} • ${activityDate}`}</Text>
+              <VStack>
+                <Text
+                  fontSize={"2xl"}
+                  textAlign={"center"}
+                >{`${activityLocation}`}</Text>
+                <Text
+                  fontSize={"lg"}
+                  textAlign={"center"}
+                  color={"blackAlpha.600"}
+                >{`${datesLongForm[activityDate.split(" ")[0]]} ${
+                  activityDate.split(" ")[1]
+                }`}</Text>
+              </VStack>
               <Heading fontSize={"3xl"}>What happened?</Heading>
               <Text maxW="lg" textAlign={"center"}>
                 {modalDescription}

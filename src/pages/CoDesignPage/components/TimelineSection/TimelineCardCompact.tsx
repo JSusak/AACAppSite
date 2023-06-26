@@ -7,7 +7,7 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react";
-
+import { datesLongForm } from "./datesLongForm";
 
 export const TimelineCardCompact = ({
   id,
@@ -40,11 +40,21 @@ export const TimelineCardCompact = ({
         objectFit={"cover"}
       />
       <VStack p="1rem">
-        <Heading fontSize={"5xl"}>{`${cardName}`}</Heading>
-        <Text
-          fontSize={"2xl"}
-          textAlign={"center"}
-        >{`${activityLocation} • ${activityDate}`}</Text>
+        <Heading fontSize={"5xl"} textAlign={"center"}>{`${cardName}`}</Heading>
+        <VStack>
+          <Text
+            fontSize={"2xl"}
+            textAlign={"center"}
+          >{`${activityLocation}`}</Text>
+          <Text
+            fontSize={"lg"}
+            textAlign={"center"}
+            color={"blackAlpha.600"}
+          >{`${datesLongForm[activityDate.split(" ")[0]]} ${
+            activityDate.split(" ")[1]
+          }`}</Text>
+        </VStack>
+
         <Heading fontSize={"3xl"}>What happened?</Heading>
 
         <Text textAlign={"center"} fontSize={"xl"}>
