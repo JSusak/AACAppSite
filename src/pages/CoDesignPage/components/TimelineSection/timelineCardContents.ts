@@ -15,7 +15,7 @@ export const timelineCardContents = [
   //workshop 2,
   {
     cardImageURL: "./codesign/lowfid.jpg",
-    cardName: "Workshop 2",
+    cardName: "Low-Fidelity Prototyping",
     modalDescription:
       "This is the text for the modal description of workshop 2.",
     activityLocation: "Aldwych, London",
@@ -26,7 +26,7 @@ export const timelineCardContents = [
   //workshop 3,
   {
     cardImageURL: "./codesign/discussions.png",
-    cardName: "Workshop 3",
+    cardName: "Further Discussions",
     modalDescription:
       "This is the text for the modal description of workshop 3.",
     activityLocation: "Covent Garden, London",
@@ -37,7 +37,7 @@ export const timelineCardContents = [
   //workshop 4
   {
     cardImageURL: "./codesign/highfid.png",
-    cardName: "Workshop 4",
+    cardName: "High-Fidelity Prototyping",
     modalDescription:
       "This is the text for the modal description of workshop 4.",
     activityLocation: "Leicester Square, London",
@@ -47,7 +47,7 @@ export const timelineCardContents = [
   //workshop 5
   {
     cardImageURL: "./codesign/experienceproto.png",
-    cardName: "Workshop 5",
+    cardName: "Experience Prototyping",
     modalDescription:
       "This is the text for the modal description of workshop 5.",
     activityLocation: "Oxford Circus, London",
