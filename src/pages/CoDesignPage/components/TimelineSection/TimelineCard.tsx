@@ -19,6 +19,8 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
+import { datesLongForm } from "./datesLongForm";
+
 const timelineCardAnim = {
   hidden: {
     opacity: 0,
@@ -62,9 +64,9 @@ export const TimelineCard = ({
       >
         <Box
           id={id}
-          width={[`200px`, `200px`, `200px`, `400px`]}
+          boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
+          width={"100%"}
           height={[`200px`, `200px`, `200px`, `400px`]}
-          borderWidth={"10px"}
           borderRadius={"50px"}
           position={"relative"}
           onClick={() => {
@@ -82,12 +84,39 @@ export const TimelineCard = ({
               width={"100%"}
               height={"100%"}
               pos={"absolute"}
+              objectFit={"cover"}
               top={0}
               borderRadius={"50px"}
               fallbackSrc={`https://via.placeholder.com/400x400`}
             />
-            <Box position={"absolute"} top="0">
-              <Heading textAlign={"center"}>{cardName}</Heading>
+            <Box
+              position={"absolute"}
+              top="0"
+              width={"100%"}
+              height={"100%"}
+              borderRadius={"50px"}
+              transition={"opacity 0.3s ease-in-out"}
+              backgroundColor={"rgba(255, 213, 164, 0.6)"}
+              opacity={0}
+              _hover={{ opacity: 1 }}
+            >
+              <Center>
+                <VStack
+                  position={"absolute"}
+                  top="50%"
+                  transform={"translate(0,-50%)"}
+                >
+                  {" "}
+                  <Heading textAlign={"center"} fontSize={"3xl"}>
+                    {cardName}
+                  </Heading>
+                  <Heading textAlign={"center"} fontSize={"xl"}>
+                    {`${datesLongForm[activityDate.split(" ")[0]]} ${
+                      activityDate.split(" ")[1]
+                    }`}
+                  </Heading>
+                </VStack>
+              </Center>
             </Box>
           </Center>
         </Box>
