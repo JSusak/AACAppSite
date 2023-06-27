@@ -15,7 +15,7 @@ export const WatchOutPreview = (): JSX.Element => {
   return (
     <Grid minH="100vh" position="relative">
       <Center>
-        <SimpleGrid columns={[1, 1, 1, 2]} w="90%">
+        <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} w="90%">
           <Center>
             <ImageCollage
               images={[
