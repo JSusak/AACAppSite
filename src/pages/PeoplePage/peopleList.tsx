@@ -6,7 +6,7 @@ export const academics = [
   {
     personName: "Researcher 1",
     organisationName: "King's College London",
-    imagePath: "",
+    imagePath: "./avatarplaceholder.png",
     projectRoles: ["Role 1", "Role 2"],
     primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
     secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
@@ -16,7 +16,7 @@ export const academics = [
   {
     personName: "Researcher 2",
     organisationName: "King's College London",
-    imagePath: "",
+    imagePath: "./avatarplaceholder.png",
     projectRoles: ["Role 1", "Role 2"],
     primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
     secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
@@ -26,7 +26,7 @@ export const academics = [
   {
     personName: "Researcher 3",
     organisationName: "King's College London",
-    imagePath: "",
+    imagePath: "./avatarplaceholder.png",
     projectRoles: ["Role 1", "Role 2"],
     primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
     secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
@@ -36,7 +36,7 @@ export const academics = [
   {
     personName: "Researcher 4",
     organisationName: "King's College London",
-    imagePath: "",
+    imagePath: "./avatarplaceholder.png",
     projectRoles: ["Role 1", "Role 2"],
     primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
     secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
@@ -85,7 +85,7 @@ export const otherContributors = [
   {
     personName: "Contributor 2",
     organisationName: "King's College London",
-    imagePath: "",
+    imagePath: "./avatarplaceholder.png",
     projectRoles: ["Role 1", "Role 2"],
     primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
     secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",

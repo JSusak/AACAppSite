@@ -9,19 +9,42 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
+import { motion } from "framer-motion";
+
+const topHeroImageAnim = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
 
 export const PeopleTop = (): JSX.Element => {
   return (
     <Grid minH="43vh" position="relative">
       <SimpleGrid columns={[1, 1, 1, 3]} mt="1rem" spacingY="2rem">
         <Center>
-          <Image
-            width={"300px"}
-            display={["none", "none", "none", "block"]}
-            src="./kcl.png"
-            fallbackSrc="https://via.placeholder.com/300"
-            borderRadius={"20px"}
-          />
+          <motion.div
+            variants={topHeroImageAnim}
+            initial="hidden"
+            animate="visible"
+          >
+            <Image
+              width={"290px"}
+              height="290px"
+              display={["none", "none", "none", "block"]}
+              src="./kclskyline.jpg"
+              objectFit={"cover"}
+              fallbackSrc="https://via.placeholder.com/300"
+              borderRadius={"20px"}
+            />
+          </motion.div>
         </Center>
 
         <Center>
@@ -54,11 +77,21 @@ export const PeopleTop = (): JSX.Element => {
         </Center>
 
         <Center>
-          <Image
-            src=""
-            fallbackSrc="https://via.placeholder.com/300"
-            borderRadius={"20px"}
-          />
+          <motion.div
+            variants={topHeroImageAnim}
+            initial="hidden"
+            animate="visible"
+          >
+            <Image
+              width={"290px"}
+              height="290px"
+              display={["none", "none", "none", "block"]}
+              src="./bushhouseinside.jpg"
+              objectFit={"cover"}
+              fallbackSrc="https://via.placeholder.com/300"
+              borderRadius={"20px"}
+            />
+          </motion.div>
         </Center>
       </SimpleGrid>
     </Grid>
