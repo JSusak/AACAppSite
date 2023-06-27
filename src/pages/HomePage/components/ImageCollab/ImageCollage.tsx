@@ -1,14 +1,14 @@
 import { Box, Image } from "@chakra-ui/react";
 import "./imageCollage.scss";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+
 
 const imageCollageWrapperAnim = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.7,
+      delayChildren: 0.5,
       staggerChildren: 0.12,
     },
   },
@@ -25,15 +25,12 @@ const imageAnim = {
 };
 
 export const ImageCollage = ({ images }: { images: string[] }): JSX.Element => {
-  useEffect(() => {
-    console.log("hi");
-  });
   return (
     <Box
       className="imageWrapper"
-      width={["200px", "200px", "400px", "400px"]}
-      height={["200px", "200px", "400px", "400px"]}
-      m={["4rem", "4rem", "10%", "1rem"]}
+      width={["200px", "225px", "400px", "500px"]}
+      height={["200px", "225px", "400px", "500px"]}
+      m={["4rem", "4rem", "15%", "15%"]}
     >
       <motion.div
         variants={imageCollageWrapperAnim}
@@ -48,9 +45,12 @@ export const ImageCollage = ({ images }: { images: string[] }): JSX.Element => {
                 objectFit={"cover"}
                 className={`image image${index + 1} imageHov`}
                 src={image}
+                transform={`scale(1) rotate(${(index + 1) * 10}deg);`}
                 fallbackSrc="https://via.placeholder.com/500"
                 borderRadius={"10%"}
                 z-index={10 + index}
+                zIndex={0}
+                _hover={{ zIndex: 150 }}
               />
             </motion.div>
           );

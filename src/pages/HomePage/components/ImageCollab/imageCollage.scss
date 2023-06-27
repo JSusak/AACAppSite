@@ -22,41 +22,12 @@ $box-shadow-effect: 0 0 5px $drop-shadow-col;
   border: 3px solid #000000;
   transition: all 0.3s ease-in-out, z-index 0s;
 }
-.image1 {
-  transform: rotate(20deg);
-  zoom: 1;
-}
-.image2 {
-  transform: rotate(30deg);
-  zoom: 1;
-}
-.image3 {
-  transform: rotate(40deg);
-  zoom: 1;
-}
-.image4 {
-  transform: rotate(50deg);
-  zoom: 1;
-}
 
 .imageWrapper:hover .imageHov:not(:hover) {
   filter: blur(8px);
 }
 
-//hovering and affecting other elements is a weird case, specific symbols have to be used:
-//+ to represent the element directly after, ~ to represent any arbitrary sibling.
-.image1:hover {
-  z-index: 150;
-}
-.image2:hover {
-  z-index: 150;
-}
-.image3:hover {
-  z-index: 150;
-}
-.image4:hover {
-  z-index: 150;
-}
+
 
 .imageWrapper:hover {
   .image1 {
