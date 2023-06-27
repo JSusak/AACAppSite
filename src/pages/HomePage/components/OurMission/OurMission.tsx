@@ -30,7 +30,7 @@ export const OurMission = (): JSX.Element => {
           <Divider />
           <Text
             fontSize={["xl", "xl", "2xl", "2xl"]}
-            w="90%"
+            w={["90%", "90%", "90%", "4xl"]}
             textAlign={["center", "center", "center", "left"]}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -45,7 +45,7 @@ export const OurMission = (): JSX.Element => {
           <SimpleGrid columns={2}>
             <Center>
               <Image
-                src="gibbresh.png"
+                src=""
                 w="80%"
                 fallbackSrc="https://via.placeholder.com/400"
                 borderRadius={"20%"}
@@ -53,7 +53,7 @@ export const OurMission = (): JSX.Element => {
             </Center>
             <Center>
               <Image
-                src="gibbresh.png"
+                src=""
                 w="80%"
                 fallbackSrc="https://via.placeholder.com/400"
                 borderRadius={"20%"}
