@@ -1,6 +1,7 @@
-import { Grid, Heading, VStack, Text } from "@chakra-ui/react";
+import { Grid, Heading, VStack, Box } from "@chakra-ui/react";
 import { TestComponent } from "../../../../components/TestComponent/TestComponent";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
+import { SVGArrow } from "../SVGArrow/SVGArrow";
 
 export const TopHero = (): JSX.Element => {
   return (
@@ -22,15 +23,15 @@ export const TopHero = (): JSX.Element => {
         <TestComponent />
       </VStack>
 
-      <Text
+      <Box
         position="absolute"
         bottom="0"
         justifyContent={"center"}
         left="50%"
         transform="translate(-50%, 0)"
       >
-        Down arrow SVG (Scroll down!)
-      </Text>
+        <SVGArrow iconSize="50px" />
+      </Box>
     </Grid>
   );
 };
