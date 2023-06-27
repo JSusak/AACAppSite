@@ -10,6 +10,8 @@ import {
 } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
+import { motion } from "framer-motion";
+import { homePageFadeInVertical } from "../homePageAnims";
 
 export const OurMission = (): JSX.Element => {
   return (
@@ -28,19 +30,29 @@ export const OurMission = (): JSX.Element => {
             Our Mission.
           </Heading>
           <Divider />
-          <Text
-            fontSize={["xl", "xl", "2xl", "2xl"]}
-            w={["90%", "90%", "90%", "4xl"]}
-            textAlign={["center", "center", "center", "left"]}
+
+          <motion.span
+            variants={homePageFadeInVertical}
+            initial="hidden"
+            whileInView={"visible"}
+            viewport={{ once: true }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Text>
+            <Center>
+              <Text
+                fontSize={["xl", "xl", "2xl", "2xl"]}
+                w={["90%", "90%", "90%", "4xl"]}
+                textAlign={["center", "center", "center", "left"]}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Text>
+            </Center>
+          </motion.span>
           <Divider />
           <SimpleGrid columns={2}>
             <Center>

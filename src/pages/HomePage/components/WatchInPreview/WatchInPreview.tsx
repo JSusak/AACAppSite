@@ -11,7 +11,9 @@ import {
 } from "@chakra-ui/react";
 import { ImageCollage } from "../ImageCollab/ImageCollage";
 import { Colours } from "../../../../colourScheme";
+import { motion } from "framer-motion";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
+import { homePageFadeInRight } from "../homePageAnims";
 
 export const WatchInPreview = (): JSX.Element => {
   const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
@@ -35,32 +37,53 @@ export const WatchInPreview = (): JSX.Element => {
     return (
       <Center>
         <VStack>
-          <Heading
-            fontSize={ResponsiveSizes.SecondaryHeaderSizes}
-            textAlign={"center"}
+          <motion.span
+            variants={homePageFadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
-            Watch In AAC
-          </Heading>
-          <Heading
-            fontSize={["2xl", "2xl", "4xl", "4xl"]}
-            color={Colours.lightModeMainCol}
+            <Heading
+              fontSize={ResponsiveSizes.SecondaryHeaderSizes}
+              textAlign={"center"}
+            >
+              Watch In AAC
+            </Heading>
+          </motion.span>
+          <motion.span
+            variants={homePageFadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
-            Private cognitive support.
-          </Heading>
+            <Heading
+              fontSize={["2xl", "2xl", "4xl", "4xl"]}
+              color={Colours.lightModeMainCol}
+            >
+              Private cognitive support.
+            </Heading>
+          </motion.span>
           <Divider />
-          <Text
-            fontSize={["xl", "xl", "2xl", "2xl"]}
-            maxW="xl"
-            textAlign={["center", "center", "center", "left"]}
+          <motion.span
+            variants={homePageFadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Text>
+            <Text
+              fontSize={["xl", "xl", "2xl", "2xl"]}
+              maxW="xl"
+              textAlign={["center", "center", "center", "left"]}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </Text>
+          </motion.span>
           <Divider />
 
           <SimpleGrid columns={2} mt="2rem" spacing={"2rem"}>

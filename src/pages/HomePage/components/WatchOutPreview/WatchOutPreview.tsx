@@ -10,12 +10,18 @@ import {
 } from "@chakra-ui/react";
 import { ImageCollage } from "../ImageCollab/ImageCollage";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
+import { motion } from "framer-motion";
+import { homePageFadeInLeft } from "../homePageAnims";
 
 export const WatchOutPreview = (): JSX.Element => {
   return (
     <Grid minH="100vh" position="relative">
       <Center>
-        <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} w="90%">
+        <SimpleGrid
+          columns={{ base: 1, md: 1, xl: 2 }}
+          mb={{ base: "0px", sm: "2rem", md: "2rem", xl: "0px" }}
+          w="90%"
+        >
           <Center>
             <ImageCollage
               images={[
@@ -28,32 +34,54 @@ export const WatchOutPreview = (): JSX.Element => {
           </Center>
           <Center>
             <VStack>
-              <Heading
-                fontSize={ResponsiveSizes.SecondaryHeaderSizes}
-                textAlign={"center"}
+              <motion.span
+                variants={homePageFadeInLeft}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
-                Watch Out AAC
-              </Heading>
-              <Heading
-                fontSize={["2xl", "2xl", "4xl", "4xl"]}
-                color={"blue.100"}
+                <Heading
+                  fontSize={ResponsiveSizes.SecondaryHeaderSizes}
+                  textAlign={"center"}
+                >
+                  Watch Out AAC
+                </Heading>
+              </motion.span>
+              <motion.span
+                variants={homePageFadeInLeft}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
-                Face-to-face interactions.
-              </Heading>
+                <Heading
+                  fontSize={["2xl", "2xl", "4xl", "4xl"]}
+                  color={"blue.100"}
+                >
+                  Face-to-face interactions.
+                </Heading>
+              </motion.span>
               <Divider />
-              <Text
-                fontSize={["xl", "xl", "2xl", "2xl"]}
-                maxW="xl"
-                textAlign={["center", "center", "center", "left"]}
+              <motion.span
+                variants={homePageFadeInLeft}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </Text>
+                <Text
+                  fontSize={["xl", "xl", "2xl", "2xl"]}
+                  maxW="xl"
+                  textAlign={["center", "center", "center", "left"]}
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </Text>
+              </motion.span>
               <Divider />
 
               <SimpleGrid columns={2} mt="2rem" spacing={"2rem"}>
