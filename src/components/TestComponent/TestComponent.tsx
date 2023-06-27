@@ -5,8 +5,9 @@ import { useColorMode, Button} from '@chakra-ui/react'
 export const TestComponent: React.FC = (): JSX.Element => {
     const {colorMode,toggleColorMode} = useColorMode()
     return (
-        <Button onClick={toggleColorMode}>
-        Test component. Change to {colorMode === 'light' ? 'Dark' : 'Light'} mode.
+      <Button onClick={toggleColorMode} colorScheme="blackAlpha">
+        Test component. Change to {colorMode === "light" ? "Dark" : "Light"}{" "}
+        mode.
       </Button>
-    )
+    );
 }
