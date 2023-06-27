@@ -45,7 +45,7 @@ export const ImageCollage = ({ images }: { images: string[] }): JSX.Element => {
                 objectFit={"cover"}
                 className={`image image${index + 1} imageHov`}
                 src={image}
-                transform={`scale(1) rotate(${(index + 1) * 10}deg);`}
+                transform={`scale(1) rotate(${(index + 1) * 15}deg);`}
                 fallbackSrc="https://via.placeholder.com/500"
                 borderRadius={"10%"}
                 z-index={10 + index}
