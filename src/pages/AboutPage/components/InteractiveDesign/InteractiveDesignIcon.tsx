@@ -93,9 +93,11 @@ export const InteractiveDesignIcon = ({
       >
         <Center>
           <Image
-            src="./kcl.png"
+            height="100%"
+            src="./images.jpg"
             borderRadius={"44px"}
             fallbackSrc={`https://via.placeholder.com/${width}x${height}`}
+            objectFit="cover"
           />
 
           <Box
@@ -108,19 +110,18 @@ export const InteractiveDesignIcon = ({
             borderRadius={"44px"}
           >
             <VStack spacing={["0rem", "0rem", "-0.5rem", "0rem"]}>
-              <Heading
-                textAlign={"center"}
-                fontSize={["md", "md", "lg", "xl"]}
-                mt="1rem"
-              >
-                {text}
-              </Heading>
               <Center>
-                <VStack mt="0.2rem">
+                <VStack mt="1rem">
                   <motion.span
                     variants={overlayContent}
                     animate={isHover ? "visible" : "hidden"}
                   >
+                    <Heading
+                      textAlign={"center"}
+                      fontSize={["md", "md", "lg", "xl"]}
+                    >
+                      {text}
+                    </Heading>
                     <Heading
                       textAlign={"center"}
                       fontSize={["sm", "sm", "md", "md"]}
