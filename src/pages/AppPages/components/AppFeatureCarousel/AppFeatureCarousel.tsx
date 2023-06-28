@@ -6,9 +6,15 @@ import {
   SimpleGrid,
   Button,
   Box,
+
 } from "@chakra-ui/react";
 import { StepType } from "../AppFeatureSection/AppFeatureSection";
-import { FaArrowLeft, FaArrowRight, FaPlay } from "react-icons/fa";
+import {
+  FaArrowLeft,
+  FaArrowRight,
+  FaPlay,
+  FaWindowClose,
+} from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { appFeatureColourScheme } from "../../appFeatureColourSchemes";
 
@@ -71,7 +77,9 @@ export const AppFeatureCarousel = ({
               top="50%"
               size={"lg"}
               transform={"translate(0,-50%)"}
-              display={isHidden ? " flex" : "none"}
+              opacity={isHidden ? 1 : 0}
+              pointerEvents={isHidden ? "all" : "none"}
+              transition={"all 0.3s ease-in-out"}
               onClick={() => {
                 document.getElementById(
                   `${featureSectionId}Image`
@@ -93,13 +101,13 @@ export const AppFeatureCarousel = ({
           transition={"all 0.5s ease-in-out"}
           p="0.5rem"
         >
-          <VStack spacing={"1rem"} fontSize={["lg", "lg", "lg", "xl"]}>
+          <VStack spacing={"0.5rem"} fontSize={["lg", "lg", "lg", "xl"]}>
             <Heading color={colourScheme.accent} textAlign={"center"}>{`Step ${
               currentIndex + 1
             }:`}</Heading>
             <Text textAlign={"center"}>{steps[currentIndex].step}</Text>
 
-            <SimpleGrid columns={2} maxW="100%" spacing="2rem">
+            <SimpleGrid columns={3} maxW="100%" spacing="2rem">
               <Button
                 aria-label="View Previous step"
                 variant={"outline"}
@@ -120,6 +128,22 @@ export const AppFeatureCarousel = ({
                 onClick={incrementIndex}
               >
                 Next
+              </Button>
+              <Button
+                aria-label="Close Demo"
+                variant="outline"
+                colorScheme={colourScheme.buttonColour}
+                rightIcon={<FaWindowClose />}
+                onClick={() => {
+                  document.getElementById(
+                    `${featureSectionId}Image`
+                  )!.style.opacity = "1";
+                  setCurrentIndex(0);
+                  modifyFeatureImage();
+                  setIsHidden(true);
+                }}
+              >
+                Close
               </Button>
             </SimpleGrid>
           </VStack>
