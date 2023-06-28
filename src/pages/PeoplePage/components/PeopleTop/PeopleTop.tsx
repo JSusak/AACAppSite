@@ -38,6 +38,7 @@ export const PeopleTop = (): JSX.Element => {
             <Image
               width={"290px"}
               height="290px"
+              boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
               display={["none", "none", "none", "block"]}
               src="./kclskyline.jpg"
               objectFit={"cover"}
@@ -85,6 +86,7 @@ export const PeopleTop = (): JSX.Element => {
             <Image
               width={"290px"}
               height="290px"
+              boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
               display={["none", "none", "none", "block"]}
               src="./bushhouseinside.jpg"
               objectFit={"cover"}
