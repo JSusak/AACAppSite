@@ -20,7 +20,7 @@ import { NavbarLink } from "./NavbarLink";
 import { NavLink as RouterLink } from "react-router-dom";
 
 import { useState, useEffect, useRef } from "react";
-import { FaGithub, FaToolbox } from "react-icons/fa";
+import { FaGithub, FaHamburger } from "react-icons/fa";
 import { FooterButton } from "../Footer/FooterButton";
 
 const navbarAnims = {
@@ -165,7 +165,9 @@ export const Navbar: React.FC = (): JSX.Element => {
           {/*Mobile Navbar - show all subpages behind a hamburger menu*/}
           <Box display={["block", "block", "block", "none"]}>
             <IconButton
-              icon={<FaToolbox />}
+              color={"current"}
+              backgroundColor={"transparent"}
+              icon={<FaHamburger />}
               aria-label={"Open Hamburger"}
               ref={hamRef}
               onClick={onOpen}
