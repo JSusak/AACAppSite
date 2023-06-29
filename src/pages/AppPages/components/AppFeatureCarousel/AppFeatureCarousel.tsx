@@ -64,10 +64,11 @@ export const AppFeatureCarousel = ({
       <Box
         w="100%"
         minH="100%"
-        borderWidth={isHidden ? "0px" : "0.5px"}
+        borderWidth={"0.5px"}
         borderRadius={"10px"}
         position={"relative"}
-        borderColor={colourScheme.accent}
+        borderColor={isHidden ? "transparent" : colourScheme.accent}
+        transition={"all 0.3s ease-in-out"}
       >
         <Box>
           <Center>
