@@ -71,8 +71,8 @@ export const AppFeature = ({
               fontSize={ResponsiveSizes.SecondaryHeaderSizes}
               textAlign={
                 isOnLeft
-                  ? ["center", "center", "left", "left"]
-                  : ["center", "center", "right", "right"]
+                  ? ["center", "center", "center", "left"]
+                  : ["center", "center", "center", "right"]
               }
               m="2rem"
             >

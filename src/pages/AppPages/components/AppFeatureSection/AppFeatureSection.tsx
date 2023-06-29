@@ -1,4 +1,4 @@
-import { Grid, SimpleGrid, Center } from "@chakra-ui/react";
+import { Grid, SimpleGrid, Center, useMediaQuery } from "@chakra-ui/react";
 import { AppFeature } from "../AppFeature/AppFeature";
 import { Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -41,6 +41,7 @@ export const AppFeatureSection = ({
   initialFeatureImageURL: string;
   colourScheme: appFeatureColourScheme;
 }): JSX.Element => {
+  const [isLargerThan991] = useMediaQuery("(min-width: 991px)");
   const Feature = (): JSX.Element => {
     return (
       <AppFeature
@@ -58,7 +59,7 @@ export const AppFeatureSection = ({
 
   const FeatureImage = (): JSX.Element => {
     return (
-      <Center>
+      <Center mt={["1rem", "1rem", "1rem", null]}>
         <motion.div
           variants={imageAnim}
           initial="hidden"
@@ -108,8 +109,12 @@ export const AppFeatureSection = ({
   ];
   return (
     <Grid minH="100vh" position="relative">
-      <SimpleGrid columns={[1, 1, 2, 2]} spacingY="2rem">
-        {isOnLeft ? featureOrder : featureOrder.reverse()}
+      <SimpleGrid columns={[1, 1, 1, 2]} spacingY="2rem">
+        {isLargerThan991
+          ? isOnLeft
+            ? featureOrder
+            : featureOrder.reverse()
+          : featureOrder}
       </SimpleGrid>
     </Grid>
   );
