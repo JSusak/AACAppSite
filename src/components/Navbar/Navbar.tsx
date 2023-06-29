@@ -3,7 +3,6 @@ import {
   Container,
   HStack,
   Heading,
-  IconButton,
   Link,
   VStack,
   useColorModeValue,
@@ -12,6 +11,7 @@ import {
   DrawerBody,
   DrawerOverlay,
   DrawerContent,
+  DrawerCloseButton,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
@@ -20,8 +20,9 @@ import { NavbarLink } from "./NavbarLink";
 import { NavLink as RouterLink } from "react-router-dom";
 
 import { useState, useEffect, useRef } from "react";
-import { FaGithub, FaHamburger } from "react-icons/fa";
+import { FaAppStore, FaGithub, FaPaperclip } from "react-icons/fa";
 import { FooterButton } from "../Footer/FooterButton";
+import { NavbarHamburgerIcon } from "./NavbarHamburgerIcon";
 
 const navbarAnims = {
   hidden: {
@@ -164,13 +165,10 @@ export const Navbar: React.FC = (): JSX.Element => {
           </HStack>
           {/*Mobile Navbar - show all subpages behind a hamburger menu*/}
           <Box display={["block", "block", "block", "none"]}>
-            <IconButton
-              color={"current"}
-              backgroundColor={"transparent"}
-              icon={<FaHamburger />}
-              aria-label={"Open Hamburger"}
-              ref={hamRef}
-              onClick={onOpen}
+            <NavbarHamburgerIcon
+              hamburgerRef={hamRef}
+              openAction={onOpen}
+              isNavOpen={isOpen}
             />
           </Box>
           <Drawer
@@ -186,7 +184,9 @@ export const Navbar: React.FC = (): JSX.Element => {
               backdropFilter="auto"
               backdropBlur="6px"
             />
+
             <DrawerContent zIndex={9999}>
+              <DrawerCloseButton />
               <DrawerBody
                 background={useColorModeValue(
                   `linear-gradient(109.6deg, ${Colours.lightModeMainCol} 11.2%, ${Colours.lightModeNavColHighlight} 100.2%);`,
@@ -228,11 +228,11 @@ export const Navbar: React.FC = (): JSX.Element => {
                       />
                       <FooterButton
                         linkTo="https://github.com/JSusak/AACAppSite"
-                        buttonIcon={<FaGithub size="50px" />}
+                        buttonIcon={<FaPaperclip size="50px" />}
                       />
                       <FooterButton
                         linkTo="https://github.com/JSusak/AACAppSite"
-                        buttonIcon={<FaGithub size="50px" />}
+                        buttonIcon={<FaAppStore size="50px" />}
                       />
                     </HStack>
                   </VStack>
