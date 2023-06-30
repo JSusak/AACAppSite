@@ -19,7 +19,7 @@ export const WatchOutLogoAnim = (): JSX.Element => {
   }, []);
 
   return (
-    <Box width={["100", "100", "300", "500"]}>
+    <Box width={["300px", "350px", "400px", "400px"]}>
       <svg
         version="1.1"
         width="100%"
