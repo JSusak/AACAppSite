@@ -58,9 +58,9 @@ export const PeopleIcon = ({
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
         className="personIconContainer"
+        width={["300px", "350px", "400px", "400px"]}
+        height={["300px", "350px", "400px", "400px"]}
         style={{
-          width: "400px",
-          height: "400px",
           position: "relative",
         }}
       >
