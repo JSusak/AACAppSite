@@ -6,19 +6,19 @@ export const watchInFeatureList = [
     numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
     featureCarouselSteps: [
       {
-        step: "This is how you do step 1. (wi",
+        step: "This is how you do step 1. (watch in feature 1)",
         stepImage: "./images.jpg",
       },
       {
-        step: "This is how you do step 2 (watch in).",
+        step: "This is how you do step 2 (watch in feature 1).",
         stepImage: "./phrases.png",
       },
       {
-        step: "This is how you do step 3. (wi",
+        step: "This is how you do step 3. (watch in feature 1)",
         stepImage: "./dialogue.png",
       },
       {
-        step: "This is how you do step 4. (wi",
+        step: "This is how you do step 4. (watch in feature 1)",
         stepImage: "./kcllogo.png",
       },
     ],
@@ -32,12 +32,20 @@ export const watchInFeatureList = [
     numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
     featureCarouselSteps: [
       {
-        step: "step 1",
-        stepImage: "",
+        step: "This is how you do step 1. (watch in feature 2)",
+        stepImage: "./images.jpg",
       },
       {
-        step: "step 2",
-        stepImage: "",
+        step: "This is how you do step 2 (watch in feature 2).",
+        stepImage: "./phrases.png",
+      },
+      {
+        step: "This is how you do step 3. (watch in feature 2)",
+        stepImage: "./dialogue.png",
+      },
+      {
+        step: "This is how you do step 4. (watch in feature 2)",
+        stepImage: "./kcllogo.png",
       },
     ],
     catchyLine: "Catchy Line 2",
@@ -51,11 +59,19 @@ export const watchInFeatureList = [
     numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
     featureCarouselSteps: [
       {
-        step: "step 1",
-        stepImage: "",
+        step: "This is how you do step 1. (watch in feature 3)",
+        stepImage: "./images.jpg",
       },
       {
-        step: "step 2",
+        step: "This is how you do step 2. (watch in feature 3).",
+        stepImage: "./phrases.png",
+      },
+      {
+        step: "This is how you do step 3. (watch in feature 3)",
+        stepImage: "./dialogue.png",
+      },
+      {
+        step: "This is how you do step 4. (watch in feature 3)",
         stepImage: "",
       },
     ],
