@@ -81,7 +81,12 @@ export const AppFeature = ({
           </motion.span>
           <motion.span variants={appFeatureSectionAnim}>
             <Center>
-              <Text textAlign={"left"} fontSize={"xl"} maxW="3xl" mb="2rem">
+              <Text
+                textAlign={["center", "center", "center", "left"]}
+                fontSize={"xl"}
+                maxW="3xl"
+                mb="2rem"
+              >
                 {featureDescription}
               </Text>
             </Center>
