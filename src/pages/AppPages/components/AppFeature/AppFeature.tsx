@@ -12,6 +12,9 @@ import { ListItem } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { FaArrowCircleRight } from "react-icons/fa";
+import { StepType } from "../AppFeatureSection/AppFeatureSection";
+import { AppFeatureCarousel } from "../AppFeatureCarousel/AppFeatureCarousel";
+import { appFeatureColourScheme } from "../../appFeatureColourSchemes";
 
 const appFeatureAnim = {
   hidden: { opacity: 0 },
@@ -36,27 +39,30 @@ const appFeatureSectionAnim = {
 };
 
 export const AppFeature = ({
+  sectionId,
   featureName,
   featureDescription,
   numericFacts,
-  usefulWhen,
   catchyLine,
   isOnLeft,
-  accentColour,
+  featureSteps,
+  colourScheme,
 }: {
+  sectionId: string;
   featureName: string;
   featureDescription: string;
   numericFacts: string[];
-  usefulWhen: string[];
   catchyLine: string;
   isOnLeft: boolean;
-  accentColour: string;
+  featureSteps: StepType[];
+  colourScheme: appFeatureColourScheme;
 }): JSX.Element => {
   return (
     <motion.div
       variants={appFeatureAnim}
       initial="hidden"
       whileInView="visible"
+      id={sectionId}
     >
       <Center>
         <Box w="90%">
@@ -65,8 +71,8 @@ export const AppFeature = ({
               fontSize={ResponsiveSizes.SecondaryHeaderSizes}
               textAlign={
                 isOnLeft
-                  ? ["center", "center", "left", "left"]
-                  : ["center", "center", "right", "right"]
+                  ? ["center", "center", "center", "left"]
+                  : ["center", "center", "center", "right"]
               }
               m="2rem"
             >
@@ -80,51 +86,47 @@ export const AppFeature = ({
               </Text>
             </Center>
           </motion.span>
-          <Divider borderColor={accentColour} />
+          <Divider borderColor={colourScheme.accent} />
           <Center>
             <List fontSize={"2xl"} m="2rem">
               {numericFacts.map((fact, key) => {
                 return (
                   <ListItem key={key}>
-                    <ListIcon as={FaArrowCircleRight} color={accentColour} />
+                    <ListIcon
+                      as={FaArrowCircleRight}
+                      color={colourScheme.accent}
+                    />
                     {fact}
                   </ListItem>
                 );
               })}
             </List>
           </Center>
-          <Divider borderColor={accentColour} />
+          <Divider borderColor={colourScheme.accent} />
 
           <Heading
             fontSize={ResponsiveSizes.SecondaryHeaderSizes}
-            m="2rem"
+            mt="2rem"
             textAlign={"center"}
           >
-            Useful when:
+            How to use:
           </Heading>
 
-          <Center>
-            <List fontSize={"2xl"}>
-              {usefulWhen.map((useful, key) => {
-                return (
-                  <ListItem key={key}>
-                    <ListIcon as={FaArrowCircleRight} color={accentColour} />
-                    {useful}
-                  </ListItem>
-                );
-              })}
-            </List>
-          </Center>
+          <AppFeatureCarousel
+            steps={featureSteps}
+            featureSectionId={sectionId}
+            colourScheme={colourScheme}
+          />
 
           <Heading
             fontSize={"xl"}
             mt="2rem"
             textAlign={isOnLeft ? "left" : "right"}
-            color={accentColour}
+            color={colourScheme.accent}
           >
             {catchyLine}
           </Heading>
-          <Divider borderColor={accentColour} />
+          <Divider borderColor={colourScheme.accent} />
         </Box>
       </Center>
     </motion.div>
