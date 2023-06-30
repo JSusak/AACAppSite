@@ -9,6 +9,7 @@ import {
 import { PublicationEmbed } from "../PublicationEmbed/PublicationEmbed";
 import { publications } from "../../publications";
 import { motion } from "framer-motion";
+import { ResponsiveSizes } from "../../../../responsiveSizes";
 
 const publicationSectionAnim = {
   hidden: { opacity: 0 },
@@ -27,7 +28,7 @@ export const PublicationSection = (): JSX.Element => {
       <Center>
         <VStack>
           <Heading
-            fontSize={"7xl"}
+            fontSize={ResponsiveSizes.SecondaryHeaderSizes}
             textAlign={["center", "center", "center", "left"]}
           >
             Academic Publications
@@ -36,7 +37,7 @@ export const PublicationSection = (): JSX.Element => {
           <Text
             fontSize={"xl"}
             maxW={["90%", "90%", "3xl", "3xl"]}
-            textAlign={"left"}
+            textAlign={["center", "center", "center", "left"]}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             maxime, suscipit ut in tempora adipisci ea repellendus aliquam

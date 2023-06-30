@@ -7,6 +7,7 @@ import {
   Image,
   Center,
 } from "@chakra-ui/react";
+import { ResponsiveSizes } from "../../../../responsiveSizes";
 
 export const AboutTop = (): JSX.Element => {
   return (
@@ -40,7 +41,7 @@ export const AboutTop = (): JSX.Element => {
           ml="1rem"
           mr="1rem"
         >
-          <Heading fontSize={"9xl"}>About</Heading>
+          <Heading fontSize={ResponsiveSizes.HeroHeaderSizes}>About</Heading>
 
           <Text fontSize={"xl"} maxW="90%" textAlign={"center"}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda

@@ -7,15 +7,18 @@ import {
   Image,
   Button,
 } from "@chakra-ui/react";
+import { ResponsiveSizes } from "../../../../responsiveSizes";
 export const OurCharity = (): JSX.Element => {
   return (
     <Grid minH="93vh" position="relative">
       <VStack mt="2rem">
-        <Heading fontSize={"7xl"}>Our Charity</Heading>
+        <Heading fontSize={ResponsiveSizes.HeroHeaderSizes}>
+          Our Charity
+        </Heading>
         <Text
           fontSize={"xl"}
           maxW={["90%", "90%", "3xl", "3xl"]}
-          textAlign={"left"}
+          textAlign={["center", "center", "center", "left"]}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
           perspiciatis reprehenderit, veniam obcaecati consequatur, nostrum
