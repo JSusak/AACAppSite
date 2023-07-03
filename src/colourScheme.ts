@@ -19,4 +19,5 @@ export const Colours: { [key: string]: string } = {
   lightModeMainAccent: "#49274a",
 
   lightModeWatchOutAccent: "#90CDF4",
+  lightModeWatchInAccent: "#FBD38D",
 };
