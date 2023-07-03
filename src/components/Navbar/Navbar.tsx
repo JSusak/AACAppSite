@@ -23,6 +23,7 @@ import { useState, useEffect, useRef } from "react";
 import { FaAppStore, FaGithub, FaPaperclip } from "react-icons/fa";
 import { FooterButton } from "../Footer/FooterButton";
 import { NavbarHamburgerIcon } from "./NavbarHamburgerIcon";
+import { ColourModeSwitcher } from "../ColourModeSwitcher/ColourModeSwitcher";
 
 const navbarAnims = {
   hidden: {
@@ -171,6 +172,9 @@ export const Navbar: React.FC = (): JSX.Element => {
               })}
             </HStack>
           </HStack>
+          <Box display={["none", "none", "none", "block"]}>
+            <ColourModeSwitcher />
+          </Box>
           {/*Mobile Navbar - show all subpages behind a hamburger menu*/}
           <Box display={["block", "block", "block", "none"]}>
             <NavbarHamburgerIcon

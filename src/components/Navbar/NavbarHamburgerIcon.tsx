@@ -101,13 +101,16 @@ export const NavbarHamburgerIcon = ({
       aria-label={"Open Hamburger"}
       ref={hamburgerRef}
       onClick={openAction}
+      borderWidth={"0px"}
       _hover={{
         bg: "none",
       }}
-      _active={{
-        bg: "none",
+      _focus={{
+        boxShadow: "none",
+        outline: "none",
+        borderColor: "transparent",
       }}
-      _focus={{ outline: "none" }}
+      _active={{ background: "transparent" }}
     />
   );
 };
