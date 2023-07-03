@@ -46,7 +46,10 @@ export const NavbarLink = ({
           _hover={{
             textDecoration: "none",
 
-            bg: useColorModeValue(Colours.lightModeNavColHighlight, "red"),
+            bg: useColorModeValue(
+              Colours.lightModeNavColHighlight,
+              Colours.darkModeNavColHighlight
+            ),
           }}
         >
           <Heading

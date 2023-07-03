@@ -2,13 +2,17 @@ import { Box, Container, HStack, Heading } from "@chakra-ui/react";
 import { FaGithub, FaFile } from "react-icons/fa";
 import { FooterButton } from "./FooterButton";
 import { Colours } from "../../colourScheme";
+import { useColorModeValue } from "@chakra-ui/react";
 
 export const Footer: React.FC = (): JSX.Element => {
   return (
     <>
       <Box
         w="100%"
-        backgroundColor={Colours.lightModeMainCol}
+        backgroundColor={useColorModeValue(
+          Colours.lightModeMainCol,
+          Colours.darkModeMainCol
+        )}
         style={{ position: "relative", left: "0", bottom: "0" }}
         boxShadow={
           "rgba(0, 0, 0, 0.2) 0px 10px 30px 5px, rgba(0, 0, 0, 0.04) 0px 10px 10px 10px"

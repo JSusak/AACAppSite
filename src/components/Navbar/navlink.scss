@@ -1,4 +1,20 @@
 .active:not(#homeLink) {
 background-color: #b9ced6;
+
+
+
 border-radius: 10px;
 }
+
+@media (prefers-color-scheme: dark) {
+    .active:not(#homeLink) {
+        background-color: #ff00ff;
+        
+        
+        
+        border-radius: 10px;
+        }
+}
+
+
+

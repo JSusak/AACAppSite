@@ -20,4 +20,12 @@ export const Colours: { [key: string]: string } = {
 
   lightModeWatchOutAccent: "#90CDF4",
   lightModeWatchInAccent: "#FBD38D",
+
+  darkModeMainCol: "	#3e3e42",
+  darkModeNavColHighlight: "#151515",
+  darkModeNavColActive: "#ff00ff",
+  darkModeMainAccent: "#49274a",
+
+  darkModeWatchOutAccent: "#90CDF4",
+  darkModeWatchInAccent: "#FBD38D",
 };

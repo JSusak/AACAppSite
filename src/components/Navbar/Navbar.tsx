@@ -91,7 +91,10 @@ export const Navbar: React.FC = (): JSX.Element => {
 
           bg: "none",
           ".navLogoText": {
-            color: useColorModeValue(Colours.lightModeNavColHighlight, "red"),
+            color: useColorModeValue(
+              Colours.lightModeNavColHighlight,
+              Colours.darkModeNavColHighlight
+            ),
           },
         }}
         to={"/"}
@@ -127,7 +130,10 @@ export const Navbar: React.FC = (): JSX.Element => {
     >
       <Box
         w="100%"
-        backgroundColor={Colours.lightModeMainCol}
+        backgroundColor={useColorModeValue(
+          Colours.lightModeMainCol,
+          Colours.darkModeMainCol
+        )}
         p={6}
         boxShadow={
           "rgba(0, 0, 0, 0.2) 0px 10px 30px -10px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px"
@@ -150,7 +156,6 @@ export const Navbar: React.FC = (): JSX.Element => {
               display={{ base: "none", lg: "flex" }}
               paddingLeft={7}
             >
-
               {navbarContents.map((link, index) => {
                 return (
                   <NavbarLink
@@ -164,7 +169,6 @@ export const Navbar: React.FC = (): JSX.Element => {
                   />
                 );
               })}
-
             </HStack>
           </HStack>
           {/*Mobile Navbar - show all subpages behind a hamburger menu*/}
