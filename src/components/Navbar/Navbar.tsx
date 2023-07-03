@@ -114,9 +114,11 @@ export const Navbar: React.FC = (): JSX.Element => {
 
   return (
     <motion.div
+      id="navbar"
       style={{
         position: "sticky",
         top: "0px",
+
         zIndex: 1000,
       }}
       variants={navbarAnims}
@@ -148,6 +150,7 @@ export const Navbar: React.FC = (): JSX.Element => {
               display={{ base: "none", lg: "flex" }}
               paddingLeft={7}
             >
+
               {navbarContents.map((link, index) => {
                 return (
                   <NavbarLink
@@ -161,6 +164,7 @@ export const Navbar: React.FC = (): JSX.Element => {
                   />
                 );
               })}
+
             </HStack>
           </HStack>
           {/*Mobile Navbar - show all subpages behind a hamburger menu*/}

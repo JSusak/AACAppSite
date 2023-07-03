@@ -2,6 +2,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { AboutPage } from "./pages/AboutPage/AboutPage";
 import { PeoplePage } from "./pages/PeoplePage/PeoplePage";
+import { CoDesignPage } from "./pages/CoDesignPage/CoDesignPage";
 import { WatchOutPage } from "./pages/AppPages/WatchOutPage/WatchOutPage";
 import { WatchInPage } from "./pages/AppPages/WatchInPage/WatchInPage";
 import { AnimatePresence } from "framer-motion";
@@ -25,9 +26,13 @@ export const AppRouter = (): JSX.Element => {
         <Route path="about" element={<AboutPage />} />
         <Route path="people" element={<PeoplePage />} />
 
+
+
+      <Route path="codesign" element={<CoDesignPage />} />
+   
         <Route path="watchin" element={<WatchInPage />} />
         <Route path="watchout" element={<WatchOutPage />} />
-        <Route path="contact" element={<HomePage />} />
+      
       </Routes>
     </AnimatePresence>
   );
