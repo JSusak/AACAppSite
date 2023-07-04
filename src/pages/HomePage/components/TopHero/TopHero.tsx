@@ -1,24 +1,40 @@
-import { Grid, Heading, VStack, Box } from "@chakra-ui/react";
+import {
+  Grid,
+  Heading,
+  VStack,
+  Box,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { TestComponent } from "../../../../components/TestComponent/TestComponent";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { SVGArrow } from "../SVGArrow/SVGArrow";
 import "./heroGradient.scss";
+import { Colours } from "../../../../colourScheme";
 
 export const TopHero = (): JSX.Element => {
   return (
-    <Grid minH="93vh" position="relative" id="homeHero">
+    <Grid
+      minH="93vh"
+      position="relative"
+      id="homeHero"
+      background={useColorModeValue(
+        `linear-gradient(135deg, hsla(32, 100%, 82%, 1) 30%, #A4CEFF 100%);`,
+        `linear-gradient(135deg,${Colours.darkModeMainCol} 30%, ${Colours.darkModeNavColHighlight} 100%);`
+      )}
+      transition={"all 0.3s ease-in-out"}
+      borderBottom={useColorModeValue("solid black", "solid white")}
+    >
       <VStack display={"flex"} justifyContent={"center"} alignItems="center">
         <Heading
           fontSize={ResponsiveSizes.HeroHeaderSizes}
           textAlign={"center"}
-          color={"blackAlpha.800"}
         >
           Watch your language!
         </Heading>
         <Heading
           fontSize={ResponsiveSizes.SecondaryHeaderSizes}
           textAlign={"center"}
-          color={"blackAlpha.600"}
+          color={useColorModeValue("blackAlpha.600", "whiteAlpha.600")}
         >
           The future of AAC smartwatch apps.
         </Heading>

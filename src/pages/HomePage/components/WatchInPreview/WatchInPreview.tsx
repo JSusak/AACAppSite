@@ -9,6 +9,7 @@ import {
   Divider,
   useMediaQuery,
 } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 import { ImageCollage } from "../ImageCollab/ImageCollage";
 import { Colours } from "../../../../colourScheme";
 import { motion } from "framer-motion";
@@ -58,7 +59,10 @@ export const WatchInPreview = (): JSX.Element => {
           >
             <Heading
               fontSize={["2xl", "2xl", "4xl", "4xl"]}
-              color={Colours.lightModeMainCol}
+              color={useColorModeValue(
+                Colours.lightModeWatchInAccent,
+                Colours.darkModeWatchInAccent
+              )}
             >
               Private cognitive support.
             </Heading>
@@ -106,6 +110,7 @@ export const WatchInPreview = (): JSX.Element => {
           columns={{ base: 1, md: 1, xl: 2 }}
           mt={{ base: "0px", md: "2rem", xl: "0px" }}
           mb={{ base: "0px", sm: "2rem", md: "2rem", xl: "0px" }}
+          pb={["2rem", "0rem", "0rem", "0rem"]}
           w="90%"
         >
           {/*To allow the preview to have an opposite layout effect and still have the image on top 

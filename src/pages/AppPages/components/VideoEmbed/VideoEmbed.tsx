@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
 import { motion } from "framer-motion";
 import { Colours } from "../../../../colourScheme";
@@ -26,7 +26,13 @@ export const VideoEmbed = ({ link }: { link: string }): JSX.Element => {
         width: "90%",
       }}
     >
-      <Box borderWidth={"3px"} borderColor={Colours.lightModeHeader}>
+      <Box
+        borderWidth={"3px"}
+        borderColor={useColorModeValue(
+          Colours.lightModeHeader,
+          Colours.darkModeHeader
+        )}
+      >
         <ReactPlayer url={link} width={"100%"} height={"700px"} />
       </Box>
     </motion.div>

@@ -2,6 +2,7 @@ import { Image } from "@chakra-ui/image";
 import { Box, Center, Heading, Link, Text, VStack } from "@chakra-ui/layout";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useColorModeValue } from "@chakra-ui/react";
 
 export const InteractiveDesignIcon = ({
   id,
@@ -84,7 +85,7 @@ export const InteractiveDesignIcon = ({
         width={`${width.toString()}px`}
         height={`${height.toString()}px`}
         borderRadius={"50px"}
-        borderColor="blue.100"
+        borderColor={useColorModeValue("blue.100", "whiteAlpha.500")}
         borderWidth={"4px"}
         display={"flex"}
         justifyContent={"center"}
@@ -103,7 +104,14 @@ export const InteractiveDesignIcon = ({
           <Box
             w={"100%"}
             zIndex={isHover ? 400 : 0}
-            backgroundColor={isHover ? "rgba(192,192,192,0.8)" : "transparent"}
+            backgroundColor={
+              isHover
+                ? useColorModeValue(
+                    "rgba(254, 235, 200,0.6)",
+                    "rgba(0, 0, 0, 0.6)"
+                  )
+                : "transparent"
+            }
             h="100%"
             transition="all 0.5s ease-in-out"
             position="absolute"

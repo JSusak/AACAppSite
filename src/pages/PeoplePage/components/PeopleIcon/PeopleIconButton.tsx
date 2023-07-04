@@ -1,4 +1,4 @@
-import { Link } from "@chakra-ui/react";
+import { Link, useColorModeValue } from "@chakra-ui/react";
 import { Colours } from "../../../../colourScheme";
 import { motion } from "framer-motion";
 
@@ -22,7 +22,13 @@ export const PeopleIconButton = ({
         borderRadius={"100%"}
         _hover={{
           bg: "none",
-          color: webLink === "" ? "none" : Colours.lightModeNavColHighlight,
+          color:
+            webLink === ""
+              ? "none"
+              : useColorModeValue(
+                  Colours.lightModeNavColHighlight,
+                  Colours.darkModeNavColHighlight
+                ),
           boxShadow: "none",
           outline: "none",
         }}

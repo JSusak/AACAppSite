@@ -7,6 +7,7 @@ import {
   Text,
   Button,
   Divider,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { Colours } from "../../../../colourScheme";
@@ -32,7 +33,12 @@ export const CodesignExplanationSection = (): JSX.Element => {
                 >
                   What is it?
                 </Heading>
-                <Divider borderColor={Colours.lightModeMainCol} />
+                <Divider
+                  borderColor={useColorModeValue(
+                    Colours.lightModeMainCol,
+                    Colours.darkModeMainCol
+                  )}
+                />
                 <Text fontSize={"xl"} maxW="2xl" textAlign={"center"} w="90%">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Assumenda maxime, suscipit ut in tempora adipisci ea

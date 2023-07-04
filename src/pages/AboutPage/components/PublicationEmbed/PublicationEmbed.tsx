@@ -7,6 +7,7 @@ import {
   Divider,
   Box,
   SimpleGrid,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -46,7 +47,14 @@ export const PublicationEmbed = ({
       viewport={{ once: true }}
     >
       <Link isExternal href={paperURL} style={{ textDecoration: "none" }}>
-        <Card w="100%" borderRadius={"10px"}>
+        <Card
+          w="100%"
+          borderRadius={"10px"}
+          backgroundColor={useColorModeValue(
+            "blackAlpha.100",
+            Colours.darkModeMainCol
+          )}
+        >
           <VStack>
             <Box overflow={"hidden"} w={"95%"} m="0.5rem">
               <Image
@@ -62,7 +70,13 @@ export const PublicationEmbed = ({
               {publicationName}
             </Heading>
             <Divider />
-            <Heading fontSize={"2xl"} color={Colours.lightModeMainCol}>
+            <Heading
+              fontSize={"2xl"}
+              color={useColorModeValue(
+                Colours.lightModeHeader,
+                Colours.darkModeHeader
+              )}
+            >
               Authors:
             </Heading>
             <SimpleGrid columns={[2, 2, 3, 3]} spacing="2rem" mb="0.5rem">
@@ -81,7 +95,7 @@ export const PublicationEmbed = ({
             m="1rem"
             textAlign={"center"}
             fontSize={"md"}
-            color="blackAlpha.500"
+            color={useColorModeValue("blackAlpha.500", "whiteAlpha.500")}
           >
             {inProceedingsOf}
           </Text>

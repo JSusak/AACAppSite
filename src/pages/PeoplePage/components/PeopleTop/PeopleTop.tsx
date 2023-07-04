@@ -7,6 +7,7 @@ import {
   Text,
   Image,
   Center,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { motion } from "framer-motion";
@@ -62,7 +63,7 @@ export const PeopleTop = (): JSX.Element => {
                   px: "2",
                   py: "1",
                   rounded: "full",
-                  bg: "blue.100",
+                  bg: useColorModeValue("blue.100", "whiteAlpha.700"),
                 }}
               >
                 The main team for 'Watch Your Language' is comprised of a

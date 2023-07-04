@@ -1,4 +1,11 @@
-import { Grid, Heading, VStack, HStack, Link } from "@chakra-ui/react";
+import {
+  Grid,
+  Heading,
+  VStack,
+  HStack,
+  Link,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { WatchOutLogoAnim } from "../WatchOutLogoAnim/WatchOutLogoAnim";
 import { motion } from "framer-motion";
 import { Image } from "@chakra-ui/react";
@@ -25,7 +32,10 @@ export const WatchOutHero = (): JSX.Element => {
           <Heading
             as="span"
             fontSize={ResponsiveSizes.SecondaryHeaderSizes}
-            color={Colours.lightModeWatchOutAccent}
+            color={useColorModeValue(
+              Colours.lightModeWatchOutAccent,
+              Colours.darkModeWatchOutAccent
+            )}
           >
             face-to-face
           </Heading>{" "}

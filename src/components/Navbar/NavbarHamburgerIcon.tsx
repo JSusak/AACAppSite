@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { IconButton } from "@chakra-ui/react";
+import { IconButton, useColorModeValue } from "@chakra-ui/react";
+import { Colours } from "../../colourScheme";
 
 const topHam = {
   close: {
@@ -59,7 +60,10 @@ export const NavbarHamburgerIcon = ({
             x2="100"
             y1="0"
             y2="0"
-            stroke={"#000000"}
+            stroke={useColorModeValue(
+              Colours.lightModeHeader,
+              Colours.darkModeHeader
+            )}
             strokeWidth={8}
             animate={isNavOpen ? "open" : "close"}
             variants={topHam}
@@ -73,7 +77,10 @@ export const NavbarHamburgerIcon = ({
             x2="100"
             y1="50"
             y2="50"
-            stroke={"#000000"}
+            stroke={useColorModeValue(
+              Colours.lightModeHeader,
+              Colours.darkModeHeader
+            )}
             strokeWidth={8}
             animate={isNavOpen ? "open" : "close"}
             variants={middleHam}
@@ -87,7 +94,10 @@ export const NavbarHamburgerIcon = ({
             x2="100"
             y1="100"
             y2="100"
-            stroke={"#000000"}
+            stroke={useColorModeValue(
+              Colours.lightModeHeader,
+              Colours.darkModeHeader
+            )}
             strokeWidth={8}
             animate={isNavOpen ? "open" : "close"}
             variants={bottomHam}
@@ -101,13 +111,16 @@ export const NavbarHamburgerIcon = ({
       aria-label={"Open Hamburger"}
       ref={hamburgerRef}
       onClick={openAction}
+      borderWidth={"0px"}
       _hover={{
         bg: "none",
       }}
-      _active={{
-        bg: "none",
+      _focus={{
+        boxShadow: "none",
+        outline: "none",
+        borderColor: "transparent",
       }}
-      _focus={{ outline: "none" }}
+      _active={{ background: "transparent" }}
     />
   );
 };

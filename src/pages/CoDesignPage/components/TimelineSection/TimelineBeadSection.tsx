@@ -1,4 +1,10 @@
-import { Box, Center, Heading, SimpleGrid } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Heading,
+  SimpleGrid,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { TimelineCard } from "./TimelineCard";
 import Xarrow from "react-xarrows";
 import { Colours } from "../../../../colourScheme";
@@ -54,7 +60,10 @@ export const TimelineBeadSection = ({
           <Xarrow
             start={`bead${orderInTimeline.toString()}`}
             end={`workshop${orderInTimeline.toString()}`}
-            color={Colours.lightModeMainCol}
+            color={useColorModeValue(
+              Colours.lightModeMainCol,
+              Colours.darkModeMainCol
+            )}
           />
         </motion.div>
       ) : null}
@@ -67,7 +76,9 @@ export const TimelineBeadSection = ({
             whileInView="visible"
             className="circle bead"
             whileHover={{ scale: 1.5 }}
-            style={{ position: "relative" }}
+            style={{
+              background: useColorModeValue("#ffd5a4", Colours.darkModeMainCol),
+            }}
             id={`bead${orderInTimeline.toString()}`}
           >
             <Heading

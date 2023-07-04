@@ -43,6 +43,7 @@ const AboutTopImage = ({ imgSRC }: { imgSRC: string }): JSX.Element => {
     <motion.div variants={aboutTopItemAnim}>
       <Image
         width={"300px"}
+        height={"300px"}
         p="0.5rem"
         src={imgSRC}
         fallbackSrc="https://via.placeholder.com/300"
@@ -69,8 +70,8 @@ export const AboutTop = (): JSX.Element => {
               columns={[2, 2, 2, 1]}
               display={["none", "none", "none", "block"]}
             >
-              <AboutTopImage imgSRC="./kcl.png" />
-              <AboutTopImage imgSRC="./kcl.png" />
+              <AboutTopImage imgSRC="./images.jpg" />
+              <AboutTopImage imgSRC="./images.jpg" />
             </SimpleGrid>
           </Center>
           <VStack
@@ -94,8 +95,8 @@ export const AboutTop = (): JSX.Element => {
           </VStack>
           <Center>
             <SimpleGrid columns={[2, 2, 2, 1]}>
-              <AboutTopImage imgSRC="./kcl.png" />
-              <AboutTopImage imgSRC="./kcl.png" />
+              <AboutTopImage imgSRC="./images.jpg" />
+              <AboutTopImage imgSRC="./images.jpg" />
             </SimpleGrid>
           </Center>
         </SimpleGrid>

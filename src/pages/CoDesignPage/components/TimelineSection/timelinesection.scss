@@ -1,4 +1,4 @@
-$timelineCol: #ffd5a4;
+
 .line {
     position: absolute;
     z-index: 10;
@@ -6,13 +6,13 @@ $timelineCol: #ffd5a4;
     width:3px;
     top:0px;
     bottom:0px;
-    background-color: $timelineCol;
+  
     
 }
 
 .circle {
     position: relative;
-    background: $timelineCol;
+  
     border-radius: 50%;
 }
 .bead {
