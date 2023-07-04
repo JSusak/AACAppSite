@@ -89,14 +89,14 @@ export const ProjectOverview = (): JSX.Element => {
         <Center>
           <SimpleGrid columns={2} spacingX={"0.5rem"} p="0.5rem">
             <Image
-              src="./images.jpg"
+              src="./watchOnHand.png"
               width={"300px"}
               height="300px"
               fallbackSrc="https://via.placeholder.com/300x300"
               borderRadius={"10%"}
             />
             <Image
-              src="./images.jpg"
+              src="./qrScan.png"
               width={"300px"}
               height="300px"
               fallbackSrc="https://via.placeholder.com/300x300"

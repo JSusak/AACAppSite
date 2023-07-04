@@ -59,6 +59,7 @@ export const InteractiveDesign = (): JSX.Element => {
                 height={300}
                 text="Individuals living with Aphasia"
                 id="box1"
+                imageSRC={""}
               />
             </div>
           </div>
@@ -92,24 +93,28 @@ export const InteractiveDesign = (): JSX.Element => {
                     height={230}
                     text="Storyboarding"
                     id="box2"
+                    imageSRC={"./codesign/storyboarding.jpg"}
                   />
                   <InteractiveDesignIcon
                     width={230}
                     height={230}
                     text="Group Discussion"
                     id="box3"
+                    imageSRC={"./codesign/discussions.png"}
                   />
                   <InteractiveDesignIcon
                     width={230}
                     height={230}
                     text="High-Fidelity Prototyping"
                     id="box4"
+                    imageSRC="./codesign/highfid.png"
                   />
                   <InteractiveDesignIcon
                     width={230}
                     height={230}
                     text="Experience Prototyping/Role Play"
                     id="box5"
+                    imageSRC={"./codesign/experienceproto.png"}
                   />
                 </SimpleGrid>
               </VStack>

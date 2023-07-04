@@ -50,6 +50,7 @@ export const InteractiveDesignVertical = (): JSX.Element => {
                 height={200}
                 text="Individuals living with Aphasia"
                 id="box1"
+                imageSRC={"./codesign/storyboarding.jpg"}
               />
             </div>
           </div>
@@ -81,24 +82,28 @@ export const InteractiveDesignVertical = (): JSX.Element => {
                     height={180}
                     text="Storyboarding"
                     id="box2"
+                    imageSRC={"./codesign/storyboarding.jpg"}
                   />
                   <InteractiveDesignIcon
                     width={180}
                     height={180}
                     text="Group Discussion"
                     id="box3"
+                    imageSRC={"./codesign/discussions.png"}
                   />
                   <InteractiveDesignIcon
                     width={180}
                     height={180}
                     text="High-Fidelity Prototyping"
                     id="box4"
+                    imageSRC="./codesign/highfid.png"
                   />
                   <InteractiveDesignIcon
                     width={180}
                     height={180}
-                    text="Experience Prototyping"
+                    text="Experience Prototyping/Role Play"
                     id="box5"
+                    imageSRC={"./codesign/experienceproto.png"}
                   />
                 </SimpleGrid>
               </VStack>

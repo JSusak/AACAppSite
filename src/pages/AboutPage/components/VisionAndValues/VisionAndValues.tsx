@@ -68,7 +68,7 @@ export const VisionAndValues = (): JSX.Element => {
           <Image
             width={"90%"}
             height={"90%"}
-            src="./images.jpg"
+            src="./situations.jpg"
             borderRadius={"10%"}
             fallbackSrc="https://via.placeholder.com/800x800"
           />

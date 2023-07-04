@@ -9,11 +9,13 @@ export const InteractiveDesignIcon = ({
   width,
   height,
   text,
+  imageSRC,
 }: {
   id: string;
   width: number;
   height: number;
   text: string;
+  imageSRC: string;
 }): JSX.Element => {
   const [isHover, setIsHover] = useState(false);
 
@@ -95,7 +97,7 @@ export const InteractiveDesignIcon = ({
         <Center>
           <Image
             height="100%"
-            src="./images.jpg"
+            src={imageSRC}
             borderRadius={"44px"}
             fallbackSrc={`https://via.placeholder.com/${width}x${height}`}
             objectFit="cover"
