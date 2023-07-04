@@ -12,6 +12,7 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
+  Flex,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
@@ -200,6 +201,7 @@ export const Navbar: React.FC = (): JSX.Element => {
 
             <DrawerContent zIndex={9999}>
               <DrawerCloseButton />
+
               <DrawerBody
                 background={useColorModeValue(
                   `linear-gradient(109.6deg, ${Colours.lightModeMainCol} 11.2%, ${Colours.lightModeNavColHighlight} 100.2%);`,
@@ -248,6 +250,9 @@ export const Navbar: React.FC = (): JSX.Element => {
                         buttonIcon={<FaAppStore size="50px" />}
                       />
                     </HStack>
+                    <Flex>
+                      <ColourModeSwitcher />
+                    </Flex>
                   </VStack>
                 </motion.div>
               </DrawerBody>
