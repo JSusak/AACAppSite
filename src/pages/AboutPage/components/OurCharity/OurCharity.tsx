@@ -64,7 +64,7 @@ export const OurCharity = (): JSX.Element => {
           mb="2rem"
           width={"95%"}
           height={"800px"}
-          src="./kcl.png"
+          src="./images.jpg"
           borderRadius={"10px"}
           objectFit={"cover"}
           fallbackSrc="https://via.placeholder.com/1500x800"
