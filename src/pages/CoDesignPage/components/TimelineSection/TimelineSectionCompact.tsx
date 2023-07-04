@@ -1,4 +1,11 @@
-import { Center, Grid, Heading, VStack, Text } from "@chakra-ui/react";
+import {
+  Center,
+  Grid,
+  Heading,
+  VStack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { timelineCardContents } from "./timelineCardContents";
 import { TimelineCardCompact } from "./TimelineCardCompact";
 import Xarrow from "react-xarrows";
@@ -40,7 +47,10 @@ export const TimelineSectionCompact = (): JSX.Element => {
                       <Xarrow
                         start={`compactCard${index}`}
                         end={`compactCard${index + 1}`}
-                        color={Colours.lightModeMainCol}
+                        color={useColorModeValue(
+                          Colours.lightModeMainCol,
+                          Colours.darkModeMainCol
+                        )}
                       />
                     </motion.div>
                   ) : null}

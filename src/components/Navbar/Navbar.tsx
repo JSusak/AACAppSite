@@ -136,6 +136,7 @@ export const Navbar: React.FC = (): JSX.Element => {
           Colours.darkModeMainCol
         )}
         p={6}
+        transition={"all 0.3s ease-in-out"}
         boxShadow={
           "rgba(0, 0, 0, 0.2) 0px 10px 30px -10px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px"
         }
@@ -202,7 +203,7 @@ export const Navbar: React.FC = (): JSX.Element => {
               <DrawerBody
                 background={useColorModeValue(
                   `linear-gradient(109.6deg, ${Colours.lightModeMainCol} 11.2%, ${Colours.lightModeNavColHighlight} 100.2%);`,
-                  `linear-gradient(109.6deg, #ff0000 11.2%, #ff0000 100.2%);`
+                  `linear-gradient(109.6deg, ${Colours.darkModeMainCol} 11.2%, ${Colours.darkModeNavColHighlight} 100.2%);`
                 )}
                 boxShadow={"-3px 0px 20px 1px #000000"}
               >

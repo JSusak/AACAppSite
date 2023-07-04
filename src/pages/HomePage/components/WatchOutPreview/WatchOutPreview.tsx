@@ -7,11 +7,13 @@ import {
   Button,
   Grid,
   Divider,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ImageCollage } from "../ImageCollab/ImageCollage";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { motion } from "framer-motion";
 import { homePageFadeInLeft } from "../homePageAnims";
+import { Colours } from "../../../../colourScheme";
 
 export const WatchOutPreview = (): JSX.Element => {
   return (
@@ -55,7 +57,10 @@ export const WatchOutPreview = (): JSX.Element => {
               >
                 <Heading
                   fontSize={["2xl", "2xl", "4xl", "4xl"]}
-                  color={"blue.100"}
+                  color={useColorModeValue(
+                    Colours.lightModeWatchOutAccent,
+                    Colours.darkModeWatchOutAccent
+                  )}
                 >
                   Face-to-face interactions.
                 </Heading>

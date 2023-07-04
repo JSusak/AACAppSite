@@ -1,7 +1,7 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, useColorModeValue } from "@chakra-ui/react";
 import "./imageCollage.scss";
 import { motion } from "framer-motion";
-
+import { Colours } from "../../../../colourScheme";
 
 const imageCollageWrapperAnim = {
   hidden: { opacity: 0 },
@@ -51,6 +51,16 @@ export const ImageCollage = ({ images }: { images: string[] }): JSX.Element => {
                 z-index={10 + index}
                 zIndex={0}
                 _hover={{ zIndex: 150 }}
+                style={{
+                  backgroundColor: useColorModeValue(
+                    "#fafafa",
+                    Colours.darkModeMainCol
+                  ),
+                  borderColor: useColorModeValue(
+                    Colours.darkModeMainCol,
+                    "#fafafa"
+                  ),
+                }}
               />
             </motion.div>
           );

@@ -9,6 +9,7 @@ import { TestComponent } from "../../../../components/TestComponent/TestComponen
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { SVGArrow } from "../SVGArrow/SVGArrow";
 import "./heroGradient.scss";
+import { Colours } from "../../../../colourScheme";
 
 export const TopHero = (): JSX.Element => {
   return (
@@ -17,9 +18,10 @@ export const TopHero = (): JSX.Element => {
       position="relative"
       id="homeHero"
       background={useColorModeValue(
-        "linear-gradient(135deg, hsla(32, 100%, 82%, 1) 30%, #A4CEFF 100%);",
-        "linear-gradient(135deg,rgb(90, 92, 106) 30%, rgb(32, 45, 58) 100%);"
+        `linear-gradient(135deg, hsla(32, 100%, 82%, 1) 30%, #A4CEFF 100%);`,
+        `linear-gradient(135deg,${Colours.darkModeMainCol} 30%, ${Colours.darkModeNavColHighlight} 100%);`
       )}
+      transition={"all 0.3s ease-in-out"}
       borderBottom={useColorModeValue("solid black", "solid white")}
     >
       <VStack display={"flex"} justifyContent={"center"} alignItems="center">

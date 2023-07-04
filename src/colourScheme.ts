@@ -8,10 +8,11 @@ export const Colours: { [key: string]: string } = {
   lightModeSecondary: "#333",
   lightModeMuted: "#00ff00",
 
+  //
   darkModeBG: "#121212",
   darkModeHeader: "#fafafa",
   darkModeSecondary: "#d3d3d3",
-  darkModeMuted: "#00ff00",
+  darkModeMuted: "#3b3b3b",
 
   lightModeMainCol: "#ffd5a4",
   lightModeNavColHighlight: "#a7c2cc",
@@ -22,10 +23,11 @@ export const Colours: { [key: string]: string } = {
   lightModeWatchInAccent: "#FBD38D",
 
   darkModeMainCol: "	#3e3e42",
-  darkModeNavColHighlight: "#151515",
-  darkModeNavColActive: "#ff00ff",
+  darkModeNavColHighlight: "#ED8936",
+  darkModeNavColActive: "#F6AD55",
   darkModeMainAccent: "#49274a",
 
-  darkModeWatchOutAccent: "#90CDF4",
-  darkModeWatchInAccent: "#FBD38D",
+  //A lighter shade of the same colour as light mode.
+  darkModeWatchOutAccent: "#d3ebfb",
+  darkModeWatchInAccent: "#fdedd1",
 };

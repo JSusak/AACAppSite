@@ -7,8 +7,10 @@ import {
   Link,
   Text,
   VStack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { Colours } from "../../../../colourScheme";
 
 const downloadVariants = {
   visible: {
@@ -56,7 +58,14 @@ export const DownloadEmbed = ({
           textDecoration: "none",
         }}
       >
-        <Card w="100%" borderRadius={"10px"}>
+        <Card
+          w="100%"
+          borderRadius={"10px"}
+          backgroundColor={useColorModeValue(
+            "blackAlpha.100",
+            Colours.darkModeMainCol
+          )}
+        >
           <CardHeader>
             <VStack>
               {embedIcon}

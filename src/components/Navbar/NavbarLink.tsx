@@ -16,6 +16,7 @@ const navLinkAnim = {
   },
 };
 
+
 export const NavbarLink = ({
   linkTo,
   linkText,
@@ -33,6 +34,16 @@ export const NavbarLink = ({
       className={({ isActive }: { isActive: boolean }): string =>
         isActive ? "active" : "inactive"
       }
+      style={({ isActive }: { isActive: boolean }) => {
+        return {
+          backgroundColor: isActive
+            ? useColorModeValue(
+                Colours.lightModeNavColActive,
+                Colours.darkModeNavColActive
+              )
+            : "",
+        };
+      }}
     >
       {" "}
       <motion.span variants={navLinkAnim} onClick={onClick}>

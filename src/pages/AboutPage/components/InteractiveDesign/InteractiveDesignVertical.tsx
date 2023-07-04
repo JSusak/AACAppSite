@@ -9,6 +9,7 @@ import {
 import { InteractiveDesignIcon } from "./InteractiveDesignIcon";
 import Xarrow from "react-xarrows";
 import { FinalImageIcon } from "./FinalImageIcon";
+import { useColorModeValue } from "@chakra-ui/react";
 
 export const InteractiveDesignVertical = (): JSX.Element => {
   return (
@@ -20,12 +21,22 @@ export const InteractiveDesignVertical = (): JSX.Element => {
         borderWidth={"5px"}
         overflow={"auto"}
         borderRadius={"10px"}
-        borderColor={"orange.300"}
+        borderColor={useColorModeValue("orange.300", "whiteAlpha.300")}
       >
-        <Xarrow start="box1" end="codesign" color={"orange"} />
-        <Xarrow start="codesign" end="apps" color={"orange"} />
+        <Xarrow
+          start="box1"
+          end="codesign"
+          color={useColorModeValue("orange", "white")}
+        />
+        <Xarrow
+          start="codesign"
+          end="apps"
+          color={useColorModeValue("orange", "white")}
+        />
         <VStack mt="2rem">
-          <Heading fontSize={"5xl"}>Project Diagram</Heading>
+          <Heading fontSize={"5xl"} textAlign={"center"}>
+            Project Diagram
+          </Heading>
 
           <div className="individualsWithAphasia">
             <div
@@ -47,11 +58,11 @@ export const InteractiveDesignVertical = (): JSX.Element => {
             mt="2rem"
             mb="2rem"
             width={["80%", "95%", "70%", "90%"]}
-            backgroundColor={"orange.200"}
+            backgroundColor={useColorModeValue("orange.200", "whiteAlpha.500")}
             borderRadius={"50px"}
             id="codesign"
             boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
-            borderColor={"blue.100"}
+            borderColor={useColorModeValue("blue.100", "whiteAlpha.500")}
             borderWidth={"5px"}
           >
             <Center>
@@ -97,11 +108,11 @@ export const InteractiveDesignVertical = (): JSX.Element => {
           <Box
             mb="2rem"
             width={["90%", "90%", "75%", "60%"]}
-            backgroundColor={"orange.200"}
+            backgroundColor={useColorModeValue("orange.200", "whiteAlpha.500")}
             borderRadius={"50px"}
             id="apps"
             boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
-            borderColor={"blue.100"}
+            borderColor={useColorModeValue("blue.100", "whiteAlpha.500")}
             borderWidth={"5px"}
           >
             <VStack>

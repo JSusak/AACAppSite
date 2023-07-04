@@ -1,4 +1,4 @@
-import { Link, Button } from "@chakra-ui/react";
+import { Link, Button, useColorModeValue } from "@chakra-ui/react";
 import { Colours } from "../../colourScheme";
 
 export const FooterButton = ({
@@ -20,7 +20,10 @@ export const FooterButton = ({
         borderRadius={"100%"}
         _hover={{
           bg: "none",
-          color: Colours.lightModeNavColHighlight,
+          color: useColorModeValue(
+            Colours.lightModeNavColHighlight,
+            Colours.darkModeNavColHighlight
+          ),
           boxShadow: "none",
           outline: "none",
         }}

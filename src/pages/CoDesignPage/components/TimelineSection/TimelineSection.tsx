@@ -1,8 +1,16 @@
-import { Box, Center, Container, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Container,
+  Heading,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import "./timelinesection.scss";
 
 import { TimelineBeadSection } from "./TimelineBeadSection";
 import { timelineCardContents } from "./timelineCardContents";
+import { Colours } from "../../../../colourScheme";
 
 export const TimelineSection = (): JSX.Element => {
   return (
@@ -27,11 +35,28 @@ export const TimelineSection = (): JSX.Element => {
         {/* Actual timeline container */}
         <Container position="relative" minH={"300px"} maxW={"90%"}>
           <Center>
-            <div className="line"></div>
+            <div
+              className="line"
+              style={{
+                backgroundColor: useColorModeValue(
+                  "#ffd5a4",
+                  Colours.darkModeMainCol
+                ),
+              }}
+            ></div>
           </Center>
 
           <Center>
-            <div className="circle beadTip" id="beadstart"></div>
+            <div
+              className="circle beadTip"
+              id="beadstart"
+              style={{
+                background: useColorModeValue(
+                  "#ffd5a4",
+                  Colours.darkModeMainCol
+                ),
+              }}
+            ></div>
           </Center>
 
           {timelineCardContents.map((card, index) => {
@@ -50,7 +75,15 @@ export const TimelineSection = (): JSX.Element => {
           })}
 
           <Center>
-            <div className="circle beadTip"></div>
+            <div
+              className="circle beadTip"
+              style={{
+                background: useColorModeValue(
+                  "#ffd5a4",
+                  Colours.darkModeMainCol
+                ),
+              }}
+            ></div>
           </Center>
         </Container>
       </Container>
