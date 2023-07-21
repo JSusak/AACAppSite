@@ -6,6 +6,7 @@ export const SVGArrow = ({ iconSize }: { iconSize: string }): JSX.Element => {
     <motion.div
       initial={{ y: 0 }}
       animate={{ y: -10 }}
+      role="figure"
       transition={{
         duration: 2,
         repeat: Infinity,
