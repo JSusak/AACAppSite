@@ -4,9 +4,21 @@ import { FaChrome, FaEnvelopeOpen, FaGlobe } from "react-icons/fa";
 //you simply have to change it here.
 export const academics = [
   {
-    personName: "Researcher 1",
-    organisationName: "King's College London",
-    imagePath: "./avatarplaceholder.png",
+    personName: "Dr Timothy Neate",
+    organisationName: "Senior Lecturer",
+    imagePath: "./peopleIcons/tdjn2022_miami.jpeg",
+    furtherInfo: "",
+    projectRoles: ["Role 1", "Role 2"],
+    primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
+    secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
+    primaryIcon: <FaEnvelopeOpen size="60px" />,
+    secondaryIcon: <FaGlobe size="60px" />,
+  },
+  {
+    personName: "Humphrey Curtis",
+    organisationName: "PhD Researcher",
+    imagePath: "./peopleIcons/curtis.png",
+    furtherInfo: "",
     projectRoles: ["Role 1", "Role 2"],
     primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
     secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
@@ -14,29 +26,10 @@ export const academics = [
     secondaryIcon: <FaGlobe size="40px" />,
   },
   {
-    personName: "Researcher 2",
-    organisationName: "King's College London",
-    imagePath: "./avatarplaceholder.png",
-    projectRoles: ["Role 1", "Role 2"],
-    primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
-    secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
-    primaryIcon: <FaEnvelopeOpen size="40px" />,
-    secondaryIcon: <FaGlobe size="40px" />,
-  },
-  {
-    personName: "Researcher 3",
-    organisationName: "King's College London",
-    imagePath: "./avatarplaceholder.png",
-    projectRoles: ["Role 1", "Role 2"],
-    primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
-    secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
-    primaryIcon: <FaEnvelopeOpen size="40px" />,
-    secondaryIcon: <FaGlobe size="40px" />,
-  },
-  {
-    personName: "Researcher 4",
-    organisationName: "King's College London",
-    imagePath: "./avatarplaceholder.png",
+    personName: "Joshua Susak",
+    organisationName: "Informatics Student",
+    imagePath: "./peopleIcons/dogy.png",
+    furtherInfo: "",
     projectRoles: ["Role 1", "Role 2"],
     primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
     secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
@@ -47,49 +40,18 @@ export const academics = [
 
 export const otherContributors = [
   {
-    personName: "Aphasia Re-connect",
-    organisationName: "Independent Charity",
+    personName: "Dr Sally McVicker",
+    organisationName: "Aphasia Re-Connect",
     imagePath:
       "https://aphasiareconnect.org/wp-content/uploads/2019/02/handsLogo_round.png",
+
+    furtherInfo:
+      "Founded Aphasia Re-Connect in 2017. Continues to co-ordinate the team at Aphasia Re-Connect, whilst also covering a Clinical Academic Role at City, University of London. Dr McVicker trained as a speech and language therapist having gained her doctorate in Anthropology from the University of Durham. She has over thirty years’ experience of working with people living with the communication disability, aphasia.",
 
     projectRoles: ["Workshop Activities"],
     primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
     secondaryWebLink: "",
     primaryIcon: <FaChrome size="40px" />,
-    secondaryIcon: <FaGlobe size="40px" />,
-  },
-  {
-    personName: "Aphasia Re-connect",
-    organisationName: "Independent Charity",
-    imagePath:
-      "https://aphasiareconnect.org/wp-content/uploads/2019/02/handsLogo_round.png",
-
-    projectRoles: ["Workshop Activities"],
-    primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
-    secondaryWebLink: "",
-    primaryIcon: <FaChrome size="40px" />,
-    secondaryIcon: <FaGlobe size="40px" />,
-  },
-  {
-    personName: "Aphasia Re-connect",
-    organisationName: "Independent Charity",
-    imagePath:
-      "https://aphasiareconnect.org/wp-content/uploads/2019/02/handsLogo_round.png",
-
-    projectRoles: ["Workshop Activities"],
-    primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
-    secondaryWebLink: "",
-    primaryIcon: <FaChrome size="40px" />,
-    secondaryIcon: <FaGlobe size="40px" />,
-  },
-  {
-    personName: "Contributor 2",
-    organisationName: "King's College London",
-    imagePath: "./avatarplaceholder.png",
-    projectRoles: ["Role 1", "Role 2"],
-    primaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
-    secondaryWebLink: "https://keats.kcl.ac.uk/?redirect=0",
-    primaryIcon: <FaEnvelopeOpen size="40px" />,
     secondaryIcon: <FaGlobe size="40px" />,
   },
 ];
