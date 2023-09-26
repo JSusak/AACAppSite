@@ -41,13 +41,14 @@ export const ProjectOverview = (): JSX.Element => {
               fontSize={"xl"}
               textAlign={["center", "center", "center", "left"]}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-              maxime, suscipit ut in tempora adipisci ea repellendus aliquam
-              ducimus? Distinctio necessitatibus ea, perspiciatis fugit officiis
-              minus earum nihil a. Quos. Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Facilis, autem sunt similique adipisci vero
-              corporis doloremque quasi illum obcaecati quia explicabo, itaque
-              minima non officia repellat omnis labore. Perferendis, quisquam.
+              Communication has been described as the essence of human life and
+              is integral to prevent social marginalisaton. Yet, our
+              communication abilites are often most challenged with strangers
+              and in public domains with significant social pressures. Within
+              these domains, typically AAC devices are hard to use and very
+              socially prominent creating further stigmas. In contrast,
+              smartwatches are a more discreet wearable technology offering a
+              host of health and wellness benefits.
             </Text>
           </motion.span>
 
@@ -61,7 +62,7 @@ export const ProjectOverview = (): JSX.Element => {
               fontSize={ResponsiveSizes.SecondaryHeaderSizes}
               textAlign={"left"}
             >
-              Research Funding
+              Co-design
             </Heading>
           </motion.span>
 
@@ -76,13 +77,17 @@ export const ProjectOverview = (): JSX.Element => {
               fontSize={"xl"}
               textAlign={["center", "center", "center", "left"]}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-              maxime, suscipit ut in tempora adipisci ea repellendus aliquam
-              ducimus? Distinctio necessitatibus ea, perspiciatis fugit officiis
-              minus earum nihil a. Quos. Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Facilis, autem sunt similique adipisci vero
-              corporis doloremque quasi illum obcaecati quia explicabo, itaque
-              minima non officia repellat omnis labore. Perferendis, quisquam.
+              For both AAC smartwatch apps, our co-design process involved
+              extensive collaboration with people living with aphasia recruited
+              from the charity Aphasia Re-Connect over several months. We began
+              with three co-design workshops that: (1) explored participants
+              contextual communication challenges, (2) tangible prototyping of
+              participants solutions and (3) iterating deployed smartwatch
+              prototypes. With the smartwatch apps built, we then proceeded to
+              complementary evaluation workshops. These workshops focused on
+              testing in a multiltude of ways: role-playing communication
+              scenarios with both smartwatch apps, session observation and
+              discussion.
             </Text>
           </motion.span>
         </VStack>

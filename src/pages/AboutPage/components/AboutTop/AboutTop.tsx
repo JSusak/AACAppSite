@@ -84,13 +84,15 @@ export const AboutTop = (): JSX.Element => {
             <Heading fontSize={ResponsiveSizes.HeroHeaderSizes}>About</Heading>
 
             <Text fontSize={"xl"} maxW="90%" textAlign={"center"}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-              maxime, suscipit ut in tempora adipisci ea repellendus aliquam
-              ducimus? Distinctio necessitatibus ea, perspiciatis fugit officiis
-              minus earum nihil a. Quos. Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Facilis, autem sunt similique adipisci vero
-              corporis doloremque quasi illum obcaecati quia explicabo, itaque
-              minima non officia repellat omnis labore. Perferendis, quisquam.
+              As smartwatches increase in global popularity with a host of
+              fitness and lifestyle benefits. Now, is the optimal time to design
+              smartwatch AAC apps that discreetly support communication of
+              wearers "on the go". Indeed, communication in public spaces with
+              social pressures is often most challenging. Importantly, both apps
+              are flexible to unobtrusively support adapting communication
+              needs. Directly co-designed with people living with the language
+              impairment aphasia so as to ensure both apps meet people's daily
+              language needs.
             </Text>
           </VStack>
           <Center>

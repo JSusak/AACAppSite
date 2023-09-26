@@ -15,14 +15,14 @@ export const AboutPage: React.FC = (): JSX.Element => {
         {/* Project Overview section */}
         <ProjectOverview />
 
+        {/* Interactive Diagram section */}
+        <InteractiveSection />
+
         {/* Vision & Values section */}
         <VisionAndValues />
 
         {/* Academic Publications section */}
         <PublicationSection />
-
-        {/* Interactive Diagram section */}
-        <InteractiveSection />
 
         {/* Aphasia Reconnectsection */}
         <OurCharity />
