@@ -13,6 +13,7 @@ interface PersonType {
   secondaryWebLink: string;
   primaryIcon: JSX.Element;
   secondaryIcon: JSX.Element;
+  furtherInfo: string;
 }
 
 const listOfPeopleAnim = {
@@ -33,10 +34,12 @@ const listOfPeopleAnim = {
 export const ListOfPeopleSection = ({
   sectionHeading,
   sectionSubheading,
+  numberOfCols,
   listOfPeople,
 }: {
   sectionHeading: string;
   sectionSubheading: string;
+  numberOfCols: number[];
   listOfPeople: PersonType[];
 }): JSX.Element => {
   return (
@@ -54,12 +57,12 @@ export const ListOfPeopleSection = ({
           >
             {sectionHeading}
           </Heading>
-          <Heading fontSize={["2xl", "2xl", "3xl", "3xl"]} textAlign={"center"}>
+          <Heading fontSize={["xl", "xl", "2xl", "2xl"]} textAlign={"center"}>
             {sectionSubheading}
           </Heading>
           <Center>
             <SimpleGrid
-              columns={[1, 1, 1, 2]}
+              columns={numberOfCols}
               spacingX={"10rem"}
               spacingY={"2rem"}
               m="2rem"
@@ -78,6 +81,7 @@ export const ListOfPeopleSection = ({
                     secondaryWebLink={person.secondaryWebLink}
                     primaryIcon={person.primaryIcon}
                     secondaryIcon={person.secondaryIcon}
+                    furtherInfo={person.furtherInfo}
                   />
                 );
               })}
