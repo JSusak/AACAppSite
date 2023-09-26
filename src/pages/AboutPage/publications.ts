@@ -1,12 +1,13 @@
 export const publications = [
   {
-    publicationName: "Academic Paper 1",
-    publicationImage: "./images.jpg",
-    publicationAuthors: ["Author 1", "Author 2", "Author 3"],
+    publicationName:
+      "Watch Your Language: Using Smartwatches to Support Communication",
+    publicationImage: "./watch-your-language-thumbnail.png",
+    publicationAuthors: ["Curtis, Humphrey", "Neate, Timothy"],
     inProceedingsOf:
-      "In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI), 2019.",
+      "In ACM SIGACCESS Conference on Computers and Accessibility, 2022.",
     paperURL:
-      "https://kclpure.kcl.ac.uk/ws/portalfiles/portal/197593195/chi_2023_no_copyright.pdf",
+      "https://kclpure.kcl.ac.uk/ws/portalfiles/portal/227569001/assets23_2.pdf",
   },
   {
     publicationName: "Academic Paper 2",

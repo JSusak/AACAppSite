@@ -79,7 +79,13 @@ export const PublicationEmbed = ({
             >
               Authors:
             </Heading>
-            <SimpleGrid columns={[2, 2, 3, 3]} spacing="2rem" mb="0.5rem">
+            <SimpleGrid
+              columns={
+                publicationAuthors.length <= 2 ? publicationAuthors.length : 3
+              }
+              spacing="2rem"
+              mb="0.5rem"
+            >
               {publicationAuthors.map((author, key) => {
                 return (
                   <Text fontSize={"xl"} key={key}>

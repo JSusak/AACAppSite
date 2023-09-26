@@ -56,14 +56,13 @@ export const PublicationSection = (): JSX.Element => {
                 maxW={["90%", "90%", "3xl", "3xl"]}
                 textAlign={["center", "center", "center", "left"]}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda maxime, suscipit ut in tempora adipisci ea repellendus
-                aliquam ducimus? Distinctio necessitatibus ea, perspiciatis
-                fugit officiis minus earum nihil a. Quos. Lorem ipsum, dolor sit
-                amet consectetur adipisicing elit. Facilis, autem sunt similique
-                adipisci vero corporis doloremque quasi illum obcaecati quia
-                explicabo, itaque minima non officia repellat omnis labore.
-                Perferendis, quisquam.
+                This work is detailed in a 2023 academic publication entitled
+                "Watch Your Language: Using Smartwatches to Support
+                Communication". Published at the The 25th International ACM
+                SIGACCESS Conference on Computers and Accessibility. The ASSETS
+                conference is the premier forum for presenting research on the
+                design, evaluation, use, and education related to computing for
+                people with disabilities and older adults.
               </Text>
             </Center>
           </motion.span>

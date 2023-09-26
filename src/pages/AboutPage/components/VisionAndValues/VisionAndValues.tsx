@@ -48,7 +48,7 @@ export const VisionAndValues = (): JSX.Element => {
           </motion.span>
 
           <Divider
-            maxW={"50%"}
+            maxW={"70%"}
             borderColor={useColorModeValue(
               Colours.lightModeHeader,
               Colours.darkModeHeader
@@ -94,7 +94,7 @@ export const VisionAndValues = (): JSX.Element => {
           </motion.span>
 
           <Divider
-            maxW={"50%"}
+            maxW={"70%"}
             borderColor={useColorModeValue(
               Colours.lightModeHeader,
               Colours.darkModeHeader
