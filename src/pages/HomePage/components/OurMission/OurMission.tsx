@@ -12,6 +12,7 @@ import { Image } from "@chakra-ui/image";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { motion } from "framer-motion";
 import { homePageFadeInVertical } from "../homePageAnims";
+import { ListItem, UnorderedList } from "@chakra-ui/react";
 
 export const OurMission = (): JSX.Element => {
   return (
@@ -27,7 +28,7 @@ export const OurMission = (): JSX.Element => {
             fontSize={ResponsiveSizes.HeroHeaderSizes}
             textAlign={"center"}
           >
-            Our Mission.
+            Looking beyond tablet-based AAC.
           </Heading>
           <Divider />
 
@@ -38,19 +39,32 @@ export const OurMission = (): JSX.Element => {
             viewport={{ once: true }}
           >
             <Center>
-              <Text
-                fontSize={["xl", "xl", "2xl", "2xl"]}
-                w={["90%", "90%", "90%", "4xl"]}
-                textAlign={["center", "center", "center", "left"]}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </Text>
+              <VStack>
+                <Text
+                  fontSize={["xl", "xl", "2xl", "2xl"]}
+                  w={["90%", "90%", "90%", "4xl"]}
+                  textAlign={["center", "center", "center", "left"]}
+                >
+                  Children, teens and adults who can't speak can use
+                  tablet-based Augmentative and Alternative Communication (AAC)
+                  apps to support and build their language skills. Based on
+                  design insights from working directly with communities living
+                  with aphasia we present two lightweight smartwatch apps to
+                  support communication. In just a few taps, enrich confidence
+                  in your communication and start exploring the world with a
+                  wrist-based support!
+                </Text>
+                <UnorderedList>
+                  <ListItem
+                    w={["90%", "90%", "90%", "4xl"]}
+                    fontSize={["lg", "lg", "xl", "xl"]}
+                  >
+                    This project was led by accessibility researchers from
+                    King's College London's Human-Centered Computing Group in
+                    partnership with Aphasia Re-Connect.
+                  </ListItem>
+                </UnorderedList>
+              </VStack>
             </Center>
           </motion.span>
           <Divider />

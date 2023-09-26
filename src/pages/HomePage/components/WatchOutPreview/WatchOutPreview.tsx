@@ -8,6 +8,8 @@ import {
   Grid,
   Divider,
   useColorModeValue,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 import { ImageCollage } from "../ImageCollab/ImageCollage";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
@@ -62,7 +64,7 @@ export const WatchOutPreview = (): JSX.Element => {
                     Colours.darkModeWatchOutAccent
                   )}
                 >
-                  Face-to-face interactions.
+                  Face-to-face communication.
                 </Heading>
               </motion.span>
               <Divider />
@@ -72,20 +74,29 @@ export const WatchOutPreview = (): JSX.Element => {
                 whileInView="visible"
                 viewport={{ once: true }}
               >
-                <Text
-                  fontSize={["xl", "xl", "2xl", "2xl"]}
-                  maxW="xl"
-                  textAlign={["center", "center", "center", "left"]}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </Text>
+                <VStack maxW="xl">
+                  <Text
+                    fontSize={["xl", "xl", "2xl", "2xl"]}
+                    textAlign={["center", "center", "center", "left"]}
+                  >
+                    Our first app, Watch Out supports public face-to-face
+                    communication. Simply, pass messages to onlookers via the
+                    smartwatch display. Have the freedom to pass custom messages
+                    silently or with accompanied body gestures.
+                  </Text>
+                  <UnorderedList fontSize={["lg", "lg", "xl", "xl"]}>
+                    <ListItem>
+                      Tap to have the phrase read aloud, tap for a buzzer, tap
+                      for recognisable blue accessibility badge and to reverse
+                      display to show more easily.
+                    </ListItem>
+                    <ListItem>
+                      Save messages for quick access on your smartwatch on the
+                      go.
+                    </ListItem>
+                    <ListItem>Quick navigation with swipe interface.</ListItem>
+                  </UnorderedList>
+                </VStack>
               </motion.span>
               <Divider />
 

@@ -5,7 +5,6 @@ import {
   Box,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { TestComponent } from "../../../../components/TestComponent/TestComponent";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { SVGArrow } from "../SVGArrow/SVGArrow";
 import "./heroGradient.scss";
@@ -28,18 +27,18 @@ export const TopHero = (): JSX.Element => {
         <Heading
           fontSize={ResponsiveSizes.HeroHeaderSizes}
           textAlign={"center"}
+          maxW={"90%"}
         >
-          Watch your language!
+          Use a smartwatch to support your communication now!
         </Heading>
         <Heading
           fontSize={ResponsiveSizes.SecondaryHeaderSizes}
           textAlign={"center"}
           color={useColorModeValue("blackAlpha.600", "whiteAlpha.600")}
+          maxW={"90%"}
         >
-          The future of AAC smartwatch apps.
+          Use AAC freely 'on the go' from your wrist.
         </Heading>
-
-        <TestComponent />
       </VStack>
 
       <Box

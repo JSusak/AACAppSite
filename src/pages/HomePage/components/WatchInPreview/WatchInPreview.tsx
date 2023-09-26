@@ -8,6 +8,8 @@ import {
   Grid,
   Divider,
   useMediaQuery,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
 import { ImageCollage } from "../ImageCollab/ImageCollage";
@@ -74,19 +76,27 @@ export const WatchInPreview = (): JSX.Element => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <Text
-              fontSize={["xl", "xl", "2xl", "2xl"]}
-              maxW="xl"
-              textAlign={["center", "center", "center", "left"]}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Text>
+            <VStack>
+              <Text
+                fontSize={["xl", "xl", "2xl", "2xl"]}
+                maxW="xl"
+                textAlign={["center", "center", "center", "left"]}
+              >
+                Our second app, Watch In supports privately with helpful
+                word-finding and mindfulness features.
+              </Text>
+              <UnorderedList fontSize={["lg", "lg", "xl", "xl"]}>
+                <ListItem>
+                  Transcribe notes to help with memory troubles.
+                </ListItem>
+                <ListItem>
+                  Use a picker to search a dictionary for word-finding.
+                </ListItem>
+                <ListItem>
+                  Trigger smartwatch haptics to support more mindful breathing.
+                </ListItem>
+              </UnorderedList>
+            </VStack>
           </motion.span>
           <Divider />
 
