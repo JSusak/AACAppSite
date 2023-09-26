@@ -66,13 +66,12 @@ export const PeopleTop = (): JSX.Element => {
                   bg: useColorModeValue("blue.100", "whiteAlpha.700"),
                 }}
               >
-                The main team for 'Watch Your Language' is comprised of a
-                handful of specialist PhD students and professors in
-                Human-Computer Interaction, based at King's College London's
-                Department of Informatics. We are grateful to work alongside
-                expert Speech & Language Therapists and independent charities,
-                who provide regular feedback as the project evolves, ensuring we
-                don't leave any hidden gaps in your upcoming apps.
+                The team behind both AAC smartwatch apps is led by members of
+                the Human Centered Computing Research Group at King's College
+                London in partnership with independent national charity Aphasia
+                Re-Connect. Aphasia Re-Connect work together in partnership,
+                running peer-led groups, training and peer befriending to
+                support people with aphasia to re-connect with life.
               </Highlight>
             </Text>
           </VStack>

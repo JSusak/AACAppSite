@@ -12,15 +12,17 @@ export const PeoplePage: React.FC = (): JSX.Element => {
         <PeopleTop />
 
         <ListOfPeopleSection
-          sectionHeading={"Academic Researchers"}
-          sectionSubheading={"The core pioneers of the project."}
+          sectionHeading={"Academic Investigators"}
+          sectionSubheading={
+            "Researchers from the King's College London's Human Centred Computing Research Group. "
+          }
           listOfPeople={academics}
         />
 
         <ListOfPeopleSection
-          sectionHeading={"Other Contributors"}
+          sectionHeading={"Charity Partner"}
           sectionSubheading={
-            "The driving force behind making this project possible."
+            "A charity that transforms lives by connecting people with Aphasia and creating opportunities to engage in life."
           }
           listOfPeople={otherContributors}
         />
