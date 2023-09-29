@@ -48,18 +48,20 @@ export const TimelineSectionModal = ({
           animate="visible"
         >
           <motion.div variants={horizontalFade}>
-            <Image
-              boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
-              borderRadius={"15px"}
-              width={"800px"}
-              height={"500px"}
-              objectFit={"cover"}
-              zIndex={9}
-              transition={"all 0.2s ease-in-out"}
-              src={featureImage}
-              fallbackSrc="https://via.placeholder.com/400"
-              m="2rem"
-            />
+            <Center>
+              <Image
+                boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
+                borderRadius={"15px"}
+                width={"100%"}
+                height={"500px"}
+                objectFit={"cover"}
+                zIndex={9}
+                transition={"all 0.2s ease-in-out"}
+                src={featureImage}
+                fallbackSrc="https://via.placeholder.com/400"
+                m="2rem"
+              />
+            </Center>
           </motion.div>
 
           <Heading

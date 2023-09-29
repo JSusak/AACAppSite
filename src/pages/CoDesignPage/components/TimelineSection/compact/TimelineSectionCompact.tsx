@@ -6,13 +6,13 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { timelineCardContents } from "./timelineCardContents";
+import { timelineCardContents } from "../timelineCardContents";
 import { TimelineCardCompact } from "./TimelineCardCompact";
 import Xarrow from "react-xarrows";
 import { useState } from "react";
-import { Colours } from "../../../../colourScheme";
+import { Colours } from "../../../../../colourScheme";
 import { motion } from "framer-motion";
-import { timelineArrowAnim } from "./helpers/timelineAnims";
+import { timelineArrowAnim } from "../helpers/timelineAnims";
 
 export const TimelineSectionCompact = (): JSX.Element => {
   const [arrow, setArrow] = useState(false);

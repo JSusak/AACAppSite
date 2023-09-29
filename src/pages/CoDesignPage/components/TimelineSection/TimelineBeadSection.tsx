@@ -10,7 +10,7 @@ import Xarrow from "react-xarrows";
 import { Colours } from "../../../../colourScheme";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { timelineArrowAnim, timelineBeadAnim } from "./helpers/timelineAnims";
+import { timelineBeadAnim } from "./helpers/timelineAnims";
 
 export const TimelineBeadSection = ({
   orderInTimeline,
@@ -20,12 +20,14 @@ export const TimelineBeadSection = ({
   modalDescription,
   activityDate,
   taskList,
+  isCompact,
   activityImages,
 }: {
   orderInTimeline: number;
   isOnLeft: boolean;
   cardImageURL: string;
   cardName: string;
+  isCompact: boolean;
   modalDescription: string;
   activityImages: string[];
   activityDate: string;
@@ -43,23 +45,23 @@ export const TimelineBeadSection = ({
         activityDate={activityDate}
         taskList={taskList}
         activityImages={activityImages}
-        onImageLoad={function (): void {
-          setArrow(true);
-        }}
+        onImageLoad={isCompact ? () => setArrow(false) : () => setArrow(true)}
       />
     );
   };
   return (
     <Box className="timelineSection" zIndex={15}>
       {arrow ? (
-        <motion.div
-          variants={timelineArrowAnim}
-          initial="hidden"
-          whileInView="visible"
-        >
+        <motion.div className="arrow">
           <Xarrow
-            start={`bead${orderInTimeline.toString()}`}
+            start={
+              isCompact
+                ? `workshop${orderInTimeline.toString()}`
+                : `bead${orderInTimeline.toString()}`
+            }
             end={`workshop${orderInTimeline.toString()}`}
+            path="smooth"
+            curveness={1}
             color={useColorModeValue(
               Colours.lightModeMainCol,
               Colours.darkModeMainCol
@@ -67,7 +69,7 @@ export const TimelineBeadSection = ({
           />
         </motion.div>
       ) : null}
-      <SimpleGrid columns={3}>
+      <SimpleGrid columns={isCompact ? 1 : 3}>
         {isOnLeft ? <SectionCard /> : <Box></Box>}
         <Center>
           <motion.div
@@ -77,6 +79,7 @@ export const TimelineBeadSection = ({
             className="circle bead"
             style={{
               background: useColorModeValue("#ffd5a4", Colours.darkModeMainCol),
+              display: isCompact ? "none" : "flex",
             }}
             id={`bead${orderInTimeline.toString()}`}
           >

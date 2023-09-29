@@ -7,16 +7,16 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react";
-import { datesLongForm } from "./helpers/datesLongForm";
+import { datesLongForm } from "../helpers/datesLongForm";
 import { motion } from "framer-motion";
-import { timelineChildrenAnim } from "./helpers/timelineAnims";
+import { timelineChildrenAnim } from "../helpers/timelineAnims";
 
 export const TimelineCardCompact = ({
   id,
   cardImageURL,
   cardName,
   modalDescription,
-  activityImages,
+
   activityDate,
   taskList,
   onImageLoad,
