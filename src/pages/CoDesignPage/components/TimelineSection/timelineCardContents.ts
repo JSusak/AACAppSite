@@ -43,10 +43,14 @@ export const timelineCardContents = [
     cardImageURL: "./codesign/discussions.png",
     cardName: "Proof of concepts",
     modalDescription:
-      "In co-design workshop 3, we built three proof of concept AAC smartwatch apps using codesigners wireframes. The apps contained most of the core features envisaged by participants. The apps were deliberately deployed on two devices of different sizes: an Apple Watch Series 8 (45mm) and Apple Watch SE 2 (40mm) to appropriately test font and icon size. Each participant with aphasia and the SLT tested the apps with support from a researcher. Furthermore, we performed light testing with Apple’s Assistive Touch activated amongst codesigners, especially those living with hemiplegic paralysis. We immediately held an open discussion about each app whether it achieved what our co-designers envisaged and suggested changes.",
+      "In co-design workshop 3, we built three proof of concept AAC smartwatch apps using codesigners wireframes. The apps contained most of the core features envisaged by participants. The apps were deliberately deployed on two devices of different sizes: an Apple Watch Series 8 (45mm) and Apple Watch SE 2 (40mm) to appropriately test font and icon size.",
     activityImages: ["./codesign/discussions.png"],
     activityDate: "Feb. 2023",
-    activityTasks: ["task1", "task2", "task3"],
+    activityTasks: [
+      "Each participant with aphasia and the SLT tested the apps with support from a researcher.",
+      "We performed light testing with Apple’s Assistive Touch activated amongst codesigners, especially those living with hemiplegic paralysis.",
+      "We immediately held an open discussion about each app whether it achieved what our co-designers envisaged and suggested changes. ",
+    ],
   },
 
   //workshop 4
@@ -54,19 +58,24 @@ export const timelineCardContents = [
     cardImageURL: "./codesign/highfid.png",
     cardName: "Experience Prototyping",
     modalDescription:
-      "Following feedback and iteration of both smartwatch apps with our co-designers. Both the Watch Out and Watch In were evaluated via experience prototyping and role-playing. We wanted to determine the efficacy of our AAC in simulated ‘realworld’ scenarios, therefore we asked our participants to use both AAC smartwatch apps in a role-playing scenario with an actor e.g., ask for a seat from the actor. ",
+      "Following feedback and iteration of both smartwatch apps with our co-designers. Both the Watch Out and Watch In were evaluated via experience prototyping and role-playing.",
     activityImages: ["./codesign/highfid.png"],
     activityDate: "Mar. 2023",
-    activityTasks: ["task1", "task2", "task3"],
+    activityTasks: [
+      "We wanted to determine the efficacy of our AAC in simulated ‘realworld’ scenarios, therefore we asked our participants to use both AAC smartwatch apps in a role-playing scenario with an actor e.g., ask for a seat from the actor.",
+    ],
   },
   //workshop 5
   {
     cardImageURL: "./codesign/experienceproto.png",
     cardName: "Focus Group",
     modalDescription:
-      "The focus group was structured as follows: initially, participants arrived and seated themselves around a large central table, a researcher and SLT introduced and demonstrated both the Watch Out and Watch In apps using an Apple Watch Series 8 and Apple Watch SE. Sequentially, participants were presented with either app – encouraged to engage and test. After 15-20 minutes of usage, participants each completed a short feedback survey. Next, the SLT plus researcher facilitated a group discussion about the app, documenting participants’ comments and garnering consensus about potential future refinements to each app.",
+      "The focus group was structured as follows: initially, participants arrived and seated themselves around a large central table, a researcher and SLT introduced and demonstrated both the Watch Out and Watch In apps using an Apple Watch Series 8 and Apple Watch SE.",
     activityImages: ["./codesign/experienceproto.png"],
     activityDate: "Mar. 2023",
-    activityTasks: ["task1", "task2", "task3"],
+    activityTasks: [
+      "Sequentially, participants were presented with either app – encouraged to engage and test. After 15-20 minutes of usage, participants each completed a short feedback survey.",
+      "The SLT plus researcher facilitated a group discussion about the app, documenting participants’ comments and garnering consensus about potential future refinements to each app.",
+    ],
   },
 ];
