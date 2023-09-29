@@ -6,10 +6,18 @@ export const timelineCardContents = [
     cardImageURL: "./codesign/storyboarding.jpg",
     cardName: "Storyboarding",
     modalDescription:
-      "This is the text for the modal description of workshop 1.",
-    activityLocation: "Southwark, London",
-    activityDate: "Oct. 2022",
-    activityTasks: ["task1", "task2", "task3"],
+      "Co-design workshop one explored participants’ communication experiences in different public contexts. We wanted our co-designers to feel empowered to share their unique stories about varying experiences with communication partners across multiple contexts.",
+    activityImages: [
+      "./codesign/storyboarding.jpg",
+      "./codesign/storyboarding.jpg",
+      "./codesign/storyboarding.jpg",
+      "./codesign/storyboarding.jpg",
+    ],
+    activityDate: "Feb. 2023",
+    activityTasks: [
+      "Usage of laminated tangible context cards. With cards, participants spontaneously shared stories prompted by each card context. Group discussions followed, ranking each conversation context.",
+      "Supported participants ranking frequency of visiting a context (never to daily) and they rated the degree of difficulty presented by communication within this setting (easy to hard).",
+    ],
   },
 
   //workshop 2,
@@ -17,41 +25,57 @@ export const timelineCardContents = [
     cardImageURL: "./codesign/lowfid.jpg",
     cardName: "Low-Fidelity Prototyping",
     modalDescription:
-      "This is the text for the modal description of workshop 2.",
-    activityLocation: "Aldwych, London",
-    activityDate: "Nov. 2022",
-    activityTasks: ["task1", "task2", "task3"],
+      "The second co-design workshop focused on supporting our co-designers to define and ideate low-fidelity solutions using craft materials. We prompted participants to envisage a ‘super’ tool that could assist them with these communication problems and enhance their pre-existing communication abilities.",
+    activityImages: [
+      "./codesign/lowfid.jpg",
+      "./codesign/lowfid.jpg",
+      "./codesign/lowfid.jpg",
+    ],
+    activityDate: "Feb. 2023",
+    activityTasks: [
+      "Amongst small groups, the SLT/ researcher would mediate discussions and appropriately use closed ‘yes/no’ questioning to support prototyping activities (e.g., drawing, writing and cutting) of a high-volume of participants’ solutions.",
+      "Low-fidelity wireframes were successfully used by our co-designers to tangibly supplement their dialogue and expression.",
+    ],
   },
 
   //workshop 3,
   {
     cardImageURL: "./codesign/discussions.png",
-    cardName: "Further Discussions",
+    cardName: "Proof of concepts",
     modalDescription:
-      "This is the text for the modal description of workshop 3.",
-    activityLocation: "Covent Garden, London",
-    activityDate: "Dec. 2022",
-    activityTasks: ["task1", "task2", "task3"],
+      "In co-design workshop 3, we built three proof of concept AAC smartwatch apps using codesigners wireframes. The apps contained most of the core features envisaged by participants. The apps were deliberately deployed on two devices of different sizes: an Apple Watch Series 8 (45mm) and Apple Watch SE 2 (40mm) to appropriately test font and icon size.",
+    activityImages: ["./codesign/discussions.png"],
+    activityDate: "Feb. 2023",
+    activityTasks: [
+      "Each participant with aphasia and the SLT tested the apps with support from a researcher.",
+      "We performed light testing with Apple’s Assistive Touch activated amongst codesigners, especially those living with hemiplegic paralysis.",
+      "We immediately held an open discussion about each app whether it achieved what our co-designers envisaged and suggested changes. ",
+    ],
   },
 
   //workshop 4
   {
     cardImageURL: "./codesign/highfid.png",
-    cardName: "High-Fidelity Prototyping",
+    cardName: "Experience Prototyping",
     modalDescription:
-      "This is the text for the modal description of workshop 4.",
-    activityLocation: "Leicester Square, London",
-    activityDate: "Jan. 2023",
-    activityTasks: ["task1", "task2", "task3"],
+      "Following feedback and iteration of both smartwatch apps with our co-designers. Both the Watch Out and Watch In were evaluated via experience prototyping and role-playing.",
+    activityImages: ["./codesign/highfid.png"],
+    activityDate: "Mar. 2023",
+    activityTasks: [
+      "We wanted to determine the efficacy of our AAC in simulated ‘realworld’ scenarios, therefore we asked our participants to use both AAC smartwatch apps in a role-playing scenario with an actor e.g., ask for a seat from the actor.",
+    ],
   },
   //workshop 5
   {
     cardImageURL: "./codesign/experienceproto.png",
-    cardName: "Experience Prototyping",
+    cardName: "Focus Group",
     modalDescription:
-      "This is the text for the modal description of workshop 5.",
-    activityLocation: "Oxford Circus, London",
-    activityDate: "Feb. 2023",
-    activityTasks: ["task1", "task2", "task3"],
+      "The focus group was structured as follows: initially, participants arrived and seated themselves around a large central table, a researcher and SLT introduced and demonstrated both the Watch Out and Watch In apps using an Apple Watch Series 8 and Apple Watch SE.",
+    activityImages: ["./codesign/experienceproto.png"],
+    activityDate: "Mar. 2023",
+    activityTasks: [
+      "Sequentially, participants were presented with either app – encouraged to engage and test. After 15-20 minutes of usage, participants each completed a short feedback survey.",
+      "The SLT plus researcher facilitated a group discussion about the app, documenting participants’ comments and garnering consensus about potential future refinements to each app.",
+    ],
   },
 ];

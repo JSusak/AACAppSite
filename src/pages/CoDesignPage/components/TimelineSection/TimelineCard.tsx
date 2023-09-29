@@ -1,25 +1,18 @@
 import {
   Box,
-  Button,
   Center,
   Heading,
   VStack,
-  Text,
-  ListItem,
-  UnorderedList,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
-import { useDisclosure } from "@chakra-ui/react";
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalFooter,
-  ModalBody,
-} from "@chakra-ui/react";
-import { motion } from "framer-motion";
 
-import { datesLongForm } from "./datesLongForm";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
+
+import { datesLongForm } from "./helpers/datesLongForm";
+import { useState } from "react";
+import { TimelineSectionModal } from "./TimelineSectionModal/TimelineSectionModal";
 
 const timelineCardAnim = {
   hidden: {
@@ -29,6 +22,7 @@ const timelineCardAnim = {
     opacity: 1,
     transition: {
       duration: 1,
+      type: "spring",
     },
   },
 };
@@ -38,26 +32,43 @@ export const TimelineCard = ({
   imageURL,
   cardName,
   modalDescription,
-  activityLocation,
+  activityImages,
   activityDate,
   taskList,
+
   onImageLoad,
 }: {
   id: string;
   imageURL: string;
   cardName: string;
   modalDescription: string;
-  activityLocation: string;
+  activityImages: string[];
   activityDate: string;
+
   taskList: string[];
   onImageLoad: () => void;
 }): JSX.Element => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [cardModalOpen, setCardModalOpen] = useState(false);
+
+  const onModalClose = () => {
+    document.body.style.overflow = "";
+    setCardModalOpen(false);
+  };
+  const onModalOpen = () => {
+    document.body.style.overflow = "hidden";
+    setCardModalOpen(true);
+  };
+
+  useEffect(onImageLoad, []);
+  useEffect(() => {
+    document.body.style.overflow = "";
+  }, []);
+
   return (
     <>
       {/*Main Image Box, to be shown on the timeline before the modal*/}
       <motion.div
-        whileHover={{ scale: 1.1, cursor: "pointer" }}
+        whileHover={{ scale: 1.05, cursor: "pointer" }}
         variants={timelineCardAnim}
         initial="hidden"
         whileInView="visible"
@@ -66,20 +77,14 @@ export const TimelineCard = ({
           id={id}
           boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
           width={"100%"}
-          height={[`200px`, `200px`, `200px`, `400px`]}
+          height={[`200px`, `250px`, `300px`, `400px`]}
           borderRadius={"50px"}
           position={"relative"}
-          onClick={() => {
-            if (document.getElementById("navbar") != null) {
-              document.getElementById("navbar")!.style.opacity = "0";
-              document.getElementById("navbar")!.style.pointerEvents = "none";
-            }
-            onOpen();
-          }}
+          onClick={onModalOpen}
+          mt={["2rem", "2rem", "2rem", "0"]}
         >
           <Center>
             <Image
-              onLoad={onImageLoad}
               src={imageURL}
               width={"100%"}
               height={"100%"}
@@ -96,7 +101,10 @@ export const TimelineCard = ({
               height={"100%"}
               borderRadius={"50px"}
               transition={"opacity 0.3s ease-in-out"}
-              backgroundColor={"rgba(255, 213, 164, 0.6)"}
+              backgroundColor={useColorModeValue(
+                "blackAlpha.600",
+                "whiteAlpha.600"
+              )}
               opacity={0}
               _hover={{ opacity: 1 }}
             >
@@ -107,10 +115,24 @@ export const TimelineCard = ({
                   transform={"translate(0,-50%)"}
                 >
                   {" "}
-                  <Heading textAlign={"center"} fontSize={"3xl"}>
+                  <Heading
+                    textAlign={"center"}
+                    fontSize={"3xl"}
+                    color={useColorModeValue(
+                      "whiteAlpha.700",
+                      "blackAlpha.700"
+                    )}
+                  >
                     {cardName}
                   </Heading>
-                  <Heading textAlign={"center"} fontSize={"xl"}>
+                  <Heading
+                    textAlign={"center"}
+                    fontSize={"xl"}
+                    color={useColorModeValue(
+                      "whiteAlpha.700",
+                      "blackAlpha.700"
+                    )}
+                  >
                     {`${datesLongForm[activityDate.split(" ")[0]]} ${
                       activityDate.split(" ")[1]
                     }`}
@@ -123,78 +145,20 @@ export const TimelineCard = ({
       </motion.div>
 
       {/*Modal containing the overall description of the activity, main tasks which occurreed, location...*/}
-      <Modal
-        isOpen={isOpen}
-        onClose={() => {
-          if (document.getElementById("navbar") != null) {
-            console.log(document.getElementById("navbar"));
-            document.getElementById("navbar")!.style.opacity = "1";
-            document.getElementById("navbar")!.style.pointerEvents = "";
-          }
-          onClose();
-        }}
-        isCentered
-        size={["md", "md", "lg", "xl"]}
-        scrollBehavior="inside"
-      >
-        <ModalOverlay />
-        <ModalContent>
-          <ModalBody>
-            <VStack>
-              <Image
-                src={imageURL}
-                width={"100%"}
-                height={"100%"}
-                borderRadius={"10px"}
-                fallbackSrc={`https://via.placeholder.com/400x400`}
-              />
-              <Heading>{cardName}</Heading>
-              <VStack>
-                <Text
-                  fontSize={"2xl"}
-                  textAlign={"center"}
-                >{`${activityLocation}`}</Text>
-                <Text
-                  fontSize={"lg"}
-                  textAlign={"center"}
-                  color={"blackAlpha.600"}
-                >{`${datesLongForm[activityDate.split(" ")[0]]} ${
-                  activityDate.split(" ")[1]
-                }`}</Text>
-              </VStack>
-              <Heading fontSize={"3xl"}>What happened?</Heading>
-              <Text maxW="lg" textAlign={"center"}>
-                {modalDescription}
-              </Text>
 
-              <Heading fontSize={"3xl"}>Main tasks:</Heading>
-              <UnorderedList>
-                {taskList.map((task, key) => {
-                  return <ListItem key={key}>{task}</ListItem>;
-                })}
-              </UnorderedList>
-            </VStack>
-          </ModalBody>
-
-          <ModalFooter>
-            <Button
-              colorScheme="orange"
-              mr={3}
-              onClick={() => {
-                if (document.getElementById("navbar") != null) {
-                  console.log(document.getElementById("navbar"));
-                  document.getElementById("navbar")!.style.opacity = "1";
-                  document.getElementById("navbar")!.style.pointerEvents = "";
-                }
-                onClose();
-              }}
-              variant={"outline"}
-            >
-              Back to timeline
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+      <AnimatePresence mode="wait" initial={false}>
+        {cardModalOpen && (
+          <TimelineSectionModal
+            sectionName={cardName}
+            sectionImages={activityImages}
+            sectionDate={activityDate}
+            sectionDescription={modalDescription}
+            sectionKeyTasks={taskList}
+            onModalClose={onModalClose}
+            featureImage={imageURL}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 };

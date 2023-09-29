@@ -5,6 +5,7 @@ import {
   Heading,
   Text,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import "./timelinesection.scss";
 
@@ -13,6 +14,7 @@ import { timelineCardContents } from "./timelineCardContents";
 import { Colours } from "../../../../colourScheme";
 
 export const TimelineSection = (): JSX.Element => {
+  const [isSmallerThan991] = useMediaQuery("(max-width: 991px)");
   return (
     <>
       {/*.Wrapper for the whole timeline*/}
@@ -34,7 +36,7 @@ export const TimelineSection = (): JSX.Element => {
 
         {/* Actual timeline container */}
         <Container position="relative" minH={"300px"} maxW={"90%"}>
-          <Center>
+          <Center display={isSmallerThan991 ? "none" : "flex"}>
             <div
               className="line"
               style={{
@@ -46,7 +48,7 @@ export const TimelineSection = (): JSX.Element => {
             ></div>
           </Center>
 
-          <Center>
+          <Center display={isSmallerThan991 ? "none" : "flex"}>
             <div
               className="circle beadTip"
               id="beadstart"
@@ -64,17 +66,18 @@ export const TimelineSection = (): JSX.Element => {
               <TimelineBeadSection
                 orderInTimeline={index}
                 isOnLeft={index % 2 === 0}
+                isCompact={isSmallerThan991}
                 cardImageURL={card.cardImageURL}
                 cardName={card.cardName}
                 modalDescription={card.modalDescription}
-                activityLocation={card.activityLocation}
+                activityImages={card.activityImages}
                 activityDate={card.activityDate}
                 taskList={card.activityTasks}
               />
             );
           })}
 
-          <Center>
+          <Center display={isSmallerThan991 ? "none" : "flex"}>
             <div
               className="circle beadTip"
               style={{

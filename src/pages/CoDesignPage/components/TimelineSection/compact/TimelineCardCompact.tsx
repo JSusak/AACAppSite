@@ -7,16 +7,16 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react";
-import { datesLongForm } from "./datesLongForm";
+import { datesLongForm } from "../helpers/datesLongForm";
 import { motion } from "framer-motion";
-import { timelineChildrenAnim } from "./timelineAnims";
+import { timelineChildrenAnim } from "../helpers/timelineAnims";
 
 export const TimelineCardCompact = ({
   id,
   cardImageURL,
   cardName,
   modalDescription,
-  activityLocation,
+
   activityDate,
   taskList,
   onImageLoad,
@@ -25,7 +25,7 @@ export const TimelineCardCompact = ({
   cardImageURL: string;
   cardName: string;
   modalDescription: string;
-  activityLocation: string;
+  activityImages: string[];
   activityDate: string;
   taskList: string[];
   onImageLoad: () => void;
@@ -49,12 +49,6 @@ export const TimelineCardCompact = ({
           >{`${cardName}`}</Heading>
         </motion.span>
         <VStack>
-          <motion.span variants={timelineChildrenAnim}>
-            <Text
-              fontSize={"2xl"}
-              textAlign={"center"}
-            >{`${activityLocation}`}</Text>
-          </motion.span>
           <motion.span variants={timelineChildrenAnim}>
             <Text
               fontSize={"lg"}
