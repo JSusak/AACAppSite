@@ -12,7 +12,7 @@ import Xarrow from "react-xarrows";
 import { useState } from "react";
 import { Colours } from "../../../../colourScheme";
 import { motion } from "framer-motion";
-import { timelineArrowAnim } from "./timelineAnims";
+import { timelineArrowAnim } from "./helpers/timelineAnims";
 
 export const TimelineSectionCompact = (): JSX.Element => {
   const [arrow, setArrow] = useState(false);
@@ -67,7 +67,7 @@ export const TimelineSectionCompact = (): JSX.Element => {
                       cardImageURL={card.cardImageURL}
                       cardName={card.cardName}
                       modalDescription={card.modalDescription}
-                      activityLocation={card.activityLocation}
+                      activityImages={card.activityImages}
                       activityDate={card.activityDate}
                       taskList={card.activityTasks}
                       onImageLoad={() => setArrow(true)}

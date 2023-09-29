@@ -10,7 +10,7 @@ import Xarrow from "react-xarrows";
 import { Colours } from "../../../../colourScheme";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { timelineArrowAnim, timelineBeadAnim } from "./timelineAnims";
+import { timelineArrowAnim, timelineBeadAnim } from "./helpers/timelineAnims";
 
 export const TimelineBeadSection = ({
   orderInTimeline,
@@ -20,14 +20,14 @@ export const TimelineBeadSection = ({
   modalDescription,
   activityDate,
   taskList,
-  activityLocation,
+  activityImages,
 }: {
   orderInTimeline: number;
   isOnLeft: boolean;
   cardImageURL: string;
   cardName: string;
   modalDescription: string;
-  activityLocation: string;
+  activityImages: string[];
   activityDate: string;
   taskList: string[];
 }): JSX.Element => {
@@ -42,7 +42,7 @@ export const TimelineBeadSection = ({
         modalDescription={modalDescription}
         activityDate={activityDate}
         taskList={taskList}
-        activityLocation={activityLocation}
+        activityImages={activityImages}
         onImageLoad={function (): void {
           setArrow(true);
         }}
@@ -75,7 +75,6 @@ export const TimelineBeadSection = ({
             initial="hidden"
             whileInView="visible"
             className="circle bead"
-            whileHover={{ scale: 1.5 }}
             style={{
               background: useColorModeValue("#ffd5a4", Colours.darkModeMainCol),
             }}

@@ -67,7 +67,7 @@ export const TimelineSection = (): JSX.Element => {
                 cardImageURL={card.cardImageURL}
                 cardName={card.cardName}
                 modalDescription={card.modalDescription}
-                activityLocation={card.activityLocation}
+                activityImages={card.activityImages}
                 activityDate={card.activityDate}
                 taskList={card.activityTasks}
               />
