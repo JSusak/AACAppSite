@@ -1,81 +1,55 @@
 export const watchOutFeatureList = [
   {
-    featureName: "Feature 1",
+    featureName: "Expressions",
     featureDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
     featureCarouselSteps: [
       {
-        step: "This is how you do step 1. (watch out feature 1)",
-        stepImage: "./images.jpg",
+        step: "Choose from menu. Expressions will automatically display in a sequence.",
+        stepImage: "./watchOut/menu.jpg",
       },
       {
-        step: "This is how you do step 2 (watch out feature 1).",
-        stepImage: "./phrases.png",
+        step: "On an expression page, tap the moving text to achieve text to speech. Make sure the smartwatch is unmuted.",
+        stepImage: "./watchOut/seat.jpg",
       },
       {
-        step: "This is how you do step 3. (watch out feature 1)",
+        step: "In the bottom left, tap the icon for the buzzer.",
         stepImage: "./dialogue.png",
       },
       {
-        step: "This is how you do step 4. (watch out feature 1)",
-        stepImage: "./kcllogo.png",
-      },
-    ],
-    catchyLine: "Catchy Line 1",
-    initialFeatureImageURL: "./watchOut/seat.jpg",
-  },
-  {
-    featureName: "Feature 2",
-    featureDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
-    featureCarouselSteps: [
-      {
-        step: "This is how you do step 1. (watch out feature 2)",
-        stepImage: "./images.jpg",
+        step: "In the bottom centre, tap the icon for the blue disability badge.",
+        stepImage: "./watchOut/bluebadge.jpg",
       },
       {
-        step: "This is how you do step 2 (watch out feature 2).",
-        stepImage: "./phrases.png",
-      },
-      {
-        step: "This is how you do step 3. (watch out feature 2)",
-        stepImage: "./dialogue.png",
-      },
-      {
-        step: "This is how you do step 4.  (watch out feature 2)",
+        step: "Finally, in the bottom right tap the icon to rotate the display to show to onlookers.",
         stepImage: "./kcllogo.png",
       },
     ],
     catchyLine: "Catchy Line 2",
-    initialFeatureImageURL: "./watchOut/qrcode.jpg",
+    initialFeatureImageURL: "./watchOut/expressionsFeature.jpg",
   },
 
   {
-    featureName: "Feature 3",
+    featureName: "Aphasia Page",
     featureDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
     featureCarouselSteps: [
       {
-        step: "This is how you do step 1. (watch out feature 3)",
-        stepImage: "./images.jpg",
+        step: "Choose from menu to be directed to an Aphasia info page.",
+        stepImage: "./watchOut/aphasiaMenu.jpg",
       },
       {
-        step: "This is how you do step 2 (watch out feature 3).",
-        stepImage: "./phrases.png",
+        step: "Provides a scannable QR code to further explain aphasia to onlookers.",
+        stepImage: "./watchOut/qrcode.jpg",
       },
       {
-        step: "This is how you do step 3. (watch out feature 3)",
+        step: "Tap any of the text for text-to-speech of useful instructions to relay to onlookers. (add picture of the instructions)",
         stepImage: "./dialogue.png",
-      },
-      {
-        step: "This is how you do step 4.  (watch out feature 3)",
-        stepImage: "./kcllogo.png",
       },
     ],
     catchyLine: "Catchy Line 3",
-    initialFeatureImageURL: "./watchOut/bluebadge.jpg",
+    initialFeatureImageURL: "./watchOut/qrcode.jpg",
   },
 ];
