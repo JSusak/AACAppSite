@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { motion } from "framer-motion";
+import { gridStagger, horizontalFade } from "../../../../Animations";
 
 const aboutTopGridAnim = {
   hidden: {
@@ -63,7 +64,14 @@ export const AboutTop = (): JSX.Element => {
       whileInView={"visible"}
       viewport={{ once: true }}
     >
-      <Grid minH="93vh" position="relative">
+      <Grid
+        minH="93vh"
+        position="relative"
+        as={motion.div}
+        variants={gridStagger}
+        initial="hidden"
+        animate="visible"
+      >
         <SimpleGrid columns={[1, 1, 1, 3]} spacingX="2rem">
           <Center>
             <SimpleGrid
@@ -81,9 +89,21 @@ export const AboutTop = (): JSX.Element => {
             ml="1rem"
             mr="1rem"
           >
-            <Heading fontSize={ResponsiveSizes.HeroHeaderSizes}>About</Heading>
+            <Heading
+              fontSize={ResponsiveSizes.HeroHeaderSizes}
+              as={motion.span}
+              variants={horizontalFade}
+            >
+              About
+            </Heading>
 
-            <Text fontSize={"xl"} maxW="90%" textAlign={"center"}>
+            <Text
+              fontSize={"xl"}
+              maxW="90%"
+              textAlign={"center"}
+              as={motion.span}
+              variants={horizontalFade}
+            >
               As smartwatches increase in global popularity with a host of
               fitness and lifestyle benefits. Now, is the optimal time to design
               smartwatch AAC apps that discreetly support communication of

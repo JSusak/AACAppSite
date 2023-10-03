@@ -3,6 +3,7 @@ import { PeopleIcon } from "../PeopleIcon/PeopleIcon";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 
 import { motion } from "framer-motion";
+import { gridStagger, verticalFade } from "../../../../Animations";
 
 interface PersonType {
   personName: string;
@@ -50,14 +51,26 @@ export const ListOfPeopleSection = ({
       whileInView="visible"
     >
       <Grid minH="43vh" position="relative">
-        <VStack>
+        <VStack
+          as={motion.div}
+          variants={gridStagger}
+          initial="hidden"
+          animate="visible"
+        >
           <Heading
             fontSize={ResponsiveSizes.SecondaryHeaderSizes}
             textAlign={"center"}
+            as={motion.span}
+            variants={verticalFade}
           >
             {sectionHeading}
           </Heading>
-          <Heading fontSize={["xl", "xl", "2xl", "2xl"]} textAlign={"center"}>
+          <Heading
+            fontSize={["xl", "xl", "2xl", "2xl"]}
+            textAlign={"center"}
+            as={motion.span}
+            variants={verticalFade}
+          >
             {sectionSubheading}
           </Heading>
           <Center>

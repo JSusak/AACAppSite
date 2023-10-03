@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { WatchInLogoAnim } from "../WatchInLogoAnim/WatchInLogoAnim";
 import { ResponsiveSizes } from "../../../../../responsiveSizes";
 import { Colours } from "../../../../../colourScheme";
+import { gridStagger, verticalFade } from "../../../../../Animations";
 
 export const WatchInHero = (): JSX.Element => {
   return (
@@ -16,13 +17,25 @@ export const WatchInHero = (): JSX.Element => {
         justifyContent={"center"}
         alignItems="center"
         textAlign={"center"}
+        as={motion.div}
+        variants={gridStagger}
+        initial="hidden"
+        animate="visible"
       >
         {" "}
         <WatchInLogoAnim />
-        <Heading fontSize={ResponsiveSizes.HeroHeaderSizes}>
+        <Heading
+          fontSize={ResponsiveSizes.HeroHeaderSizes}
+          as={motion.span}
+          variants={verticalFade}
+        >
           Watch In AAC
         </Heading>
-        <Heading fontSize={ResponsiveSizes.SecondaryHeaderSizes}>
+        <Heading
+          fontSize={ResponsiveSizes.SecondaryHeaderSizes}
+          as={motion.span}
+          variants={verticalFade}
+        >
           Aiding{" "}
           <Heading
             as="span"
@@ -36,6 +49,7 @@ export const WatchInHero = (): JSX.Element => {
           <motion.div
             whileHover={{ scale: 1.3 }}
             transition={{ type: "spring" }}
+            variants={verticalFade}
           >
             <Link>
               <Image src="./appstore.svg" width={"150px"} />
@@ -45,6 +59,7 @@ export const WatchInHero = (): JSX.Element => {
           <motion.div
             whileHover={{ scale: 1.3 }}
             transition={{ type: "spring" }}
+            variants={verticalFade}
           >
             <Link
               _hover={{

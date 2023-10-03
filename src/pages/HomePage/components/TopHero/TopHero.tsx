@@ -9,6 +9,8 @@ import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { SVGArrow } from "../SVGArrow/SVGArrow";
 import "./heroGradient.scss";
 import { Colours } from "../../../../colourScheme";
+import { motion } from "framer-motion";
+import { gridStagger, verticalFade } from "../../../../Animations";
 
 export const TopHero = (): JSX.Element => {
   return (
@@ -23,11 +25,21 @@ export const TopHero = (): JSX.Element => {
       transition={"all 0.3s ease-in-out"}
       borderBottom={useColorModeValue("solid black", "solid white")}
     >
-      <VStack display={"flex"} justifyContent={"center"} alignItems="center">
+      <VStack
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems="center"
+        as={motion.div}
+        variants={gridStagger}
+        initial="hidden"
+        animate="visible"
+      >
         <Heading
           fontSize={ResponsiveSizes.HeroHeaderSizes}
           textAlign={"center"}
           maxW={"90%"}
+          as={motion.span}
+          variants={verticalFade}
         >
           Use a smartwatch to support your communication now!
         </Heading>
@@ -36,6 +48,8 @@ export const TopHero = (): JSX.Element => {
           textAlign={"center"}
           color={useColorModeValue("blackAlpha.600", "whiteAlpha.600")}
           maxW={"90%"}
+          as={motion.span}
+          variants={verticalFade}
         >
           Use AAC freely 'on the go' from your wrist.
         </Heading>

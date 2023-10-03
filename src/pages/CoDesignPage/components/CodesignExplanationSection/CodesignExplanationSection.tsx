@@ -10,16 +10,27 @@ import {
 } from "@chakra-ui/react";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { Colours } from "../../../../colourScheme";
+import { motion } from "framer-motion";
+import { gridStagger, horizontalFade } from "../../../../Animations";
 
 export const CodesignExplanationSection = (): JSX.Element => {
   return (
-    <Grid minH="93vh" position="relative">
+    <Grid
+      minH="93vh"
+      position="relative"
+      as={motion.div}
+      variants={gridStagger}
+      initial="hidden"
+      animate="visible"
+    >
       <SimpleGrid columns={1}>
         <Center>
           <VStack>
             <Heading
               fontSize={ResponsiveSizes.HeroHeaderSizes}
               textAlign={"center"}
+              as={motion.span}
+              variants={horizontalFade}
             >
               Co-Design Process
             </Heading>
@@ -29,6 +40,8 @@ export const CodesignExplanationSection = (): JSX.Element => {
                 <Heading
                   fontSize={ResponsiveSizes.SecondaryHeaderSizes}
                   textAlign={"center"}
+                  as={motion.span}
+                  variants={horizontalFade}
                 >
                   What is it?
                 </Heading>
@@ -38,7 +51,14 @@ export const CodesignExplanationSection = (): JSX.Element => {
                     Colours.darkModeMainCol
                   )}
                 />
-                <Text fontSize={"xl"} maxW="2xl" textAlign={"center"} w="90%">
+                <Text
+                  fontSize={"xl"}
+                  maxW="2xl"
+                  textAlign={"center"}
+                  w="90%"
+                  as={motion.span}
+                  variants={horizontalFade}
+                >
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Assumenda maxime, suscipit ut in tempora adipisci ea
                   repellendus aliquam ducimus? Distinctio necessitatibus ea,
@@ -53,11 +73,20 @@ export const CodesignExplanationSection = (): JSX.Element => {
                 <Heading
                   fontSize={ResponsiveSizes.SecondaryHeaderSizes}
                   textAlign={"center"}
+                  as={motion.span}
+                  variants={horizontalFade}
                 >
                   How did we use it?
                 </Heading>
                 <Divider borderColor={Colours.lightModeMainCol} />
-                <Text fontSize={"xl"} maxW="2xl" textAlign={"center"} w="90%">
+                <Text
+                  fontSize={"xl"}
+                  maxW="2xl"
+                  textAlign={"center"}
+                  w="90%"
+                  as={motion.span}
+                  variants={horizontalFade}
+                >
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Assumenda maxime, suscipit ut in tempora adipisci ea
                   repellendus aliquam ducimus? Distinctio necessitatibus ea,

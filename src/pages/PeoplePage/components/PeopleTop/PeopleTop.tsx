@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { motion } from "framer-motion";
+import { gridStagger, horizontalFade } from "../../../../Animations";
 
 const topHeroImageAnim = {
   hidden: {
@@ -50,9 +51,26 @@ export const PeopleTop = (): JSX.Element => {
         </Center>
 
         <Center>
-          <VStack>
-            <Heading fontSize={ResponsiveSizes.HeroHeaderSizes}>People</Heading>
-            <Text fontSize={"xl"} maxW="90%" textAlign={"center"}>
+          <VStack
+            as={motion.div}
+            variants={gridStagger}
+            initial="hidden"
+            animate="visible"
+          >
+            <Heading
+              fontSize={ResponsiveSizes.HeroHeaderSizes}
+              as={motion.span}
+              variants={horizontalFade}
+            >
+              People
+            </Heading>
+            <Text
+              fontSize={"xl"}
+              maxW="90%"
+              textAlign={"center"}
+              as={motion.span}
+              variants={horizontalFade}
+            >
               <Highlight
                 query={[
                   "Department of Informatics",
