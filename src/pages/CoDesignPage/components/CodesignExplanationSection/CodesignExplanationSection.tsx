@@ -5,7 +5,6 @@ import {
   VStack,
   Heading,
   Text,
-  Button,
   Divider,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -69,13 +68,6 @@ export const CodesignExplanationSection = (): JSX.Element => {
                   repellat omnis labore. Perferendis, quisquam.
                 </Text>
               </VStack>
-            </SimpleGrid>
-
-            <SimpleGrid columns={1} spacing={"1rem"}>
-              <Button colorScheme="orange">Learn More</Button>
-              <Button colorScheme="blue" variant={"outline"}>
-                Project Facts
-              </Button>
             </SimpleGrid>
           </VStack>
         </Center>
