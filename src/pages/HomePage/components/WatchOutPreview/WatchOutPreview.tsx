@@ -16,6 +16,7 @@ import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { motion } from "framer-motion";
 import { homePageFadeInLeft } from "../homePageAnims";
 import { Colours } from "../../../../colourScheme";
+import { NavLink } from "react-router-dom";
 
 export const WatchOutPreview = (): JSX.Element => {
   return (
@@ -101,9 +102,11 @@ export const WatchOutPreview = (): JSX.Element => {
               <Divider />
 
               <SimpleGrid columns={2} mt="2rem" spacing={"2rem"}>
-                <Button size={"lg"} colorScheme="blue" variant="outline">
-                  Learn More
-                </Button>
+                <NavLink to={"/watchout"}>
+                  <Button size={"lg"} colorScheme="blue" variant="outline">
+                    Learn More
+                  </Button>
+                </NavLink>
                 <Button size={"lg"} colorScheme="blue">
                   Install Now
                 </Button>

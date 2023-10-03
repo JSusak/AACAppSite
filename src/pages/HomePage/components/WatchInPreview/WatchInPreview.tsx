@@ -17,6 +17,7 @@ import { Colours } from "../../../../colourScheme";
 import { motion } from "framer-motion";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { homePageFadeInRight } from "../homePageAnims";
+import { NavLink } from "react-router-dom";
 
 export const WatchInPreview = (): JSX.Element => {
   const [isLargerThan1280] = useMediaQuery("(min-width: 1280px)");
@@ -101,9 +102,11 @@ export const WatchInPreview = (): JSX.Element => {
           <Divider />
 
           <SimpleGrid columns={2} mt="2rem" spacing={"2rem"}>
-            <Button size={"lg"} colorScheme="orange" variant="outline">
-              Learn More
-            </Button>
+            <NavLink to={"/watchin"}>
+              <Button size={"lg"} colorScheme="orange" variant="outline">
+                Learn More
+              </Button>
+            </NavLink>
             <Button size={"lg"} colorScheme="orange">
               Install Now
             </Button>

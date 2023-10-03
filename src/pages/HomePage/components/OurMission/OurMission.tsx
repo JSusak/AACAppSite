@@ -12,6 +12,7 @@ import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { motion } from "framer-motion";
 import { homePageFadeInVertical } from "../homePageAnims";
 import { Link, useColorModeValue } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
 
 export const OurMission = (): JSX.Element => {
   return (
@@ -77,17 +78,17 @@ export const OurMission = (): JSX.Element => {
           <Divider />
 
           <SimpleGrid columns={1} spacing={"1rem"} mt="2rem" mb="2rem">
-            <Button colorScheme="orange" size={"lg"}>
-              {" "}
-              Project Description
-            </Button>
-            <Button colorScheme="blue" size={"lg"}>
-              What is Aphasia?
-            </Button>
-
-            <Button colorScheme="blue" size={"lg"} variant={"outline"}>
-              View Contributors
-            </Button>
+            <NavLink to={"/about"}>
+              <Button colorScheme="orange" size={"lg"}>
+                {" "}
+                Project Description
+              </Button>
+            </NavLink>
+            <NavLink to={"/people"}>
+              <Button colorScheme="blue" size={"lg"} variant={"outline"}>
+                View Contributors
+              </Button>
+            </NavLink>
           </SimpleGrid>
         </VStack>
       </VStack>
