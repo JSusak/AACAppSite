@@ -8,11 +8,10 @@ import {
   Divider,
   Text,
 } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/image";
 import { ResponsiveSizes } from "../../../../responsiveSizes";
 import { motion } from "framer-motion";
 import { homePageFadeInVertical } from "../homePageAnims";
-import { ListItem, UnorderedList } from "@chakra-ui/react";
+import { Link, useColorModeValue } from "@chakra-ui/react";
 
 export const OurMission = (): JSX.Element => {
   return (
@@ -54,38 +53,29 @@ export const OurMission = (): JSX.Element => {
                   in your communication and start exploring the world with a
                   wrist-based support!
                 </Text>
-                <UnorderedList>
-                  <ListItem
-                    w={["90%", "90%", "90%", "4xl"]}
-                    fontSize={["lg", "lg", "xl", "xl"]}
+
+                <Text
+                  textAlign={"center"}
+                  w={["90%", "90%", "90%", "4xl"]}
+                  fontSize={["lg", "lg", "xl", "xl"]}
+                  color={useColorModeValue("blackAlpha.600", "whiteAlpha.600")}
+                >
+                  This project was led by accessibility researchers from{" "}
+                  <Link
+                    style={{ color: "#FF7276" }}
+                    isExternal
+                    href={"https://www.kcl.ac.uk/"}
                   >
-                    This project was led by accessibility researchers from
-                    King's College London's Human-Centered Computing Group in
-                    partnership with Aphasia Re-Connect.
-                  </ListItem>
-                </UnorderedList>
+                    King's College London's
+                  </Link>{" "}
+                  Human-Centered Computing Group in partnership with Aphasia
+                  Re-Connect.
+                </Text>
               </VStack>
             </Center>
           </motion.span>
           <Divider />
-          <SimpleGrid columns={2}>
-            <Center>
-              <Image
-                src=""
-                w="80%"
-                fallbackSrc="https://via.placeholder.com/400"
-                borderRadius={"20%"}
-              />
-            </Center>
-            <Center>
-              <Image
-                src=""
-                w="80%"
-                fallbackSrc="https://via.placeholder.com/400"
-                borderRadius={"20%"}
-              />
-            </Center>
-          </SimpleGrid>
+
           <SimpleGrid columns={1} spacing={"1rem"} mt="2rem" mb="2rem">
             <Button colorScheme="orange" size={"lg"}>
               {" "}
