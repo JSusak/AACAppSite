@@ -44,12 +44,12 @@ export const theme = extendTheme({
     global: (props: StyleFunctionProps) => ({
       body: {
         bg: mode(Colours.lightModeBG, Colours.darkModeBG)(props),
-        transitionProperty: "all",
-        transitionDuration: "ultra-slow",
+        // transitionProperty: "all",
+        //   transitionDuration: "ultra-slow",
       },
     }),
   },
-  config: {
-    disableTransitionOnChange: false,
-  },
+  //config: {
+  //   disableTransitionOnChange: false,
+  // },
 });
