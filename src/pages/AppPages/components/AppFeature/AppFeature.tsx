@@ -43,7 +43,6 @@ export const AppFeature = ({
   featureName,
   featureDescription,
   numericFacts,
-  catchyLine,
   isOnLeft,
   featureSteps,
   colourScheme,
@@ -52,7 +51,6 @@ export const AppFeature = ({
   featureName: string;
   featureDescription: string;
   numericFacts: string[];
-  catchyLine: string;
   isOnLeft: boolean;
   featureSteps: StepType[];
   colourScheme: appFeatureColourScheme;
@@ -122,16 +120,6 @@ export const AppFeature = ({
             featureSectionId={sectionId}
             colourScheme={colourScheme}
           />
-
-          <Heading
-            fontSize={"xl"}
-            mt="2rem"
-            textAlign={isOnLeft ? "left" : "right"}
-            color={colourScheme.accent}
-          >
-            {catchyLine}
-          </Heading>
-          <Divider borderColor={colourScheme.accent} />
         </Box>
       </Center>
     </motion.div>

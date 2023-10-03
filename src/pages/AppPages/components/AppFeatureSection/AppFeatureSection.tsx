@@ -25,7 +25,7 @@ export const AppFeatureSection = ({
   featureName,
   featureDescription,
   numericFacts,
-  catchyLine,
+
   featureSteps,
   isOnLeft,
   initialFeatureImageURL,
@@ -36,7 +36,6 @@ export const AppFeatureSection = ({
   featureDescription: string;
   numericFacts: string[];
   featureSteps: StepType[];
-  catchyLine: string;
   isOnLeft: boolean;
   initialFeatureImageURL: string;
   colourScheme: appFeatureColourScheme;
@@ -49,7 +48,6 @@ export const AppFeatureSection = ({
         featureName={featureName}
         featureDescription={featureDescription}
         numericFacts={numericFacts}
-        catchyLine={catchyLine}
         isOnLeft={isOnLeft}
         colourScheme={colourScheme}
         featureSteps={featureSteps}

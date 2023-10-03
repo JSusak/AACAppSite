@@ -64,11 +64,12 @@ export const AppFeatureCarousel = ({
       <Box
         w="100%"
         minH="100%"
-        borderWidth={"0.5px"}
+        //borderWidth={"0.5px"}
         borderRadius={"10px"}
         position={"relative"}
-        borderColor={isHidden ? "transparent" : colourScheme.accent}
+        //borderColor={isHidden ? "transparent" : colourScheme.accent}
         transition={"all 0.3s ease-in-out"}
+        pointerEvents={isHidden ? "none" : "all"}
       >
         <Box>
           <Center>
@@ -106,8 +107,6 @@ export const AppFeatureCarousel = ({
             <Heading color={colourScheme.accent} textAlign={"center"}>{`Step ${
               currentIndex + 1
             }:`}</Heading>
-            <Text textAlign={"center"}>{steps[currentIndex].step}</Text>
-
             <SimpleGrid columns={3} maxW="100%" spacing="2rem">
               <Button
                 aria-label="View Previous step"
@@ -116,6 +115,7 @@ export const AppFeatureCarousel = ({
                 leftIcon={<FaArrowLeft />}
                 isDisabled={currentIndex === 0}
                 onClick={decrementIndex}
+                pointerEvents={isHidden ? "none" : "all"}
               >
                 Previous
               </Button>
@@ -127,6 +127,7 @@ export const AppFeatureCarousel = ({
                 rightIcon={<FaArrowRight />}
                 isDisabled={currentIndex === steps.length - 1}
                 onClick={incrementIndex}
+                pointerEvents={isHidden ? "none" : "all"}
               >
                 Next
               </Button>
@@ -143,10 +144,13 @@ export const AppFeatureCarousel = ({
                   modifyFeatureImage();
                   setIsHidden(true);
                 }}
+                pointerEvents={isHidden ? "none" : "all"}
               >
                 Close
               </Button>
             </SimpleGrid>
+
+            <Text textAlign={"center"}>{steps[currentIndex].step}</Text>
           </VStack>
         </Center>
       </Box>

@@ -1,81 +1,119 @@
 export const watchInFeatureList = [
   {
-    featureName: "Feature 1",
+    featureName: "Transcribe",
     featureDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
     featureCarouselSteps: [
       {
-        step: "This is how you do step 1. (watch in feature 1)",
+        step: "Choose Transcribe from menu.",
         stepImage: "./images.jpg",
       },
       {
-        step: "This is how you do step 2 (watch in feature 1).",
-        stepImage: "./phrases.png",
+        step: "Tap record note and then the bottom right microphone icon to start recording speech.",
+        stepImage: "./watchIn/transcribeRecording.jpg",
       },
       {
-        step: "This is how you do step 3. (watch in feature 1)",
+        step: "Tap the screen when finished and recording completed.",
         stepImage: "./dialogue.png",
       },
       {
-        step: "This is how you do step 4. (watch in feature 1)",
+        step: "Tap unsaved to save and store text recording.",
+        stepImage: "./watchIn/savedRecording.jpg",
+      },
+      {
+        step: "Scroll through your saved recordings and tap on text to play them back.",
+        stepImage: "./kcllogo.png",
+      },
+      {
+        step: "View the date and count of recordings at the bottom.",
         stepImage: "./kcllogo.png",
       },
     ],
-    catchyLine: "Catchy Line 1",
-    initialFeatureImageURL: "./watchIn/transcribe.jpg",
+    initialFeatureImageURL: "./watchIn/watchInMenu.jpg",
   },
   {
-    featureName: "Feature 2",
+    featureName: "Breathe",
     featureDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
     featureCarouselSteps: [
       {
-        step: "This is how you do step 1. (watch in feature 2)",
+        step: "Choose breathe from menu.",
         stepImage: "./images.jpg",
       },
       {
-        step: "This is how you do step 2 (watch in feature 2).",
+        step: "Begins wrist haptic pulse to support mindful breathing.",
         stepImage: "./phrases.png",
       },
-      {
-        step: "This is how you do step 3. (watch in feature 2)",
-        stepImage: "./dialogue.png",
-      },
-      {
-        step: "This is how you do step 4. (watch in feature 2)",
-        stepImage: "./kcllogo.png",
-      },
     ],
-    catchyLine: "Catchy Line 2",
     initialFeatureImageURL: "./watchIn/picker.jpg",
   },
 
   {
-    featureName: "Feature 3",
+    featureName: "Picker",
     featureDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
     featureCarouselSteps: [
       {
-        step: "This is how you do step 1. (watch in feature 3)",
+        step: "Choose Picker from Menu.",
         stepImage: "./images.jpg",
       },
       {
-        step: "This is how you do step 2. (watch in feature 3).",
+        step: "Choose start of word e.g., ‘f’ for ‘family’ in dictionary search bar.",
         stepImage: "./phrases.png",
       },
       {
-        step: "This is how you do step 3. (watch in feature 3)",
+        step: "Scroll through list of words.",
         stepImage: "./dialogue.png",
       },
       {
-        step: "This is how you do step 4. (watch in feature 3)",
+        step: "Tap on word to page to get text-to-speech.",
         stepImage: "",
       },
     ],
-    catchyLine: "Catchy Line 3",
+
+    initialFeatureImageURL: "./watchIn/breathe.jpeg",
+  },
+  {
+    featureName: "Update",
+    featureDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
+    featureCarouselSteps: [
+      {
+        step: "Choose Update from menu.",
+        stepImage: "./images.jpg",
+      },
+      {
+        step: "Input unique word and press add.",
+        stepImage: "./phrases.png",
+      },
+      {
+        step: "Now, word is added to dictionary.",
+        stepImage: "./dialogue.png",
+      },
+    ],
+
+    initialFeatureImageURL: "./watchIn/breathe.jpeg",
+  },
+  {
+    featureName: "History",
+    featureDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
+    featureCarouselSteps: [
+      {
+        step: "Choose History from menu.",
+        stepImage: "./images.jpg",
+      },
+      {
+        step: "Use search or scroll to check your recent dictionary searches. ",
+        stepImage: "./phrases.png",
+      },
+    ],
+
     initialFeatureImageURL: "./watchIn/breathe.jpeg",
   },
 ];
