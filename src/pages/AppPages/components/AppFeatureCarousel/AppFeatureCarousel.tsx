@@ -12,8 +12,7 @@ import { StepType } from "../AppFeatureSection/AppFeatureSection";
 import {
   FaArrowLeft,
   FaArrowRight,
-  FaPlay,
-  FaWindowClose,
+
 } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { appFeatureColourScheme } from "../../appFeatureColourSchemes";
@@ -32,7 +31,7 @@ export const AppFeatureCarousel = ({
   colourScheme: appFeatureColourScheme;
 }): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHidden, setIsHidden] = useState(true);
+  const [isHidden, setIsHidden] = useState(false);
 
   const decrementIndex = () => {
     setCurrentIndex(currentIndex - 1);
@@ -71,46 +70,22 @@ export const AppFeatureCarousel = ({
         transition={"all 0.3s ease-in-out"}
         pointerEvents={isHidden ? "none" : "all"}
       >
-        <Box>
-          <Center>
-            <Button
-              zIndex={100}
-              pos={"absolute"}
-              top="50%"
-              size={"lg"}
-              transform={"translate(0,-50%)"}
-              opacity={isHidden ? 1 : 0}
-              pointerEvents={isHidden ? "all" : "none"}
-              transition={"all 0.3s ease-in-out"}
-              onClick={() => {
-                document.getElementById(
-                  `${featureSectionId}Image`
-                )!.style.opacity = "0";
-                setCurrentIndex(0);
-                modifyFeatureImage();
-                setIsHidden(false);
-              }}
-              leftIcon={<FaPlay />}
-              variant={"outline"}
-              colorScheme={colourScheme.buttonColour}
-            >
-              Play Demo
-            </Button>
-          </Center>
-        </Box>
         <Center
           opacity={isHidden ? "0" : "1"}
           transition={"all 0.5s ease-in-out"}
           p="0.5rem"
         >
           <VStack spacing={"0.5rem"} fontSize={["lg", "lg", "lg", "xl"]}>
-            <Heading color={colourScheme.accent} textAlign={"center"}>{`Step ${
-              currentIndex + 1
-            }:`}</Heading>
-            <SimpleGrid columns={3} maxW="100%" spacing="2rem">
+            <Heading
+              color={colourScheme.accent}
+              textAlign={"center"}
+              fontSize={"5xl"}
+            >{`Step ${currentIndex + 1}:`}</Heading>
+            <SimpleGrid columns={2} maxW="100%" spacing="2rem">
               <Button
                 aria-label="View Previous step"
                 variant={"outline"}
+                size={"lg"}
                 colorScheme={colourScheme.buttonColour}
                 leftIcon={<FaArrowLeft />}
                 isDisabled={currentIndex === 0}
@@ -123,6 +98,7 @@ export const AppFeatureCarousel = ({
               <Button
                 aria-label="View next step"
                 variant="outline"
+                size={"lg"}
                 colorScheme={colourScheme.buttonColour}
                 rightIcon={<FaArrowRight />}
                 isDisabled={currentIndex === steps.length - 1}
@@ -131,26 +107,11 @@ export const AppFeatureCarousel = ({
               >
                 Next
               </Button>
-              <Button
-                aria-label="Close Demo"
-                variant="outline"
-                colorScheme={colourScheme.buttonColour}
-                rightIcon={<FaWindowClose />}
-                onClick={() => {
-                  document.getElementById(
-                    `${featureSectionId}Image`
-                  )!.style.opacity = "1";
-                  setCurrentIndex(0);
-                  modifyFeatureImage();
-                  setIsHidden(true);
-                }}
-                pointerEvents={isHidden ? "none" : "all"}
-              >
-                Close
-              </Button>
             </SimpleGrid>
 
-            <Text textAlign={"center"}>{steps[currentIndex].step}</Text>
+            <Text textAlign={"center"} fontSize={"3xl"}>
+              {steps[currentIndex].step}
+            </Text>
           </VStack>
         </Center>
       </Box>

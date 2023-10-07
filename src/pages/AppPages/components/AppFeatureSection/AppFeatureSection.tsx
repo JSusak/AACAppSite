@@ -25,6 +25,7 @@ export const AppFeatureSection = ({
   featureName,
   featureDescription,
 
+
   featureSteps,
   isOnLeft,
   initialFeatureImageURL,
@@ -42,14 +43,15 @@ export const AppFeatureSection = ({
   const [isLargerThan991] = useMediaQuery("(min-width: 991px)");
   const Feature = (): JSX.Element => {
     return (
-      <AppFeature
-        sectionId={sectionId}
-        featureName={featureName}
-        featureDescription={featureDescription}
-        isOnLeft={isOnLeft}
-        colourScheme={colourScheme}
-        featureSteps={featureSteps}
-      />
+      <Center>
+        <AppFeature
+          sectionId={sectionId}
+          featureName={featureName}
+          featureDescription={featureDescription}
+          colourScheme={colourScheme}
+          featureSteps={featureSteps}
+        />
+      </Center>
     );
   };
 
@@ -87,7 +89,7 @@ export const AppFeatureSection = ({
             src={initialFeatureImageURL}
             transition={"all 0.5s ease-in-out"}
             width={[350, 400, 600, 600]}
-            opacity={1}
+            opacity={0}
             height={[350, 400, 600, 600]}
             fallbackSrc="https://via.placeholder.com/600"
             borderRadius={"20%"}

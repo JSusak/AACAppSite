@@ -1,4 +1,4 @@
-import { Box, Center, Divider, Heading } from "@chakra-ui/layout";
+import { Box, Center, Heading } from "@chakra-ui/layout";
 
 import { Text } from "@chakra-ui/layout";
 
@@ -36,7 +36,7 @@ export const AppFeature = ({
   featureName,
   featureDescription,
 
-  isOnLeft,
+  //isOnLeft,
   featureSteps,
   colourScheme,
 }: {
@@ -44,7 +44,7 @@ export const AppFeature = ({
   featureName: string;
   featureDescription: string;
 
-  isOnLeft: boolean;
+  // isOnLeft: boolean;
   featureSteps: StepType[];
   colourScheme: appFeatureColourScheme;
 }): JSX.Element => {
@@ -56,15 +56,11 @@ export const AppFeature = ({
       id={sectionId}
     >
       <Center>
-        <Box w="90%">
+        <Box w="100%">
           <motion.span variants={appFeatureSectionAnim}>
             <Heading
               fontSize={ResponsiveSizes.SecondaryHeaderSizes}
-              textAlign={
-                isOnLeft
-                  ? ["center", "center", "center", "left"]
-                  : ["center", "center", "center", "right"]
-              }
+              textAlign={"center"}
               m="2rem"
             >
               {featureName}
@@ -77,14 +73,12 @@ export const AppFeature = ({
                 fontSize={"3xl"}
                 maxW="3xl"
                 mb="2rem"
+                fontWeight={"bold"}
               >
                 {featureDescription}
               </Text>
             </Center>
           </motion.span>
-          <Divider borderColor={colourScheme.accent} />
-
-          <Divider borderColor={colourScheme.accent} />
 
           <AppFeatureCarousel
             steps={featureSteps}
