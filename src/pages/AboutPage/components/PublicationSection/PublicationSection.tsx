@@ -76,7 +76,7 @@ export const PublicationSection = (): JSX.Element => {
             <Box w="100%">
               <Center>
                 <SimpleGrid
-                  columns={[1, 1, 1, 2]}
+                  columns={[1, 1, 1, 1]} //Change to 2 if you want more publications to be displayed in a more concise way.
                   spacing={"2rem"}
                   mt="2rem"
                   mb="2rem"

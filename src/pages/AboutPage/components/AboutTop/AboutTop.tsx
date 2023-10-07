@@ -43,12 +43,13 @@ const AboutTopImage = ({ imgSRC }: { imgSRC: string }): JSX.Element => {
   return (
     <motion.div variants={aboutTopItemAnim}>
       <Image
-        width={"300px"}
-        height={"300px"}
+        width={["300px", "350px", "350px", "500px"]}
+        height={["300px", "350px", "350px", "500px"]}
         p="0.5rem"
         src={imgSRC}
         fallbackSrc="https://via.placeholder.com/300"
         borderRadius={"10%"}
+        objectFit={"cover"}
       />
     </motion.div>
   );
@@ -74,12 +75,8 @@ export const AboutTop = (): JSX.Element => {
       >
         <SimpleGrid columns={[1, 1, 1, 3]} spacingX="2rem">
           <Center>
-            <SimpleGrid
-              columns={[2, 2, 2, 1]}
-              display={["none", "none", "none", "block"]}
-            >
-              <AboutTopImage imgSRC="./images.jpg" />
-              <AboutTopImage imgSRC="./images.jpg" />
+            <SimpleGrid columns={1} display={["none", "none", "none", "block"]}>
+              <AboutTopImage imgSRC="./watchOnHand.png" />
             </SimpleGrid>
           </Center>
           <VStack
@@ -116,9 +113,8 @@ export const AboutTop = (): JSX.Element => {
             </Text>
           </VStack>
           <Center>
-            <SimpleGrid columns={[2, 2, 2, 1]}>
-              <AboutTopImage imgSRC="./images.jpg" />
-              <AboutTopImage imgSRC="./images.jpg" />
+            <SimpleGrid columns={1}>
+              <AboutTopImage imgSRC="./situations.jpg" />
             </SimpleGrid>
           </Center>
         </SimpleGrid>

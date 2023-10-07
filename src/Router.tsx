@@ -26,13 +26,11 @@ export const AppRouter = (): JSX.Element => {
         <Route path="about" element={<AboutPage />} />
         <Route path="people" element={<PeoplePage />} />
 
+        {/**<Route path="codesign" element={<CoDesignPage />} />
+         * */}
 
-
-      <Route path="codesign" element={<CoDesignPage />} />
-   
         <Route path="watchin" element={<WatchInPage />} />
         <Route path="watchout" element={<WatchOutPage />} />
-      
       </Routes>
     </AnimatePresence>
   );

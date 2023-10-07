@@ -25,11 +25,11 @@ export const TimelineSection = (): JSX.Element => {
             <Heading fontSize={"6xl"}>Project Timeline</Heading>
           </Center>
           <Center>
-            <Text maxW="lg">
+            <Text maxW="lg" fontSize={"xl"}>
               {" "}
-              Take a look at some of the activities we did! Traverse the
+              Take a look at some of the workshops we conducted. Traverse the
               timeline and interact with specific cards to find out more
-              information about that certain activity.
+              information about workshops.
             </Text>
           </Center>
         </Box>

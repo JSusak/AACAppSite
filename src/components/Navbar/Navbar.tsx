@@ -79,7 +79,7 @@ export const Navbar: React.FC = (): JSX.Element => {
   const navbarContents: string[] = [
     "About",
     "People",
-    "Co-Design",
+    // "Co-Design",
     "Watch In",
     "Watch Out",
   ];

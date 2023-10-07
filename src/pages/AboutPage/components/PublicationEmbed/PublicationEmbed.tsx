@@ -88,7 +88,7 @@ export const PublicationEmbed = ({
             >
               {publicationAuthors.map((author, key) => {
                 return (
-                  <Text fontSize={"xl"} key={key}>
+                  <Text fontSize={"xl"} key={key} textDecor={"underline"}>
                     {author}
                   </Text>
                 );
