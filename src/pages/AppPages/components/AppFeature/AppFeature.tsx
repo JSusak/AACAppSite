@@ -69,7 +69,7 @@ export const AppFeature = ({
           <motion.span variants={appFeatureSectionAnim}>
             <Center>
               <Text
-                textAlign={["center", "center", "center", "left"]}
+                textAlign={"center"}
                 fontSize={"3xl"}
                 maxW="3xl"
                 mb="2rem"
