@@ -12,7 +12,7 @@ import {
 export const TimelineSectionModal = ({
   sectionName,
   featureImage,
-  sectionImages,
+  // sectionImages,
   sectionDate,
   sectionDescription,
   sectionKeyTasks,
@@ -20,7 +20,7 @@ export const TimelineSectionModal = ({
 }: {
   sectionName: string;
   featureImage: string;
-  sectionImages: string[];
+  // sectionImages: string[];
   sectionDate: string;
   sectionDescription: string;
   sectionKeyTasks: string[];
@@ -90,15 +90,6 @@ export const TimelineSectionModal = ({
             {sectionDescription}
           </Text>
 
-          <Heading
-            fontSize={["2xl", "3xl", "4xl", "5xl"]}
-            as={motion.div}
-            variants={verticalFade}
-            textAlign={"center"}
-            textDecor={"underline"}
-          >
-            Key Activities
-          </Heading>
           {sectionKeyTasks.map((task, index) => {
             return (
               <Text
@@ -112,9 +103,10 @@ export const TimelineSectionModal = ({
             );
           })}
 
-          <Heading
+          {/**
+          * <Heading
             fontSize={["2xl", "3xl", "4xl", "5xl"]}
-            as={motion.div}
+           as={motion.div}
             variants={verticalFade}
             textAlign={"center"}
             textDecor={"underline"}
@@ -141,6 +133,7 @@ export const TimelineSectionModal = ({
               </motion.div>
             );
           })}
+          */}
         </VStack>
       </Center>
     </ModalTemplate>
