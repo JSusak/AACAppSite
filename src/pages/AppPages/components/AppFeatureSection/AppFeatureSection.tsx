@@ -24,7 +24,6 @@ export const AppFeatureSection = ({
   sectionId,
   featureName,
   featureDescription,
-  numericFacts,
 
   featureSteps,
   isOnLeft,
@@ -34,7 +33,7 @@ export const AppFeatureSection = ({
   sectionId: string;
   featureName: string;
   featureDescription: string;
-  numericFacts: string[];
+
   featureSteps: StepType[];
   isOnLeft: boolean;
   initialFeatureImageURL: string;
@@ -47,7 +46,6 @@ export const AppFeatureSection = ({
         sectionId={sectionId}
         featureName={featureName}
         featureDescription={featureDescription}
-        numericFacts={numericFacts}
         isOnLeft={isOnLeft}
         colourScheme={colourScheme}
         featureSteps={featureSteps}

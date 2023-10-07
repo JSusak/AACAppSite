@@ -1,9 +1,8 @@
 export const watchInFeatureList = [
   {
     featureName: "Transcribe",
-    featureDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
+    featureDescription: "Sentence describing feature.",
+
     featureCarouselSteps: [
       {
         step: "Choose Transcribe from menu.",
@@ -34,9 +33,8 @@ export const watchInFeatureList = [
   },
   {
     featureName: "Breathe",
-    featureDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
+    featureDescription: "Sentence describing feature.",
+
     featureCarouselSteps: [
       {
         step: "Choose breathe from menu.",
@@ -52,9 +50,8 @@ export const watchInFeatureList = [
 
   {
     featureName: "Picker",
-    featureDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
+    featureDescription: "Sentence describing feature.",
+
     featureCarouselSteps: [
       {
         step: "Choose Picker from Menu.",
@@ -78,8 +75,7 @@ export const watchInFeatureList = [
   },
   {
     featureName: "Update",
-    featureDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    featureDescription: "Sentence describing feature.",
     numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
     featureCarouselSteps: [
       {
@@ -100,9 +96,8 @@ export const watchInFeatureList = [
   },
   {
     featureName: "History",
-    featureDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
+    featureDescription: "Sentence describing feature.",
+
     featureCarouselSteps: [
       {
         step: "Choose History from menu.",

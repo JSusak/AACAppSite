@@ -1,6 +1,6 @@
 import { WatchInHero } from "./components/WatchInHero/WatchInHero";
 
-import { WatchInFurtherInfoSection } from "./components/WatchInFurtherInfoSection/WatchInFurtherInfoSection";
+
 import { PageTransition } from "../../../PageTransition";
 import { AppFeatureSection } from "../components/AppFeatureSection/AppFeatureSection";
 import { watchInFeatureList } from "./watchInFeatureList";
@@ -20,8 +20,6 @@ export const WatchInPage = (): JSX.Element => {
               sectionId={`watchInFeature${index}`}
               featureName={feature.featureName}
               featureDescription={feature.featureDescription}
-              numericFacts={feature.numericFacts}
-              catchyLine={feature.catchyLine}
               isOnLeft={index % 2 == 0}
               initialFeatureImageURL={feature.initialFeatureImageURL}
               featureSteps={feature.featureCarouselSteps}
@@ -29,8 +27,7 @@ export const WatchInPage = (): JSX.Element => {
             />
           );
         })}
-        {/**Further Info component */}
-        <WatchInFurtherInfoSection />
+        {/**Further Info component and download components. Removed for now, can be added back.   <WatchInFurtherInfoSection />*/}
       </PageTransition>
     </>
   );

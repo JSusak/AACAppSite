@@ -1,9 +1,8 @@
 export const watchOutFeatureList = [
   {
     featureName: "Expressions",
-    featureDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
+    featureDescription: "Sentence describing feature.",
+
     featureCarouselSteps: [
       {
         step: "Choose from menu. Expressions will automatically display in a sequence.",
@@ -26,15 +25,14 @@ export const watchOutFeatureList = [
         stepImage: "./kcllogo.png",
       },
     ],
-    catchyLine: "Catchy Line 2",
+
     initialFeatureImageURL: "./watchOut/expressionsFeature.jpg",
   },
 
   {
     featureName: "Aphasia Page",
-    featureDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
+    featureDescription: "Sentence describing feature.",
+
     featureCarouselSteps: [
       {
         step: "Choose from menu to be directed to an Aphasia info page.",
@@ -49,7 +47,7 @@ export const watchOutFeatureList = [
         stepImage: "./dialogue.png",
       },
     ],
-    catchyLine: "Catchy Line 3",
+
     initialFeatureImageURL: "./watchOut/qrcode.jpg",
   },
 ];
