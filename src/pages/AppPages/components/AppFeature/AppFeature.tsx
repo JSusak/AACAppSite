@@ -56,7 +56,7 @@ export const AppFeature = ({
       id={sectionId}
     >
       <Center>
-        <Box w="100%">
+        <Box w="100%" minH={"500px"}>
           <motion.span variants={appFeatureSectionAnim}>
             <Heading
               fontSize={ResponsiveSizes.SecondaryHeaderSizes}

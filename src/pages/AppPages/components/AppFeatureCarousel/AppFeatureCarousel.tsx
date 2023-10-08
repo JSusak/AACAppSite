@@ -61,14 +61,12 @@ export const AppFeatureCarousel = ({
   return (
     <>
       <Box
-        w="100%"
-        minH="100%"
-        //borderWidth={"0.5px"}
+        width={"100%"}
         borderRadius={"10px"}
-        position={"relative"}
         //borderColor={isHidden ? "transparent" : colourScheme.accent}
         transition={"all 0.3s ease-in-out"}
         pointerEvents={isHidden ? "none" : "all"}
+        wordBreak={"break-word"}
       >
         <Center
           opacity={isHidden ? "0" : "1"}
@@ -81,7 +79,7 @@ export const AppFeatureCarousel = ({
               textAlign={"center"}
               fontSize={"5xl"}
             >{`Step ${currentIndex + 1}:`}</Heading>
-            <SimpleGrid columns={2} maxW="100%" spacing="2rem">
+            <SimpleGrid columns={2} spacing="2rem">
               <Button
                 aria-label="View Previous step"
                 variant={"outline"}
@@ -108,8 +106,11 @@ export const AppFeatureCarousel = ({
                 Next
               </Button>
             </SimpleGrid>
-
-            <Text textAlign={"center"} fontSize={"3xl"}>
+            <Text
+              textAlign={"center"}
+              fontSize={["xl", "2xl", "3xl", "3xl"]}
+              p="2rem"
+            >
               {steps[currentIndex].step}
             </Text>
           </VStack>

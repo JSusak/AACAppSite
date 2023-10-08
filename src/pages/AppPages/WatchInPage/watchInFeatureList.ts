@@ -104,7 +104,7 @@ export const watchInFeatureList = [
         stepImage: "./images.jpg",
       },
       {
-        step: "Use search or scroll to check your recent dictionary searches. ",
+        step: "Use search or scroll to check your recent dictionary searches.",
         stepImage: "./phrases.png",
       },
     ],

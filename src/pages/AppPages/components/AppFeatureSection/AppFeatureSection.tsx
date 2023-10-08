@@ -1,4 +1,4 @@
-import { Grid, SimpleGrid, Center, useMediaQuery } from "@chakra-ui/react";
+import { Grid, SimpleGrid, Center, useMediaQuery, Box } from "@chakra-ui/react";
 import { AppFeature } from "../AppFeature/AppFeature";
 import { Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -25,7 +25,6 @@ export const AppFeatureSection = ({
   featureName,
   featureDescription,
 
-
   featureSteps,
   isOnLeft,
   initialFeatureImageURL,
@@ -43,7 +42,7 @@ export const AppFeatureSection = ({
   const [isLargerThan991] = useMediaQuery("(min-width: 991px)");
   const Feature = (): JSX.Element => {
     return (
-      <Center>
+      <Box>
         <AppFeature
           sectionId={sectionId}
           featureName={featureName}
@@ -51,7 +50,7 @@ export const AppFeatureSection = ({
           colourScheme={colourScheme}
           featureSteps={featureSteps}
         />
-      </Center>
+      </Box>
     );
   };
 
