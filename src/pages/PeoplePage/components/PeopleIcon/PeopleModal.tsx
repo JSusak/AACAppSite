@@ -60,18 +60,20 @@ export const PeopleModal = ({
           animate="visible"
         >
           <motion.div variants={horizontalFade}>
-            <Image
-              boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
-              borderRadius={"15px"}
-              width={"800px"}
-              height={"500px"}
-              objectFit={"cover"}
-              zIndex={9}
-              transition={"all 0.2s ease-in-out"}
-              src={imagePath}
-              fallbackSrc="https://via.placeholder.com/400"
-              m="2rem"
-            />
+            <Center>
+              <Image
+                boxShadow={"2px 12px 20px rgba(0,0,0,0.2);"}
+                borderRadius={"15px"}
+                width={"800px"}
+                height={"500px"}
+                objectFit={"cover"}
+                zIndex={9}
+                transition={"all 0.2s ease-in-out"}
+                src={imagePath}
+                fallbackSrc="https://via.placeholder.com/400"
+                m="2rem"
+              />
+            </Center>
           </motion.div>
 
           <Heading
@@ -109,14 +111,6 @@ export const PeopleModal = ({
             <PeopleIconButton webLink={secondaryWebLink} icon={secondaryIcon} />
           </SimpleGrid>
 
-          <Heading
-            fontSize={["2xl", "3xl", "4xl", "5xl"]}
-            as={motion.span}
-            textAlign={"center"}
-            variants={verticalFade}
-          >
-            Project Roles
-          </Heading>
           {projectRoles.map((role, index) => {
             return (
               <Text
