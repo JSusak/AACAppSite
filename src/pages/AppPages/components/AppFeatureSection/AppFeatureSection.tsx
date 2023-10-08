@@ -74,7 +74,7 @@ export const AppFeatureSection = ({
         >
           {/*To achieve a crossfading effect, all images must be initially present.*/}
           {/*Animations cannot be achieved by directly changing the src of an image*/}
-          <Box display={"inherit"} height={["500px", "500px", "100%", "100%"]}>
+          <Box display={"inherit"} height={"100%"}>
             {isLargerThan991 ? null : (
               <Box
                 backgroundColor={useColorModeValue(
@@ -98,8 +98,8 @@ export const AppFeatureSection = ({
                     opacity={0}
                     position="absolute"
                     transition={"all 0.5s ease-in-out"}
-                    width={["100%", "100%", 600, 600]}
-                    height={["100%", "100%", 600, 600]}
+                    width={[400, "100%", 600, 600]}
+                    height={[400, "100%", 600, 600]}
                     fallbackSrc="https://via.placeholder.com/600"
                     borderRadius={"20%"}
                     zIndex={1}
@@ -132,9 +132,9 @@ export const AppFeatureSection = ({
             id={`${sectionId}Image`}
             src={initialFeatureImageURL}
             transition={"all 0.5s ease-in-out"}
-            width={[350, 400, 600, 600]}
+            width={[400, 400, 600, 600]}
             opacity={0}
-            height={[350, 400, 600, 600]}
+            height={[400, 400, 600, 600]}
             fallbackSrc="https://via.placeholder.com/600"
             borderRadius={"20%"}
             zIndex={2}

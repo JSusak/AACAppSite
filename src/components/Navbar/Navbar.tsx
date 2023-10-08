@@ -21,8 +21,6 @@ import { NavbarLink } from "./NavbarLink";
 import { NavLink as RouterLink } from "react-router-dom";
 
 import { useState, useEffect, useRef } from "react";
-import { FaAppStore, FaGithub } from "react-icons/fa";
-import { FooterButton } from "../Footer/FooterButton";
 import { NavbarHamburgerIcon } from "./NavbarHamburgerIcon";
 import { ColourModeSwitcher } from "../ColourModeSwitcher/ColourModeSwitcher";
 
