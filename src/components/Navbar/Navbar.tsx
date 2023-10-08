@@ -239,7 +239,7 @@ export const Navbar: React.FC = (): JSX.Element => {
                         />
                       );
                     })}
-                    <Box position={"absolute"} bottom={"2rem"}>
+                    {/**        <Box position={"absolute"} bottom={"2rem"}>
                       <VStack>
                         <HStack>
                           <FooterButton
@@ -253,7 +253,7 @@ export const Navbar: React.FC = (): JSX.Element => {
                           />
                         </HStack>
                       </VStack>
-                    </Box>
+                    </Box> */}
                   </VStack>
                 </motion.div>
               </DrawerBody>
