@@ -1,0 +1,17 @@
+#homeHero {
+    animation: animateGrad 10s ease-in-out infinite;
+    background-size:400%;
+}
+@keyframes animateGrad {
+
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 150%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    
+}

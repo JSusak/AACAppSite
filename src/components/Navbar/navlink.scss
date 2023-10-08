@@ -1,0 +1,26 @@
+.active-dark,.active {
+    border-radius: 10px;
+}
+
+
+.active:not(#homeLink) {
+background-color: #b9ced6;
+
+}
+
+.active-dark:not(#homeLink) {
+    background-color: #F6AD55;
+}
+
+@media (prefers-color-scheme: dark) {
+    .active:not(#homeLink) {
+       
+        
+        
+        
+        border-radius: 10px;
+        }
+}
+
+
+

@@ -1,0 +1,60 @@
+$drop-shadow-col: #000000;
+$box-shadow-effect: 0 0 5px $drop-shadow-col;
+
+.imageWrapper {
+  position: relative;
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: translate(50%, 50%);
+
+  padding: 20px;
+
+  
+  width: 100%;
+  height: 100%;
+
+  border: 3px solid;
+  transition: all 0.3s ease-in-out, z-index 0s;
+}
+
+.imageWrapper:hover .imageHov:not(:hover) {
+  filter: blur(8px);
+}
+
+
+
+.imageWrapper:hover {
+  .image1 {
+    top: -100px;
+    left: 75px;
+    transform: rotate(10deg);
+    box-shadow: $box-shadow-effect;
+  }
+
+  .image2 {
+    transform: rotate(-10deg);
+    top: 50px;
+    box-shadow: $box-shadow-effect;
+    left: 100px;
+  }
+
+  .image3 {
+    transform: rotate(10deg);
+    top: 25px;
+    box-shadow: $box-shadow-effect;
+    left: -50px;
+  }
+
+  .image4 {
+    top: -100px;
+    transform: rotate(-10deg);
+    box-shadow: $box-shadow-effect;
+    left: -50px;
+  }
+}

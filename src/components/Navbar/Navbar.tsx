@@ -4,14 +4,25 @@ import {
   HStack,
   Heading,
   Link,
+  VStack,
   useColorModeValue,
+  useDisclosure,
+  Drawer,
+  DrawerBody,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 import { Colours } from "../../colourScheme";
 import { NavbarLink } from "./NavbarLink";
 import { NavLink as RouterLink } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+
+import { useState, useEffect, useRef } from "react";
+import { NavbarHamburgerIcon } from "./NavbarHamburgerIcon";
+import { ColourModeSwitcher } from "../ColourModeSwitcher/ColourModeSwitcher";
 
 const navbarAnims = {
   hidden: {
@@ -24,6 +35,19 @@ const navbarAnims = {
   },
 };
 
+const navHamGridAnim = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 export const Navbar: React.FC = (): JSX.Element => {
   const [scrollPos, setScrollPos] = useState(0);
   const [isScrollDown, setIsScrollDown] = useState(false);
@@ -32,6 +56,12 @@ export const Navbar: React.FC = (): JSX.Element => {
   //and therefore the navbar should be hidden.
   const checkScrollPos = (): void => {
     window.scrollY > scrollPos ? setIsScrollDown(true) : setIsScrollDown(false);
+
+    //Apple 'bouncing' bug.
+    if (window.scrollY < 50) {
+      setIsScrollDown(false);
+    }
+
     setScrollPos(window.scrollY);
   };
 
@@ -43,65 +73,190 @@ export const Navbar: React.FC = (): JSX.Element => {
     };
   });
 
+  //All links within the navbar, to avoid code duplication between desktop and mobile bars.
+  const navbarContents: string[] = [
+    "About",
+    "People",
+    // "Co-Design",
+    "Watch In",
+    "Watch Out",
+  ];
+
+  const LogoLink = (): JSX.Element => {
+    return (
+      <Link
+        as={RouterLink}
+        _hover={{
+          textDecoration: "none",
+
+          bg: "none",
+          ".navLogoText": {
+            color: useColorModeValue(
+              Colours.lightModeNavColHighlight,
+              Colours.darkModeNavColHighlight
+            ),
+          },
+        }}
+        to={"/"}
+        id="homeLink"
+      >
+        <Heading
+          className="navLogoText"
+          fontSize={"5xl"}
+          transition={"all 0.2s ease-in-out"}
+        >
+          WYL
+        </Heading>
+      </Link>
+    );
+  };
+
+  //Hamburger drawer logic for checking the status of the mobile sidebar.
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const hamRef = useRef<HTMLButtonElement>(null);
+
   return (
     <motion.div
+      id="navbar"
       style={{
         position: "sticky",
         top: "0px",
+
+        zIndex: 1000,
       }}
       variants={navbarAnims}
       animate={isScrollDown ? "hidden" : "active"}
       transition={{ duration: 0.5, type: "tween" }}
-      whileHover={{ opacity: 0.9 }}
     >
       <Box
         w="100%"
-        backgroundColor={Colours.lightModeMainCol}
+        backgroundColor={useColorModeValue(
+          Colours.lightModeMainCol,
+          Colours.darkModeMainCol
+        )}
         p={6}
+        transition={"all 0.3s ease-in-out"}
         boxShadow={
           "rgba(0, 0, 0, 0.2) 0px 10px 30px -10px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px"
         }
-        zIndex={1000}
+        zIndex={9000}
         scrollBehavior={"smooth"}
       >
-        <Container minW={"100%"} display={"flex"} alignItems={"center"} h={5}>
+        <Container
+          minW={"100%"}
+          display={"flex"}
+          alignItems={"center"}
+          h={5}
+          justifyContent={"space-between"}
+        >
+          {/*Desktop Navbar - show all subpages in a row */}
           <HStack alignItems={"center"}>
-            <Link
-              as={RouterLink}
-              _hover={{
-                textDecoration: "none",
-
-                bg: "none",
-                ".navLogoText": {
-                  color: useColorModeValue(
-                    Colours.lightModeNavColHighlight,
-                    "red"
-                  ),
-                },
-              }}
-              to={"/"}
-              style={{ margin: "auto" }}
-            >
-              <Heading
-                className="navLogoText"
-                fontSize={"5xl"}
-                transition={"all 0.2s ease-in-out"}
-              >
-                WYL
-              </Heading>
-            </Link>
+            <LogoLink />
             <HStack
               spacing={5}
               display={{ base: "none", lg: "flex" }}
               paddingLeft={7}
             >
-              <NavbarLink linkText="About" linkTo="about" />
-              <NavbarLink linkText="People" linkTo="people" />
-              <NavbarLink linkText="Co-Design" linkTo="contact" />
-              <NavbarLink linkText="Watch In" linkTo="watchin" />
-              <NavbarLink linkText="Watch Out" linkTo="watchout" />
+              {navbarContents.map((link, index) => {
+                return (
+                  <NavbarLink
+                    linkText={link}
+                    linkSize="md"
+                    linkTo={link
+                      .replace(/-/g, "")
+                      .replace(/\s/g, "")
+                      .toLowerCase()}
+                    key={`navDesktop${index}`}
+                  />
+                );
+              })}
             </HStack>
           </HStack>
+          <Box display={["none", "none", "none", "block"]}>
+            <ColourModeSwitcher />
+          </Box>
+          {/*Mobile Navbar - show all subpages behind a hamburger menu*/}
+          <Box display={["block", "block", "block", "none"]}>
+            <NavbarHamburgerIcon
+              hamburgerRef={hamRef}
+              openAction={onOpen}
+              isNavOpen={isOpen}
+            />
+          </Box>
+          <Drawer
+            isOpen={isOpen}
+            placement="right"
+            onClose={onClose}
+            finalFocusRef={hamRef}
+            size={"xs"}
+          >
+            <DrawerOverlay
+              background={"rgba(0,0,0,0.7)"}
+              filter={"blur(10px)"}
+              backdropFilter="auto"
+              backdropBlur="6px"
+            />
+
+            <DrawerContent zIndex={9999}>
+              <DrawerCloseButton />
+
+              <DrawerBody
+                background={useColorModeValue(
+                  `linear-gradient(109.6deg, ${Colours.lightModeMainCol} 11.2%, ${Colours.lightModeNavColHighlight} 100.2%);`,
+                  `linear-gradient(109.6deg, ${Colours.darkModeMainCol} 11.2%, ${Colours.darkModeNavColHighlight} 100.2%);`
+                )}
+                boxShadow={"-3px 0px 20px 1px #000000"}
+              >
+                <motion.div
+                  variants={navHamGridAnim}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <Box position={"absolute"} top={"0.5rem"}>
+                    <ColourModeSwitcher />
+                  </Box>
+                  <VStack spacing={10} mt="20%">
+                    <NavbarLink
+                      linkSize="3xl"
+                      linkText={"home"}
+                      linkTo=""
+                      key={`navMobileHome`}
+                      onClick={onClose}
+                    />
+                    {navbarContents.map((link, index) => {
+                      return (
+                        <NavbarLink
+                          linkSize="3xl"
+                          linkText={link}
+                          linkTo={link
+                            .replace(/-/g, "")
+                            .replace(/\s/g, "")
+                            .toLowerCase()}
+                          key={`navMobile${index}`}
+                          onClick={onClose}
+                        />
+                      );
+                    })}
+                    {/**        <Box position={"absolute"} bottom={"2rem"}>
+                      <VStack>
+                        <HStack>
+                          <FooterButton
+                            linkTo="https://github.com/JSusak/AACAppSite"
+                            buttonIcon={<FaGithub size="50px" />}
+                          />
+
+                          <FooterButton
+                            linkTo="https://github.com/JSusak/AACAppSite"
+                            buttonIcon={<FaAppStore size="50px" />}
+                          />
+                        </HStack>
+                      </VStack>
+                    </Box> */}
+                  </VStack>
+                </motion.div>
+              </DrawerBody>
+            </DrawerContent>
+          </Drawer>
         </Container>
       </Box>
     </motion.div>

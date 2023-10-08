@@ -2,6 +2,9 @@ import { extendTheme } from '@chakra-ui/react'
 import type { StyleFunctionProps } from '@chakra-ui/styled-system'
 import '@fontsource/barlow';
 import "@fontsource/fredoka-one";
+import "@fontsource/poppins";
+import "@fontsource-variable/open-sans";
+import "@fontsource-variable/bitter";
 import { mode } from "@chakra-ui/theme-tools";
 import { Colours } from "./colourScheme";
 
@@ -32,8 +35,8 @@ export const theme = extendTheme({
   //Define the main fonts to be used throughout the website. Second font is fallback.
   //The easiest method is to go to 'fontsource.org', install the font with NPM and import it here, changing the name.
   fonts: {
-    heading: `'Fredoka One', sans-serif`,
-    body: `'Barlow', sans-serif`,
+    heading: `'Bitter Variable', sans-serif`,
+    body: `'Open Sans Variable', sans-serif`,
   },
 
   //Define global styles for arbitrary HTML elements
@@ -41,7 +44,12 @@ export const theme = extendTheme({
     global: (props: StyleFunctionProps) => ({
       body: {
         bg: mode(Colours.lightModeBG, Colours.darkModeBG)(props),
+        // transitionProperty: "all",
+        //   transitionDuration: "ultra-slow",
       },
     }),
   },
+  //config: {
+  //   disableTransitionOnChange: false,
+  // },
 });
