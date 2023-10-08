@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { HomePage } from "./pages/HomePage/HomePage";
 import { AboutPage } from "./pages/AboutPage/AboutPage";
 import { PeoplePage } from "./pages/PeoplePage/PeoplePage";
@@ -30,6 +30,7 @@ export const AppRouter = (): JSX.Element => {
 
         <Route path="watchin" element={<WatchInPage />} />
         <Route path="watchout" element={<WatchOutPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </AnimatePresence>
   );
