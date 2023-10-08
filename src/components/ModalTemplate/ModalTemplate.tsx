@@ -48,7 +48,7 @@ export const ModalTemplate = ({
           )}
           borderColor={useColorModeValue(
             Colours.lightModeMainCol,
-            Colours.darkModeNavColActive
+            Colours.darkModeMainCol
           )}
           borderWidth={"5px"}
           borderRadius={"10px"}

@@ -12,7 +12,7 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  Flex,
+
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
@@ -21,7 +21,7 @@ import { NavbarLink } from "./NavbarLink";
 import { NavLink as RouterLink } from "react-router-dom";
 
 import { useState, useEffect, useRef } from "react";
-import { FaAppStore, FaGithub, FaPaperclip } from "react-icons/fa";
+import { FaAppStore, FaGithub } from "react-icons/fa";
 import { FooterButton } from "../Footer/FooterButton";
 import { NavbarHamburgerIcon } from "./NavbarHamburgerIcon";
 import { ColourModeSwitcher } from "../ColourModeSwitcher/ColourModeSwitcher";
@@ -214,6 +214,9 @@ export const Navbar: React.FC = (): JSX.Element => {
                   initial="hidden"
                   animate="visible"
                 >
+                  <Box position={"absolute"} top={"0.5rem"}>
+                    <ColourModeSwitcher />
+                  </Box>
                   <VStack spacing={10} mt="20%">
                     <NavbarLink
                       linkSize="3xl"
@@ -236,23 +239,21 @@ export const Navbar: React.FC = (): JSX.Element => {
                         />
                       );
                     })}
-                    <HStack>
-                      <FooterButton
-                        linkTo="https://github.com/JSusak/AACAppSite"
-                        buttonIcon={<FaGithub size="50px" />}
-                      />
-                      <FooterButton
-                        linkTo="https://github.com/JSusak/AACAppSite"
-                        buttonIcon={<FaPaperclip size="50px" />}
-                      />
-                      <FooterButton
-                        linkTo="https://github.com/JSusak/AACAppSite"
-                        buttonIcon={<FaAppStore size="50px" />}
-                      />
-                    </HStack>
-                    <Flex>
-                      <ColourModeSwitcher />
-                    </Flex>
+                    <Box position={"absolute"} bottom={"2rem"}>
+                      <VStack>
+                        <HStack>
+                          <FooterButton
+                            linkTo="https://github.com/JSusak/AACAppSite"
+                            buttonIcon={<FaGithub size="50px" />}
+                          />
+
+                          <FooterButton
+                            linkTo="https://github.com/JSusak/AACAppSite"
+                            buttonIcon={<FaAppStore size="50px" />}
+                          />
+                        </HStack>
+                      </VStack>
+                    </Box>
                   </VStack>
                 </motion.div>
               </DrawerBody>

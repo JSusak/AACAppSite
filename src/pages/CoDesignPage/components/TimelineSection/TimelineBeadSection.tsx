@@ -6,7 +6,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { TimelineCard } from "./TimelineCard";
-import Xarrow from "react-xarrows";
+//import Xarrow from "react-xarrows";
 import { Colours } from "../../../../colourScheme";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -51,7 +51,7 @@ export const TimelineBeadSection = ({
   };
   return (
     <Box className="timelineSection" zIndex={15}>
-      {arrow ? (
+      {/**{arrow ? (
         <motion.div className="arrow">
           <Xarrow
             start={
@@ -68,7 +68,7 @@ export const TimelineBeadSection = ({
             )}
           />
         </motion.div>
-      ) : null}
+      ) : null} */}
       <SimpleGrid columns={isCompact ? 1 : 3}>
         {isOnLeft ? <SectionCard /> : <Box></Box>}
         <Center>

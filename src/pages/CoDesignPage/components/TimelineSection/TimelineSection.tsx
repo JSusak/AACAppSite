@@ -64,6 +64,7 @@ export const TimelineSection = (): JSX.Element => {
           {timelineCardContents.map((card, index) => {
             return (
               <TimelineBeadSection
+                key={"timelineBeadSection" + index}
                 orderInTimeline={index}
                 isOnLeft={index % 2 === 0}
                 isCompact={isSmallerThan991}

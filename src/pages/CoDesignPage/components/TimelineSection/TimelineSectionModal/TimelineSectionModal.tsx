@@ -1,4 +1,12 @@
-import { Button, Center, Heading, Text, VStack, Image } from "@chakra-ui/react";
+import {
+  Button,
+  Center,
+  Heading,
+  Text,
+  VStack,
+  Image,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { ModalTemplate } from "../../../../../components/ModalTemplate/ModalTemplate";
 
@@ -34,7 +42,7 @@ export const TimelineSectionModal = ({
         top="2rem"
         right="2rem"
         leftIcon={<FaChevronCircleRight />}
-        colorScheme="orange"
+        colorScheme={useColorModeValue("orange", "gray")}
       >
         Back
       </Button>

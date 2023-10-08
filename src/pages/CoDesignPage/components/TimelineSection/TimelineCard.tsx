@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import { datesLongForm } from "./helpers/datesLongForm";
 import { useState } from "react";
 import { TimelineSectionModal } from "./TimelineSectionModal/TimelineSectionModal";
+import { Colours } from "../../../../colourScheme";
 
 const timelineCardAnim = {
   hidden: {
@@ -32,7 +33,7 @@ export const TimelineCard = ({
   imageURL,
   cardName,
   modalDescription,
-  activityImages,
+  // activityImages,
   activityDate,
   taskList,
 
@@ -82,6 +83,11 @@ export const TimelineCard = ({
           position={"relative"}
           onClick={onModalOpen}
           mt={["2rem", "2rem", "2rem", "0"]}
+          borderWidth={"5px"}
+          borderColor={useColorModeValue(
+            Colours.lightModeMainCol,
+            Colours.darkModeMainCol
+          )}
         >
           <Center>
             <Image
@@ -91,7 +97,7 @@ export const TimelineCard = ({
               pos={"absolute"}
               objectFit={"cover"}
               top={0}
-              borderRadius={"50px"}
+              borderRadius={"45px"}
               fallbackSrc={`https://via.placeholder.com/400x400`}
             />
             <Box
@@ -99,7 +105,7 @@ export const TimelineCard = ({
               top="0"
               width={"100%"}
               height={"100%"}
-              borderRadius={"50px"}
+              borderRadius={"45px"}
               transition={"opacity 0.3s ease-in-out"}
               backgroundColor={useColorModeValue(
                 "blackAlpha.600",
@@ -150,7 +156,6 @@ export const TimelineCard = ({
         {cardModalOpen && (
           <TimelineSectionModal
             sectionName={cardName}
-            sectionImages={activityImages}
             sectionDate={activityDate}
             sectionDescription={modalDescription}
             sectionKeyTasks={taskList}
