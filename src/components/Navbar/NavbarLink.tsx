@@ -31,19 +31,13 @@ export const NavbarLink = ({
   return (
     <NavLink
       to={"/" + linkTo.toLowerCase()}
-      className={({ isActive }: { isActive: boolean }): string =>
-        isActive ? "active" : "inactive"
+      className={({ isActive, isPending }) =>
+        isPending
+          ? "pending"
+          : isActive
+          ? useColorModeValue("active", "active-dark")
+          : useColorModeValue("inactive", "inactive-dark")
       }
-      style={({ isActive }: { isActive: boolean }) => {
-        return {
-          backgroundColor: isActive
-            ? useColorModeValue(
-                Colours.lightModeNavColActive,
-                Colours.darkModeNavColActive
-              )
-            : "",
-        };
-      }}
     >
       {" "}
       <motion.span variants={navLinkAnim} onClick={onClick}>
