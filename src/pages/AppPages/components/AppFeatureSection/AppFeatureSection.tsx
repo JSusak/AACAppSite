@@ -1,4 +1,12 @@
-import { Grid, SimpleGrid, Center, useMediaQuery, Box } from "@chakra-ui/react";
+import {
+  Grid,
+  SimpleGrid,
+  Center,
+  useMediaQuery,
+  Box,
+  Heading,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { AppFeature } from "../AppFeature/AppFeature";
 import { Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
@@ -56,7 +64,7 @@ export const AppFeatureSection = ({
 
   const FeatureImage = (): JSX.Element => {
     return (
-      <Center mt={["1rem", "1rem", "1rem", null]}>
+      <Center mt={["1rem", "1rem", "1rem", null]} m="2rem">
         <motion.div
           variants={imageAnim}
           initial="hidden"
@@ -66,23 +74,60 @@ export const AppFeatureSection = ({
         >
           {/*To achieve a crossfading effect, all images must be initially present.*/}
           {/*Animations cannot be achieved by directly changing the src of an image*/}
-          {featureSteps.map((feature, index) => {
-            return (
-              <Image
-                key={`${sectionId}Image${index}`}
-                id={`${sectionId}Image${index}`}
-                src={feature.stepImage}
-                opacity={0}
-                position="absolute"
-                transition={"all 0.5s ease-in-out"}
-                width={[350, 400, 600, 600]}
-                height={[350, 400, 600, 600]}
-                fallbackSrc="https://via.placeholder.com/600"
+          <Box display={"inherit"} height={["500px", "500px", "100%", "100%"]}>
+            {isLargerThan991 ? null : (
+              <Box
+                backgroundColor={useColorModeValue(
+                  "blackAlpha.700",
+                  "whiteAlpha.700"
+                )}
+                zIndex={2}
+                position={"absolute"}
+                width={["100%", "100%", 600, 600]}
+                height={["100%", "100%", 600, 600]}
                 borderRadius={"20%"}
-                zIndex={1}
-              />
-            );
-          })}
+              ></Box>
+            )}
+            {featureSteps.map((feature, index) => {
+              return (
+                <>
+                  <Image
+                    id={`${sectionId}Image${index}`}
+                    key={`${sectionId}Image${index}`}
+                    src={feature.stepImage}
+                    opacity={0}
+                    position="absolute"
+                    transition={"all 0.5s ease-in-out"}
+                    width={["100%", "100%", 600, 600]}
+                    height={["100%", "100%", 600, 600]}
+                    fallbackSrc="https://via.placeholder.com/600"
+                    borderRadius={"20%"}
+                    zIndex={1}
+                  />
+                  <Center>
+                    <Heading
+                      opacity={0}
+                      position={"absolute"}
+                      top="50%"
+                      left="50%"
+                      textAlign={"center"}
+                      fontSize={"lg"}
+                      transform={"translate(-50%,-50%)"}
+                      id={`${sectionId}Image${index}Step`}
+                      display={isLargerThan991 ? "none" : "inherit"}
+                      zIndex={3}
+                      color={useColorModeValue(
+                        "whiteAlpha.700",
+                        "blackAlpha.700"
+                      )}
+                    >
+                      {feature.step}
+                    </Heading>
+                  </Center>
+                </>
+              );
+            })}{" "}
+          </Box>
           <Image
             id={`${sectionId}Image`}
             src={initialFeatureImageURL}
@@ -106,7 +151,7 @@ export const AppFeatureSection = ({
   ];
   return (
     <Grid minH="100vh" position="relative">
-      <SimpleGrid columns={[1, 1, 1, 2]} spacingY="2rem">
+      <SimpleGrid columns={[1, 1, 1, 2]} spacingY="0rem">
         {isLargerThan991
           ? isOnLeft
             ? featureOrder

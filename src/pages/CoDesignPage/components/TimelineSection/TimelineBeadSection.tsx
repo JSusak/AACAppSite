@@ -51,7 +51,8 @@ export const TimelineBeadSection = ({
   };
   return (
     <Box className="timelineSection" zIndex={15}>
-      {/**{arrow ? (
+      {/**Got rid of arrows in the timeline due to uncontrollable errors in light/dark mode shift.
+       * {arrow ? (
         <motion.div className="arrow">
           <Xarrow
             start={
@@ -69,6 +70,8 @@ export const TimelineBeadSection = ({
           />
         </motion.div>
       ) : null} */}
+
+      {arrow ? null : null}
       <SimpleGrid columns={isCompact ? 1 : 3}>
         {isOnLeft ? <SectionCard /> : <Box></Box>}
         <Center>

@@ -6,14 +6,10 @@ import {
   SimpleGrid,
   Button,
   Box,
-
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { StepType } from "../AppFeatureSection/AppFeatureSection";
-import {
-  FaArrowLeft,
-  FaArrowRight,
-
-} from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { appFeatureColourScheme } from "../../appFeatureColourSchemes";
 
@@ -31,7 +27,7 @@ export const AppFeatureCarousel = ({
   colourScheme: appFeatureColourScheme;
 }): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHidden, setIsHidden] = useState(false);
+  const [isLargerThan991] = useMediaQuery("(min-width: 991px)");
 
   const decrementIndex = () => {
     setCurrentIndex(currentIndex - 1);
@@ -48,9 +44,15 @@ export const AppFeatureCarousel = ({
       if (i != currentIndex) {
         document.getElementById(`${featureSectionId}Image${i}`)!.style.opacity =
           "0";
+        document.getElementById(
+          `${featureSectionId}Image${i}Step`
+        )!.style.opacity = "0";
       } else {
         document.getElementById(`${featureSectionId}Image${i}`)!.style.opacity =
           "1";
+        document.getElementById(
+          `${featureSectionId}Image${i}Step`
+        )!.style.opacity = "1";
       }
     }
   };
@@ -62,17 +64,12 @@ export const AppFeatureCarousel = ({
     <>
       <Box
         width={"100%"}
-        borderRadius={"10px"}
         //borderColor={isHidden ? "transparent" : colourScheme.accent}
         transition={"all 0.3s ease-in-out"}
-        pointerEvents={isHidden ? "none" : "all"}
+        pointerEvents={"all"}
         wordBreak={"break-word"}
       >
-        <Center
-          opacity={isHidden ? "0" : "1"}
-          transition={"all 0.5s ease-in-out"}
-          p="0.5rem"
-        >
+        <Center opacity={1} transition={"all 0.5s ease-in-out"} p="0.5rem">
           <VStack spacing={"0.5rem"} fontSize={["lg", "lg", "lg", "xl"]}>
             <Heading
               color={colourScheme.accent}
@@ -88,7 +85,7 @@ export const AppFeatureCarousel = ({
                 leftIcon={<FaArrowLeft />}
                 isDisabled={currentIndex === 0}
                 onClick={decrementIndex}
-                pointerEvents={isHidden ? "none" : "all"}
+                pointerEvents={"all"}
               >
                 Previous
               </Button>
@@ -101,7 +98,7 @@ export const AppFeatureCarousel = ({
                 rightIcon={<FaArrowRight />}
                 isDisabled={currentIndex === steps.length - 1}
                 onClick={incrementIndex}
-                pointerEvents={isHidden ? "none" : "all"}
+                pointerEvents={"all"}
               >
                 Next
               </Button>
@@ -110,6 +107,7 @@ export const AppFeatureCarousel = ({
               textAlign={"center"}
               fontSize={["xl", "2xl", "3xl", "3xl"]}
               p="2rem"
+              display={isLargerThan991 ? "inherit" : "none"}
             >
               {steps[currentIndex].step}
             </Text>
