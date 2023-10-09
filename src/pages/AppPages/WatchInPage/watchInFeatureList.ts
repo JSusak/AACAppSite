@@ -76,7 +76,6 @@ export const watchInFeatureList = [
   {
     featureName: "Update",
     featureDescription: "Sentence describing feature.",
-    numericFacts: ["Numeric Fact 1", "Numeric Fact 2", "Numeric Fact 3"],
     featureCarouselSteps: [
       {
         step: "Choose Update from menu.",
