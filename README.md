@@ -33,7 +33,7 @@
 Deployment is handled via the [gh-pages](https://www.npmjs.com/package/gh-pages) npm package. By following a few steps you will be able to set up deployment with a few commands.
 
 1) gh-pages should already be installed if you have ran 'npm install'.
-2) In package.json, under 'homepage', change the username to your github username and REPONAME to the name of the repo.
+2) In package.json, under 'homepage', change the username to your github username and REPONAME to the name of the repo. Also in vite.config.ts, change the base to '/REPONAME/'.
 3) Run:
 ```bash
   npm run deploy
