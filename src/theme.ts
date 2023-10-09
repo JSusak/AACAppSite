@@ -1,7 +1,6 @@
-import { extendTheme } from '@chakra-ui/react'
-import type { StyleFunctionProps } from '@chakra-ui/styled-system'
-import '@fontsource/barlow';
-import "@fontsource/fredoka-one";
+import { extendTheme } from "@chakra-ui/react";
+import type { StyleFunctionProps } from "@chakra-ui/styled-system";
+import "@fontsource/barlow";
 import "@fontsource/poppins";
 import "@fontsource-variable/open-sans";
 import "@fontsource-variable/bitter";
